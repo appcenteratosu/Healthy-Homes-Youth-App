@@ -32,7 +32,7 @@ class CheckItTwiceViewController: UIViewController {
     ]
     var selectedQuestion = Question(name: "Living, Dining, and Family Rooms", answers: ["If your home was built before 1978, check painted doors, windows, trim, and walls for lead", "Vacuum carpets regularly to reduce asthma triggers", "Move blind cords out of reach of children to prevent strangulation", "Check lighting and extension cords for fraying or bare wires", "Avoid having lighting and extension cords in floor pathways", "Purchase children’s toys that do not have small parts for choking and do not contain lead", "Secure heavy items (televisions, bookcases) to walls to prevent tip overs"])
     
-    
+    var selectedIndex : Int = 0
     
     weak var delegate: MonsterSelectionDelegate?
 
@@ -40,49 +40,59 @@ class CheckItTwiceViewController: UIViewController {
         let title : String = sender.currentTitle!
         if (title == "1. Family rooms"){
             self.selectedQuestion = questions[0]
+            selectedIndex = 0
             self.performSegue(withIdentifier: "ChecklistSegue", sender: self)
         } else if (title == "2. Kitchen") {
             self.selectedQuestion = questions[1]
+            selectedIndex = 1
             self.performSegue(withIdentifier: "ChecklistSegue", sender: self)
         } else if (title == "3. Bedroom") {
             self.selectedQuestion = questions[2]
+            selectedIndex = 2
             self.performSegue(withIdentifier: "ChecklistSegue", sender: self)
         } else if (title == "4. Entry") {
             self.selectedQuestion = questions[3]
+            selectedIndex = 3
             self.performSegue(withIdentifier: "ChecklistSegue", sender: self)
         } else if (title == "5. Bathroom") {
             self.selectedQuestion = questions[4]
+            selectedIndex = 4
             self.performSegue(withIdentifier: "ChecklistSegue", sender: self)
         } else if (title == "6. Laundry") {
             self.selectedQuestion = questions[5]
+            selectedIndex = 5
             self.performSegue(withIdentifier: "ChecklistSegue", sender: self)
         } else if (title == "7. Attic") {
             self.selectedQuestion = questions[6]
+            selectedIndex = 6
             self.performSegue(withIdentifier: "ChecklistSegue", sender: self)
         } else if (title == "8. Basement") {
             self.selectedQuestion = questions[7]
+            selectedIndex = 7
             self.performSegue(withIdentifier: "ChecklistSegue", sender: self)
         } else if (title == "9. Garage") {
             self.selectedQuestion = questions[8]
+            selectedIndex = 8
             self.performSegue(withIdentifier: "ChecklistSegue", sender: self)
         } else if (title == "10. Outside") {
             self.selectedQuestion = questions[9]
+            selectedIndex = 9
             self.performSegue(withIdentifier: "ChecklistSegue", sender: self)
         } else if (title == "11. General") {
-            self.selectedQuestion = questions[11]
+            self.selectedQuestion = questions[10]
+            selectedIndex = 10
             self.performSegue(withIdentifier: "ChecklistSegue", sender: self)
         }
     }
-    
-    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let yourVC = segue.destination as? DetailViewController {
             yourVC.question = self.selectedQuestion
+            yourVC.currentIndex = self.selectedIndex
+            yourVC.allQuestions = self.questions
         }
     }
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 

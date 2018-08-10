@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18EBE941211E20D40001A9C4 /* QuestionBank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EBE940211E20D40001A9C4 /* QuestionBank.swift */; };
+		18EBE943211E20F30001A9C4 /* QuizQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EBE942211E20F30001A9C4 /* QuizQuestion.swift */; };
+		18EBE945211E21130001A9C4 /* QuizResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EBE944211E21130001A9C4 /* QuizResultsViewController.swift */; };
+		18EBE947211E21340001A9C4 /* quizScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EBE946211E21340001A9C4 /* quizScreenViewController.swift */; };
+		18EBE949211E21580001A9C4 /* TrainyourBrainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EBE948211E21580001A9C4 /* TrainyourBrainViewController.swift */; };
+		18EBE94B211E217F0001A9C4 /* ViewAnswersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EBE94A211E217F0001A9C4 /* ViewAnswersTableViewCell.swift */; };
+		18EBE94D211E219F0001A9C4 /* ViewAnswersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EBE94C211E219F0001A9C4 /* ViewAnswersViewController.swift */; };
 		A50E83B92117AC270026A0D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50E83B82117AC270026A0D6 /* AppDelegate.swift */; };
 		A50E83BB2117AC270026A0D6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50E83BA2117AC270026A0D6 /* ViewController.swift */; };
 		A50E83BE2117AC270026A0D6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A50E83BC2117AC270026A0D6 /* Main.storyboard */; };
@@ -24,16 +31,16 @@
 		A50E8430211A79050026A0D6 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50E842F211A79050026A0D6 /* DetailViewController.swift */; };
 		A50E8432211A792B0026A0D6 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50E8431211A792B0026A0D6 /* Question.swift */; };
 		A50E8434211A79580026A0D6 /* ChecklistTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50E8433211A79580026A0D6 /* ChecklistTableViewCell.swift */; };
-		A50E844C211AA8F50026A0D6 /* quizScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50E8447211AA8F50026A0D6 /* quizScreenViewController.swift */; };
-		A50E844D211AA8F50026A0D6 /* QuizResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50E8448211AA8F50026A0D6 /* QuizResultsViewController.swift */; };
-		A50E844E211AA8F50026A0D6 /* QuestionBank.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50E8449211AA8F50026A0D6 /* QuestionBank.swift */; };
-		A50E844F211AA8F50026A0D6 /* TrainyourBrainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50E844A211AA8F50026A0D6 /* TrainyourBrainViewController.swift */; };
-		A50E8450211AA8F50026A0D6 /* QuizQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50E844B211AA8F50026A0D6 /* QuizQuestion.swift */; };
-		A50E8452211ADE0C0026A0D6 /* ViewAnswersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50E8451211ADE0C0026A0D6 /* ViewAnswersViewController.swift */; };
-		A50E8454211BAD810026A0D6 /* ViewAnswersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50E8453211BAD810026A0D6 /* ViewAnswersTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		18EBE940211E20D40001A9C4 /* QuestionBank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionBank.swift; sourceTree = "<group>"; };
+		18EBE942211E20F30001A9C4 /* QuizQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizQuestion.swift; sourceTree = "<group>"; };
+		18EBE944211E21130001A9C4 /* QuizResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizResultsViewController.swift; sourceTree = "<group>"; };
+		18EBE946211E21340001A9C4 /* quizScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = quizScreenViewController.swift; sourceTree = "<group>"; };
+		18EBE948211E21580001A9C4 /* TrainyourBrainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainyourBrainViewController.swift; sourceTree = "<group>"; };
+		18EBE94A211E217F0001A9C4 /* ViewAnswersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewAnswersTableViewCell.swift; sourceTree = "<group>"; };
+		18EBE94C211E219F0001A9C4 /* ViewAnswersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewAnswersViewController.swift; sourceTree = "<group>"; };
 		A50E83B52117AC270026A0D6 /* temporary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = temporary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A50E83B82117AC270026A0D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A50E83BA2117AC270026A0D6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -53,13 +60,6 @@
 		A50E842F211A79050026A0D6 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		A50E8431211A792B0026A0D6 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		A50E8433211A79580026A0D6 /* ChecklistTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistTableViewCell.swift; sourceTree = "<group>"; };
-		A50E8447211AA8F50026A0D6 /* quizScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = quizScreenViewController.swift; sourceTree = "<group>"; };
-		A50E8448211AA8F50026A0D6 /* QuizResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizResultsViewController.swift; sourceTree = "<group>"; };
-		A50E8449211AA8F50026A0D6 /* QuestionBank.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionBank.swift; sourceTree = "<group>"; };
-		A50E844A211AA8F50026A0D6 /* TrainyourBrainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrainyourBrainViewController.swift; sourceTree = "<group>"; };
-		A50E844B211AA8F50026A0D6 /* QuizQuestion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizQuestion.swift; sourceTree = "<group>"; };
-		A50E8451211ADE0C0026A0D6 /* ViewAnswersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewAnswersViewController.swift; sourceTree = "<group>"; };
-		A50E8453211BAD810026A0D6 /* ViewAnswersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewAnswersTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +92,13 @@
 		A50E83B72117AC270026A0D6 /* temporary */ = {
 			isa = PBXGroup;
 			children = (
+				18EBE940211E20D40001A9C4 /* QuestionBank.swift */,
+				18EBE942211E20F30001A9C4 /* QuizQuestion.swift */,
+				18EBE944211E21130001A9C4 /* QuizResultsViewController.swift */,
+				18EBE946211E21340001A9C4 /* quizScreenViewController.swift */,
+				18EBE948211E21580001A9C4 /* TrainyourBrainViewController.swift */,
+				18EBE94A211E217F0001A9C4 /* ViewAnswersTableViewCell.swift */,
+				18EBE94C211E219F0001A9C4 /* ViewAnswersViewController.swift */,
 				A50E83D82117B4750026A0D6 /* Assets */,
 				A50E83B82117AC270026A0D6 /* AppDelegate.swift */,
 				A50E83BA2117AC270026A0D6 /* ViewController.swift */,
@@ -108,7 +115,6 @@
 				A50E83E92117D7C90026A0D6 /* CheckItTwiceViewController.swift */,
 				A50E83EF2117E4E60026A0D6 /* Checklist.swift */,
 				A50E83E52117CEB90026A0D6 /* keepItDryViewController.swift */,
-				A50E8446211AA8F50026A0D6 /* Quiz */,
 				A50E83C12117AC290026A0D6 /* LaunchScreen.storyboard */,
 				A50E83C42117AC290026A0D6 /* Info.plist */,
 			);
@@ -121,21 +127,6 @@
 				A50E83ED2117DD380026A0D6 /* Assets.xcassets */,
 			);
 			path = Assets;
-			sourceTree = "<group>";
-		};
-		A50E8446211AA8F50026A0D6 /* Quiz */ = {
-			isa = PBXGroup;
-			children = (
-				A50E8447211AA8F50026A0D6 /* quizScreenViewController.swift */,
-				A50E8448211AA8F50026A0D6 /* QuizResultsViewController.swift */,
-				A50E8449211AA8F50026A0D6 /* QuestionBank.swift */,
-				A50E844A211AA8F50026A0D6 /* TrainyourBrainViewController.swift */,
-				A50E844B211AA8F50026A0D6 /* QuizQuestion.swift */,
-				A50E8451211ADE0C0026A0D6 /* ViewAnswersViewController.swift */,
-				A50E8453211BAD810026A0D6 /* ViewAnswersTableViewCell.swift */,
-			);
-			name = Quiz;
-			path = "../../../Documents/Healthy Homes Youth App/Healthy Homes Youth App/Quiz";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,23 +203,23 @@
 				A50E8434211A79580026A0D6 /* ChecklistTableViewCell.swift in Sources */,
 				A50E83E62117CEBA0026A0D6 /* keepItDryViewController.swift in Sources */,
 				A50E8432211A792B0026A0D6 /* Question.swift in Sources */,
+				18EBE945211E21130001A9C4 /* QuizResultsViewController.swift in Sources */,
 				A50E83BB2117AC270026A0D6 /* ViewController.swift in Sources */,
-				A50E844D211AA8F50026A0D6 /* QuizResultsViewController.swift in Sources */,
 				A50E83CD2117AE060026A0D6 /* CenterViewController.swift in Sources */,
 				A50E83D12117AE120026A0D6 /* CenterViewControllerDelegate.swift in Sources */,
-				A50E8452211ADE0C0026A0D6 /* ViewAnswersViewController.swift in Sources */,
-				A50E844E211AA8F50026A0D6 /* QuestionBank.swift in Sources */,
+				18EBE947211E21340001A9C4 /* quizScreenViewController.swift in Sources */,
 				A50E83EC2117DAC90026A0D6 /* CheckItTwiceSubSectionViewController.swift in Sources */,
-				A50E8454211BAD810026A0D6 /* ViewAnswersTableViewCell.swift in Sources */,
-				A50E844C211AA8F50026A0D6 /* quizScreenViewController.swift in Sources */,
 				A50E83EA2117D7C90026A0D6 /* CheckItTwiceViewController.swift in Sources */,
-				A50E844F211AA8F50026A0D6 /* TrainyourBrainViewController.swift in Sources */,
+				18EBE941211E20D40001A9C4 /* QuestionBank.swift in Sources */,
 				A50E83CB2117ADE80026A0D6 /* ContainerViewController.swift in Sources */,
+				18EBE949211E21580001A9C4 /* TrainyourBrainViewController.swift in Sources */,
 				A50E83B92117AC270026A0D6 /* AppDelegate.swift in Sources */,
+				18EBE94D211E219F0001A9C4 /* ViewAnswersViewController.swift in Sources */,
 				A50E83E42117C1720026A0D6 /* SlideOutViewController.swift in Sources */,
 				A50E8430211A79050026A0D6 /* DetailViewController.swift in Sources */,
-				A50E8450211AA8F50026A0D6 /* QuizQuestion.swift in Sources */,
 				A50E83F02117E4E60026A0D6 /* Checklist.swift in Sources */,
+				18EBE943211E20F30001A9C4 /* QuizQuestion.swift in Sources */,
+				18EBE94B211E217F0001A9C4 /* ViewAnswersTableViewCell.swift in Sources */,
 				A50E83E82117D0C60026A0D6 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

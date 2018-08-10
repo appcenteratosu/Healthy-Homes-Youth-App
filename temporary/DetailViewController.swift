@@ -11,10 +11,27 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     var answers : [String]!
     var rowChecked = false
+    
+    @IBOutlet weak var nextButton: UIButton!
+    
+    @IBOutlet weak var backButton: UIButton!
+    
+    
     @IBAction func MailButton(_ sender: UIButton) {
         convertToPDF()
     }
     var question: Question? {
+        didSet {
+            refreshUI()
+        }
+    }
+
+    var currentIndex : Int? {
+        didSet {
+            refreshUI()
+        }
+    }
+    var allQuestions : [Question]? {
         didSet {
             refreshUI()
         }
@@ -25,27 +42,47 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
         self.answersTableView.delegate = self
         self.answersTableView.dataSource = self
         self.answersTableView.separatorColor = UIColor.clear
-  //      self.answersTableView.tableFooterView = UIView(frame: CGRect.zero)
-//        self.answersTableView.tableFooterView = UIView(frame: .zero)
-        
+//        let defaults = UserDefaults.standard
+//        for questionIndex in 0...(self.allQuestions?.count)! {
+//            var tempQuestion = self.allQuestions![questionIndex]
+//            for optionIndex1 in 0...tempQuestion.answers.count {
+//               // let key = "checklist|" + (self.question?.name)! + "|" + (self.question?.answers[optionIndex])! + "|" + String(optionIndex)
+//                //let defaults = UserDefaults.standard
+//                //let existingAnswer = defaults.object(forKey:key) as? Bool
+//            }
+//        }
     }
     
     func refreshUI() {
         loadViewIfNeeded()
         nameLabel.text = question?.name
         answers = (question?.answers)!
+//        if self.currentIndex! !=nil && self.currentIndex! == 0 {
+//            backButton.isHidden = true
+//        }
         self.answersTableView.reloadData()
+        
     }
     
     var questionIndex = 0
     
     @IBAction func backChecklistButton(_ sender: UIButton) {
-        
+        self.currentIndex = (self.currentIndex!-1)
+
+        if currentIndex! == -1 {
+            currentIndex = 10
+        }
+        self.question = allQuestions?[currentIndex!]
+        refreshUI()
     }
     
     @IBAction func nextChecklistButton(_ sender: UIButton) {
-        questionIndex += 1
- //       Question
+        self.currentIndex=self.currentIndex!+1
+        if currentIndex! == (allQuestions?.count)! - 1 {
+            currentIndex = 0
+        }
+        self.question = allQuestions?[currentIndex!]
+        refreshUI()
     }
     
     func numberOfSections(in answersTableView: UITableView) -> Int {
@@ -62,6 +99,7 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         cell.answerLabel.text = answers[indexPath.row]
         configureCheckmark(for: cell, at: indexPath)
+        
         let optionIndex = indexPath.row
         let key = "checklist|" + (self.question?.name)! + "|" + (self.question?.answers[optionIndex])! + "|" + String(optionIndex)
         let existingAnswer = defaults.object(forKey:key) as? Bool
@@ -223,8 +261,8 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
                     //doc 2 : 175, 52 //385 = 212.5
                     //doc 3 : 175, 50  //385 = 212.5
                     //doc 4 : 170, 50  //380 = 215
-                    image = UIImage(named: "logo_iphone")
-                    image?.draw(in: CGRect(x: 410, y: 21, width: 80,height: 80)) //
+            //        image = UIImage(named: "logo_iphone")
+           //         image?.draw(in: CGRect(x: 410, y: 21, width: 80,height: 80)) //
                     image = UIImage(named: "Group 2700")
                     image?.draw(in: CGRect(x: 500, y: 21, width: 80,height: 80))
                 }
