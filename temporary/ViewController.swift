@@ -9,6 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController {
+    var window: UIWindow?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +21,18 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func WelcomeButton(_ sender: UIButton) {
+        HelloWorld()
+    }
+    
+    func HelloWorld() {
+        window = UIWindow(frame: UIScreen.main.bounds)
 
+        let containerViewController = ContainerViewController()
+        
+        window!.rootViewController = containerViewController
+
+    }
+    
 }
 
