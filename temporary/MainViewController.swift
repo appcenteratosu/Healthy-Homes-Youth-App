@@ -9,11 +9,22 @@
 import UIKit
 
 class MainViewController: UIViewController {
-
+    var delegate: CenterViewControllerDelegate?
+    
+    @IBOutlet weak var MenuButton: UIBarButtonItem!
+    
+    @IBOutlet var MainButtons: [UIButton]!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        MenuButton.setBackgroundImage(UIImage(named: "hamburger menu"), for: UIControlState.normal, barMetrics: .default)
+        
+        for eachbutton in MainButtons {
+            eachbutton.titleLabel?.textAlignment = .center
+            eachbutton.titleEdgeInsets = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
+            eachbutton.titleLabel?.adjustsFontSizeToFitWidth = true
+            eachbutton.layer.cornerRadius = 5
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,15 +32,9 @@ class MainViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func MenuButton(_ sender: UIBarButtonItem) {
+        delegate?.toggleRightPanel?()
     }
-    */
-
+    
+    
 }

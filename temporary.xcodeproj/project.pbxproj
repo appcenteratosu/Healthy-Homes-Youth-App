@@ -7,6 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1827C84D2124951A00E91A86 /* SponsorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1827C84C2124951900E91A86 /* SponsorsViewController.swift */; };
+		1827C84F2126609500E91A86 /* BookmarkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1827C84E2126609500E91A86 /* BookmarkViewController.swift */; };
+		1827C85121268C0A00E91A86 /* keepItContaminentFreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1827C85021268C0A00E91A86 /* keepItContaminentFreeViewController.swift */; };
+		1827C853212714DA00E91A86 /* pestFreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1827C852212714DA00E91A86 /* pestFreeViewController.swift */; };
+		1827C855212714FE00E91A86 /* SafeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1827C854212714FE00E91A86 /* SafeViewController.swift */; };
+		1827C8572127150E00E91A86 /* CleanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1827C8562127150E00E91A86 /* CleanViewController.swift */; };
+		1827C8592127152200E91A86 /* WellMaintainedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1827C8582127152200E91A86 /* WellMaintainedViewController.swift */; };
+		1827C85B2127153600E91A86 /* WellVentilatedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1827C85A2127153600E91A86 /* WellVentilatedViewController.swift */; };
+		1827C85D2127154800E91A86 /* TemperatureControlledViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1827C85C2127154800E91A86 /* TemperatureControlledViewController.swift */; };
+		1827C85F2127155C00E91A86 /* LeadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1827C85E2127155C00E91A86 /* LeadViewController.swift */; };
+		1827C8632127158500E91A86 /* MoldMoistureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1827C8622127158500E91A86 /* MoldMoistureViewController.swift */; };
+		1827C8652127159700E91A86 /* RadonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1827C8642127159700E91A86 /* RadonViewController.swift */; };
+		1827C867212715AB00E91A86 /* AsbestosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1827C866212715AB00E91A86 /* AsbestosViewController.swift */; };
+		1827C869212715C700E91A86 /* HouseHoldChemicalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1827C868212715C700E91A86 /* HouseHoldChemicalsViewController.swift */; };
+		1827C86B212715D800E91A86 /* PestsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1827C86A212715D800E91A86 /* PestsViewController.swift */; };
+		1827C86D212715EF00E91A86 /* CarbonMonoxideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1827C86C212715EF00E91A86 /* CarbonMonoxideViewController.swift */; };
+		1827C86F2127160100E91A86 /* HomeSafetyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1827C86E2127160100E91A86 /* HomeSafetyViewController.swift */; };
+		1827C8712127161600E91A86 /* HomeTempControlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1827C8702127161600E91A86 /* HomeTempControlViewController.swift */; };
+		1827C87A2127F87D00E91A86 /* AsthamaAllergiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1827C8792127F87C00E91A86 /* AsthamaAllergiesViewController.swift */; };
+		183508882129B688007A6637 /* PrinciplesofHealthyHomesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183508872129B688007A6637 /* PrinciplesofHealthyHomesViewController.swift */; };
 		18EBE941211E20D40001A9C4 /* QuestionBank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EBE940211E20D40001A9C4 /* QuestionBank.swift */; };
 		18EBE943211E20F30001A9C4 /* QuizQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EBE942211E20F30001A9C4 /* QuizQuestion.swift */; };
 		18EBE945211E21130001A9C4 /* QuizResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EBE944211E21130001A9C4 /* QuizResultsViewController.swift */; };
@@ -25,7 +45,6 @@
 		A50E83E62117CEBA0026A0D6 /* keepItDryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50E83E52117CEB90026A0D6 /* keepItDryViewController.swift */; };
 		A50E83E82117D0C60026A0D6 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50E83E72117D0C60026A0D6 /* MainViewController.swift */; };
 		A50E83EA2117D7C90026A0D6 /* CheckItTwiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50E83E92117D7C90026A0D6 /* CheckItTwiceViewController.swift */; };
-		A50E83EC2117DAC90026A0D6 /* CheckItTwiceSubSectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50E83EB2117DAC90026A0D6 /* CheckItTwiceSubSectionViewController.swift */; };
 		A50E83EE2117DD3A0026A0D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A50E83ED2117DD380026A0D6 /* Assets.xcassets */; };
 		A50E83F02117E4E60026A0D6 /* Checklist.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50E83EF2117E4E60026A0D6 /* Checklist.swift */; };
 		A50E8430211A79050026A0D6 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50E842F211A79050026A0D6 /* DetailViewController.swift */; };
@@ -34,6 +53,26 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1827C84C2124951900E91A86 /* SponsorsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SponsorsViewController.swift; sourceTree = "<group>"; };
+		1827C84E2126609500E91A86 /* BookmarkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkViewController.swift; sourceTree = "<group>"; };
+		1827C85021268C0A00E91A86 /* keepItContaminentFreeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = keepItContaminentFreeViewController.swift; sourceTree = "<group>"; };
+		1827C852212714DA00E91A86 /* pestFreeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pestFreeViewController.swift; sourceTree = "<group>"; };
+		1827C854212714FE00E91A86 /* SafeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeViewController.swift; sourceTree = "<group>"; };
+		1827C8562127150E00E91A86 /* CleanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleanViewController.swift; sourceTree = "<group>"; };
+		1827C8582127152200E91A86 /* WellMaintainedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WellMaintainedViewController.swift; sourceTree = "<group>"; };
+		1827C85A2127153600E91A86 /* WellVentilatedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WellVentilatedViewController.swift; sourceTree = "<group>"; };
+		1827C85C2127154800E91A86 /* TemperatureControlledViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureControlledViewController.swift; sourceTree = "<group>"; };
+		1827C85E2127155C00E91A86 /* LeadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeadViewController.swift; sourceTree = "<group>"; };
+		1827C8622127158500E91A86 /* MoldMoistureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoldMoistureViewController.swift; sourceTree = "<group>"; };
+		1827C8642127159700E91A86 /* RadonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadonViewController.swift; sourceTree = "<group>"; };
+		1827C866212715AB00E91A86 /* AsbestosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsbestosViewController.swift; sourceTree = "<group>"; };
+		1827C868212715C700E91A86 /* HouseHoldChemicalsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseHoldChemicalsViewController.swift; sourceTree = "<group>"; };
+		1827C86A212715D800E91A86 /* PestsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PestsViewController.swift; sourceTree = "<group>"; };
+		1827C86C212715EF00E91A86 /* CarbonMonoxideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarbonMonoxideViewController.swift; sourceTree = "<group>"; };
+		1827C86E2127160100E91A86 /* HomeSafetyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSafetyViewController.swift; sourceTree = "<group>"; };
+		1827C8702127161600E91A86 /* HomeTempControlViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTempControlViewController.swift; sourceTree = "<group>"; };
+		1827C8792127F87C00E91A86 /* AsthamaAllergiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsthamaAllergiesViewController.swift; sourceTree = "<group>"; };
+		183508872129B688007A6637 /* PrinciplesofHealthyHomesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrinciplesofHealthyHomesViewController.swift; sourceTree = "<group>"; };
 		18EBE940211E20D40001A9C4 /* QuestionBank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionBank.swift; sourceTree = "<group>"; };
 		18EBE942211E20F30001A9C4 /* QuizQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizQuestion.swift; sourceTree = "<group>"; };
 		18EBE944211E21130001A9C4 /* QuizResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizResultsViewController.swift; sourceTree = "<group>"; };
@@ -54,7 +93,6 @@
 		A50E83E52117CEB90026A0D6 /* keepItDryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = keepItDryViewController.swift; sourceTree = "<group>"; };
 		A50E83E72117D0C60026A0D6 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		A50E83E92117D7C90026A0D6 /* CheckItTwiceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckItTwiceViewController.swift; sourceTree = "<group>"; };
-		A50E83EB2117DAC90026A0D6 /* CheckItTwiceSubSectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckItTwiceSubSectionViewController.swift; sourceTree = "<group>"; };
 		A50E83ED2117DD380026A0D6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A50E83EF2117E4E60026A0D6 /* Checklist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checklist.swift; sourceTree = "<group>"; };
 		A50E842F211A79050026A0D6 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
@@ -73,6 +111,92 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1827C8722127162200E91A86 /* The Big Stuff */ = {
+			isa = PBXGroup;
+			children = (
+				1827C85E2127155C00E91A86 /* LeadViewController.swift */,
+				1827C8792127F87C00E91A86 /* AsthamaAllergiesViewController.swift */,
+				1827C8622127158500E91A86 /* MoldMoistureViewController.swift */,
+				1827C8642127159700E91A86 /* RadonViewController.swift */,
+				1827C866212715AB00E91A86 /* AsbestosViewController.swift */,
+				1827C868212715C700E91A86 /* HouseHoldChemicalsViewController.swift */,
+				1827C852212714DA00E91A86 /* pestFreeViewController.swift */,
+				1827C86C212715EF00E91A86 /* CarbonMonoxideViewController.swift */,
+				1827C86E2127160100E91A86 /* HomeSafetyViewController.swift */,
+				1827C8702127161600E91A86 /* HomeTempControlViewController.swift */,
+			);
+			path = "The Big Stuff";
+			sourceTree = "<group>";
+		};
+		1827C8732127169B00E91A86 /* Quiz */ = {
+			isa = PBXGroup;
+			children = (
+				18EBE948211E21580001A9C4 /* TrainyourBrainViewController.swift */,
+				18EBE946211E21340001A9C4 /* quizScreenViewController.swift */,
+				18EBE944211E21130001A9C4 /* QuizResultsViewController.swift */,
+				18EBE94C211E219F0001A9C4 /* ViewAnswersViewController.swift */,
+				18EBE94A211E217F0001A9C4 /* ViewAnswersTableViewCell.swift */,
+				18EBE942211E20F30001A9C4 /* QuizQuestion.swift */,
+				18EBE940211E20D40001A9C4 /* QuestionBank.swift */,
+			);
+			name = Quiz;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		1827C874212716E800E91A86 /* Principles for healthy homes */ = {
+			isa = PBXGroup;
+			children = (
+				A50E83E52117CEB90026A0D6 /* keepItDryViewController.swift */,
+				1827C85021268C0A00E91A86 /* keepItContaminentFreeViewController.swift */,
+				1827C86A212715D800E91A86 /* PestsViewController.swift */,
+				1827C854212714FE00E91A86 /* SafeViewController.swift */,
+				1827C8562127150E00E91A86 /* CleanViewController.swift */,
+				1827C8582127152200E91A86 /* WellMaintainedViewController.swift */,
+				1827C85A2127153600E91A86 /* WellVentilatedViewController.swift */,
+				1827C85C2127154800E91A86 /* TemperatureControlledViewController.swift */,
+			);
+			path = "Principles for healthy homes";
+			sourceTree = "<group>";
+		};
+		1827C8752127175900E91A86 /* Save for Later */ = {
+			isa = PBXGroup;
+			children = (
+				1827C84E2126609500E91A86 /* BookmarkViewController.swift */,
+			);
+			path = "Save for Later";
+			sourceTree = "<group>";
+		};
+		1827C8762127177800E91A86 /* Our Sponsors */ = {
+			isa = PBXGroup;
+			children = (
+				1827C84C2124951900E91A86 /* SponsorsViewController.swift */,
+			);
+			path = "Our Sponsors";
+			sourceTree = "<group>";
+		};
+		1827C8772127179B00E91A86 /* Check it Twice */ = {
+			isa = PBXGroup;
+			children = (
+				A50E83E92117D7C90026A0D6 /* CheckItTwiceViewController.swift */,
+				A50E842F211A79050026A0D6 /* DetailViewController.swift */,
+				A50E8431211A792B0026A0D6 /* Question.swift */,
+				A50E8433211A79580026A0D6 /* ChecklistTableViewCell.swift */,
+				A50E83EF2117E4E60026A0D6 /* Checklist.swift */,
+			);
+			path = "Check it Twice";
+			sourceTree = "<group>";
+		};
+		1827C8782127185600E91A86 /* Side Menu */ = {
+			isa = PBXGroup;
+			children = (
+				A50E83CA2117ADE80026A0D6 /* ContainerViewController.swift */,
+				A50E83E32117C1720026A0D6 /* SlideOutViewController.swift */,
+				A50E83D02117AE120026A0D6 /* CenterViewControllerDelegate.swift */,
+				A50E83CC2117AE060026A0D6 /* CenterViewController.swift */,
+			);
+			path = "Side Menu";
+			sourceTree = "<group>";
+		};
 		A50E83AC2117AC270026A0D6 = {
 			isa = PBXGroup;
 			children = (
@@ -92,29 +216,19 @@
 		A50E83B72117AC270026A0D6 /* temporary */ = {
 			isa = PBXGroup;
 			children = (
-				18EBE940211E20D40001A9C4 /* QuestionBank.swift */,
-				18EBE942211E20F30001A9C4 /* QuizQuestion.swift */,
-				18EBE944211E21130001A9C4 /* QuizResultsViewController.swift */,
-				18EBE946211E21340001A9C4 /* quizScreenViewController.swift */,
-				18EBE948211E21580001A9C4 /* TrainyourBrainViewController.swift */,
-				18EBE94A211E217F0001A9C4 /* ViewAnswersTableViewCell.swift */,
-				18EBE94C211E219F0001A9C4 /* ViewAnswersViewController.swift */,
 				A50E83D82117B4750026A0D6 /* Assets */,
 				A50E83B82117AC270026A0D6 /* AppDelegate.swift */,
 				A50E83BA2117AC270026A0D6 /* ViewController.swift */,
 				A50E83BC2117AC270026A0D6 /* Main.storyboard */,
-				A50E83EB2117DAC90026A0D6 /* CheckItTwiceSubSectionViewController.swift */,
-				A50E842F211A79050026A0D6 /* DetailViewController.swift */,
-				A50E8431211A792B0026A0D6 /* Question.swift */,
-				A50E8433211A79580026A0D6 /* ChecklistTableViewCell.swift */,
+				183508872129B688007A6637 /* PrinciplesofHealthyHomesViewController.swift */,
 				A50E83E72117D0C60026A0D6 /* MainViewController.swift */,
-				A50E83CA2117ADE80026A0D6 /* ContainerViewController.swift */,
-				A50E83E32117C1720026A0D6 /* SlideOutViewController.swift */,
-				A50E83D02117AE120026A0D6 /* CenterViewControllerDelegate.swift */,
-				A50E83CC2117AE060026A0D6 /* CenterViewController.swift */,
-				A50E83E92117D7C90026A0D6 /* CheckItTwiceViewController.swift */,
-				A50E83EF2117E4E60026A0D6 /* Checklist.swift */,
-				A50E83E52117CEB90026A0D6 /* keepItDryViewController.swift */,
+				1827C8782127185600E91A86 /* Side Menu */,
+				1827C874212716E800E91A86 /* Principles for healthy homes */,
+				1827C8722127162200E91A86 /* The Big Stuff */,
+				1827C8752127175900E91A86 /* Save for Later */,
+				1827C8732127169B00E91A86 /* Quiz */,
+				1827C8762127177800E91A86 /* Our Sponsors */,
+				1827C8772127179B00E91A86 /* Check it Twice */,
 				A50E83C12117AC290026A0D6 /* LaunchScreen.storyboard */,
 				A50E83C42117AC290026A0D6 /* Info.plist */,
 			);
@@ -200,27 +314,46 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1827C84F2126609500E91A86 /* BookmarkViewController.swift in Sources */,
+				1827C855212714FE00E91A86 /* SafeViewController.swift in Sources */,
 				A50E8434211A79580026A0D6 /* ChecklistTableViewCell.swift in Sources */,
 				A50E83E62117CEBA0026A0D6 /* keepItDryViewController.swift in Sources */,
 				A50E8432211A792B0026A0D6 /* Question.swift in Sources */,
+				1827C85D2127154800E91A86 /* TemperatureControlledViewController.swift in Sources */,
 				18EBE945211E21130001A9C4 /* QuizResultsViewController.swift in Sources */,
 				A50E83BB2117AC270026A0D6 /* ViewController.swift in Sources */,
 				A50E83CD2117AE060026A0D6 /* CenterViewController.swift in Sources */,
+				1827C867212715AB00E91A86 /* AsbestosViewController.swift in Sources */,
+				1827C8572127150E00E91A86 /* CleanViewController.swift in Sources */,
 				A50E83D12117AE120026A0D6 /* CenterViewControllerDelegate.swift in Sources */,
+				1827C869212715C700E91A86 /* HouseHoldChemicalsViewController.swift in Sources */,
+				1827C8592127152200E91A86 /* WellMaintainedViewController.swift in Sources */,
 				18EBE947211E21340001A9C4 /* quizScreenViewController.swift in Sources */,
-				A50E83EC2117DAC90026A0D6 /* CheckItTwiceSubSectionViewController.swift in Sources */,
 				A50E83EA2117D7C90026A0D6 /* CheckItTwiceViewController.swift in Sources */,
 				18EBE941211E20D40001A9C4 /* QuestionBank.swift in Sources */,
 				A50E83CB2117ADE80026A0D6 /* ContainerViewController.swift in Sources */,
+				1827C87A2127F87D00E91A86 /* AsthamaAllergiesViewController.swift in Sources */,
+				1827C8632127158500E91A86 /* MoldMoistureViewController.swift in Sources */,
 				18EBE949211E21580001A9C4 /* TrainyourBrainViewController.swift in Sources */,
+				1827C84D2124951A00E91A86 /* SponsorsViewController.swift in Sources */,
+				1827C85F2127155C00E91A86 /* LeadViewController.swift in Sources */,
+				1827C86D212715EF00E91A86 /* CarbonMonoxideViewController.swift in Sources */,
 				A50E83B92117AC270026A0D6 /* AppDelegate.swift in Sources */,
 				18EBE94D211E219F0001A9C4 /* ViewAnswersViewController.swift in Sources */,
 				A50E83E42117C1720026A0D6 /* SlideOutViewController.swift in Sources */,
+				1827C8652127159700E91A86 /* RadonViewController.swift in Sources */,
 				A50E8430211A79050026A0D6 /* DetailViewController.swift in Sources */,
 				A50E83F02117E4E60026A0D6 /* Checklist.swift in Sources */,
 				18EBE943211E20F30001A9C4 /* QuizQuestion.swift in Sources */,
+				183508882129B688007A6637 /* PrinciplesofHealthyHomesViewController.swift in Sources */,
 				18EBE94B211E217F0001A9C4 /* ViewAnswersTableViewCell.swift in Sources */,
+				1827C85B2127153600E91A86 /* WellVentilatedViewController.swift in Sources */,
+				1827C86B212715D800E91A86 /* PestsViewController.swift in Sources */,
 				A50E83E82117D0C60026A0D6 /* MainViewController.swift in Sources */,
+				1827C86F2127160100E91A86 /* HomeSafetyViewController.swift in Sources */,
+				1827C8712127161600E91A86 /* HomeTempControlViewController.swift in Sources */,
+				1827C853212714DA00E91A86 /* pestFreeViewController.swift in Sources */,
+				1827C85121268C0A00E91A86 /* keepItContaminentFreeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -371,7 +504,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.rlukedavis.temporary;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rlukedavis.temporary1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -389,7 +522,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.rlukedavis.temporary;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rlukedavis.temporary1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
