@@ -23,8 +23,8 @@ class PrinciplesofHealthyHomesViewController: UIViewController {
         TitleTextView.contentInset = UIEdgeInsetsMake(5,5,5,5)
         TitleTextView.adjustsFontForContentSizeCategory = true
         TitleTextView.textAlignment = .center
-        TitleTextView.textContainer.maximumNumberOfLines = 2
-        
+        TitleTextView.textContainer.maximumNumberOfLines = 3
+   //     TitleTextView.num
       
         for eachbutton in MainButtons {
             eachbutton.titleEdgeInsets = UIEdgeInsets(top: 2, left: 2, bottom: 2, right: 2)

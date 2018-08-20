@@ -1603,7 +1603,7 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="2m6-sr-Gfm">
-                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="F3i-Yk-86m">
+                        <barButtonItem key="rightBarButtonItem" title="Mail" id="F3i-Yk-86m">
                             <connections>
                                 <action selector="MailButton:" destination="qeO-vX-vqB" id="ogi-57-kP0"/>
                             </connections>
@@ -2549,7 +2549,7 @@
                                             <constraint firstAttribute="width" constant="250" id="slv-9x-FvX"/>
                                         </constraints>
                                     </imageView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="The 8 principles of having a healthy home" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="u10-Nw-V6d">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="The 8 principles of having a healthy home" textAlignment="center" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="u10-Nw-V6d">
                                         <rect key="frame" x="60" y="11" width="200" height="55"/>
                                         <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -8778,7 +8778,7 @@ AABUAAAAAAAAAAAAAAAAAAAT6w
         <segue reference="zro-l4-WRl"/>
         <segue reference="5jX-XO-PPT"/>
         <segue reference="uND-3y-Ib5"/>
-        <segue reference="hqg-B1-2N4"/>
+        <segue reference="5Ea-un-8uM"/>
         <segue reference="SUD-xo-s4P"/>
     </inferredMetricsTieBreakers>
 </document>
