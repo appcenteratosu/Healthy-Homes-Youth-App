@@ -13,6 +13,9 @@ class SafeViewController: UIViewController {
 
     @IBOutlet weak var bookmarkSelected: UIButton!
     
+    
+    @IBOutlet var bottomNavButtons: [UIButton]!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -21,9 +24,13 @@ class SafeViewController: UIViewController {
         //        configureCheckmark()
         // change the status of button based on "value"
         if value == true {
-            bookmarkSelected.setBackgroundImage(UIImage(named: "checked box"), for: UIControlState.normal)
+            bookmarkSelected.setBackgroundImage(UIImage(named: "liked heart icon"), for: UIControlState.normal)
         } else {
-            bookmarkSelected.setBackgroundImage(UIImage(named: "check list box (unfilled)"), for: UIControlState.normal)
+            bookmarkSelected.setBackgroundImage(UIImage(named: "fav heart "), for: UIControlState.normal)
+        }
+        
+        for eachBottomButton in bottomNavButtons {
+            
         }
 
     }
@@ -47,12 +54,12 @@ class SafeViewController: UIViewController {
         if existingAnswer! {
             UserDefaults.standard.set(true, forKey: key)
             UserDefaults.standard.synchronize()
-            bookmarkSelected.setBackgroundImage(UIImage(named: "checked box"), for: UIControlState.normal)
+            bookmarkSelected.setBackgroundImage(UIImage(named: "liked heart icon"), for: UIControlState.normal)
         } else {
             UserDefaults.standard.set(false, forKey: key)
             UserDefaults.standard.synchronize()
             
-            bookmarkSelected.setBackgroundImage(UIImage(named: "check list box (unfilled)"), for: UIControlState.normal)
+            bookmarkSelected.setBackgroundImage(UIImage(named: "fav heart "), for: UIControlState.normal)
         }
     }
 

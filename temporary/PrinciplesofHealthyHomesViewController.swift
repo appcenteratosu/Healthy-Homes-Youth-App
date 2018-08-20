@@ -12,11 +12,9 @@ class PrinciplesofHealthyHomesViewController: UIViewController {
     
     @IBOutlet weak var TitleTextView: UITextView!
     
-    @IBOutlet weak var subTitleTextView: UITextView!
     
     @IBOutlet var MainButtons: [UIButton]!
-    
-    
+   
     
 
     override func viewDidLoad() {
@@ -27,12 +25,7 @@ class PrinciplesofHealthyHomesViewController: UIViewController {
         TitleTextView.textAlignment = .center
         TitleTextView.textContainer.maximumNumberOfLines = 2
         
-        subTitleTextView.contentInset = UIEdgeInsetsMake(5,5,5,5)
-        subTitleTextView.adjustsFontForContentSizeCategory = true
-        subTitleTextView.textAlignment = .center
-        
-        subTitleTextView.textContainer.maximumNumberOfLines = 2
-        
+      
         for eachbutton in MainButtons {
             eachbutton.titleEdgeInsets = UIEdgeInsets(top: 2, left: 2, bottom: 2, right: 2)
             

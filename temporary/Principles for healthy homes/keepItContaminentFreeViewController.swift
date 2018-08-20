@@ -16,12 +16,7 @@ class keepItContaminentFreeViewController: UIViewController {
     
     @IBOutlet weak var speechBubbleText: UITextView!
     
-    @IBOutlet weak var backButton: UIButton!
-    
-    @IBOutlet weak var ChapterMenu: UIButton!
-    
-    @IBOutlet weak var NextButton: UIButton!
-    
+    @IBOutlet var BottomNavButtons: [UIButton]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,9 +25,9 @@ class keepItContaminentFreeViewController: UIViewController {
         value = UserDefaults.standard.bool(forKey: key)
         
         if value == true {
-            bookmarkButtonSelected.setBackgroundImage(UIImage(named: "checked box"), for: UIControlState.normal)
+            bookmarkButtonSelected.setBackgroundImage(UIImage(named: "liked heart icon"), for: UIControlState.normal)
         } else {
-            bookmarkButtonSelected.setBackgroundImage(UIImage(named: "check list box (unfilled)"), for: UIControlState.normal)
+            bookmarkButtonSelected.setBackgroundImage(UIImage(named: "fav heart "), for: UIControlState.normal)
         }
 
         speechBubbleText.contentInset = UIEdgeInsetsMake(5,5,5,5)
@@ -40,32 +35,17 @@ class keepItContaminentFreeViewController: UIViewController {
         speechBubbleText.textAlignment = .center
         speechBubbleText.textContainer.maximumNumberOfLines = 2
         
-  //      Padding:
-        backButton.titleEdgeInsets = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
- //       Min font:
-        backButton.titleLabel?.adjustsFontSizeToFitWidth = true
-   //     Corner radius:
-        backButton.layer.cornerRadius = 5
-   //     Alignment:
-        backButton.titleLabel?.textAlignment = .center
+        for eachbutton in BottomNavButtons {
+            //          Padding:
+            eachbutton.titleEdgeInsets = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
+            //           Min font:
+            eachbutton.titleLabel?.adjustsFontSizeToFitWidth = true
+            //         Corner radius:
+            eachbutton.layer.cornerRadius = 5
+            //        Alignment:
+            eachbutton.titleLabel?.textAlignment = .center
+        }
         
-        //      Padding:
-        ChapterMenu.titleEdgeInsets = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
-        //       Min font:
-        ChapterMenu.titleLabel?.adjustsFontSizeToFitWidth = true
-        //     Corner radius:
-        ChapterMenu.layer.cornerRadius = 5
-        //     Alignment:
-        ChapterMenu.titleLabel?.textAlignment = .center
-        
-        //      Padding:
-        NextButton.titleEdgeInsets = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
-        //       Min font:
-        NextButton.titleLabel?.adjustsFontSizeToFitWidth = true
-        //     Corner radius:
-        NextButton.layer.cornerRadius = 5
-        //     Alignment:
-        NextButton.titleLabel?.textAlignment = .center
         
     }
 
@@ -88,13 +68,13 @@ class keepItContaminentFreeViewController: UIViewController {
         if existingAnswer! {
             UserDefaults.standard.set(true, forKey: key)
             UserDefaults.standard.synchronize()
-            bookmarkButtonSelected.setBackgroundImage(UIImage(named: "checked box"), for: UIControlState.normal)
+            bookmarkButtonSelected.setBackgroundImage(UIImage(named: "liked heart icon"), for: UIControlState.normal)
         }
         else {
             UserDefaults.standard.set(false, forKey: key)
             UserDefaults.standard.synchronize()
             
-            bookmarkButtonSelected.setBackgroundImage(UIImage(named: "check list box (unfilled)"), for: UIControlState.normal)
+            bookmarkButtonSelected.setBackgroundImage(UIImage(named: "fav heart "), for: UIControlState.normal)
         }
        
     }

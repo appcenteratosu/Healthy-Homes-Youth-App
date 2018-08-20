@@ -13,7 +13,9 @@ protocol MonsterSelectionDelegate: class {
 }
 
 class CheckItTwiceViewController: UIViewController {
-
+    
+    @IBOutlet var CheckButtons: [UIButton]!
+    
     let questions = [
         Question(name: "Living, Dining, and Family Rooms", answers: ["If your home was built before 1978, check painted doors, windows, trim, and walls for lead", "Vacuum carpets regularly to reduce asthma triggers", "Move blind cords out of reach of children to prevent strangulation", "Check lighting and extension cords for fraying or bare wires", "Avoid having lighting and extension cords in floor pathways", "Purchase children’s toys that do not have small parts for choking and do not contain lead", "Secure heavy items (televisions, bookcases) to walls to prevent tip overs"]),
         Question(name: "Kitchen", answers: ["If your home was built before 1978, check painted doors, windows, trim, and walls for lead", "Use a range hood exhausted to the outside (or open window) to ventilate while cooking", "Clean up liquids and foods right after spills", "Keep matches, glassware, knives, and cleaning supplies out of reach of children", "Avoid leaving food and water out overnight", "Mop floors weekly", "Place Poison Control Hotline number (800) 222 – 1222 on the refrigerator and in every room", "Do not allow children to be in kitchen unsupervised when the range or oven is on"]),
@@ -96,7 +98,16 @@ class CheckItTwiceViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        for eachbutton in CheckButtons {
+            //          Padding:
+            eachbutton.titleEdgeInsets = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
+            //           Min font:
+            eachbutton.titleLabel?.adjustsFontSizeToFitWidth = true
+            //         Corner radius:
+            eachbutton.layer.cornerRadius = 5
+            //        Alignment:
+            eachbutton.titleLabel?.textAlignment = .center
+        }
     }
 
     override func didReceiveMemoryWarning() {

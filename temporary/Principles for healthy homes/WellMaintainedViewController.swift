@@ -13,6 +13,8 @@ class WellMaintainedViewController: UIViewController {
     @IBOutlet weak var bookmarkButtonTapped: UIButton!
     
     let key = "bookmark|" + "8Principles|" + "Maintained"
+    
+    @IBOutlet var BottomNavButtons: [UIButton]!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,9 +24,20 @@ class WellMaintainedViewController: UIViewController {
         //        configureCheckmark()
         // change the status of button based on "value"
         if value == true {
-            bookmarkButtonTapped.setBackgroundImage(UIImage(named: "checked box"), for: UIControlState.normal)
+            bookmarkButtonTapped.setBackgroundImage(UIImage(named: "liked heart icon"), for: UIControlState.normal)
         } else {
-            bookmarkButtonTapped.setBackgroundImage(UIImage(named: "check list box (unfilled)"), for: UIControlState.normal)
+            bookmarkButtonTapped.setBackgroundImage(UIImage(named: "fav heart "), for: UIControlState.normal)
+        }
+        
+        for eachbutton in BottomNavButtons {
+            //          Padding:
+            eachbutton.titleEdgeInsets = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
+            //           Min font:
+            eachbutton.titleLabel?.adjustsFontSizeToFitWidth = true
+            //         Corner radius:
+            eachbutton.layer.cornerRadius = 5
+            //        Alignment:
+            eachbutton.titleLabel?.textAlignment = .center
         }
         
     }
@@ -48,12 +61,12 @@ class WellMaintainedViewController: UIViewController {
         if existingAnswer! {
             UserDefaults.standard.set(true, forKey: key)
             UserDefaults.standard.synchronize()
-            bookmarkButtonTapped.setBackgroundImage(UIImage(named: "checked box"), for: UIControlState.normal)
+            bookmarkButtonTapped.setBackgroundImage(UIImage(named: "liked heart icon"), for: UIControlState.normal)
         } else {
             UserDefaults.standard.set(false, forKey: key)
             UserDefaults.standard.synchronize()
             
-            bookmarkButtonTapped.setBackgroundImage(UIImage(named: "check list box (unfilled)"), for: UIControlState.normal)
+            bookmarkButtonTapped.setBackgroundImage(UIImage(named: "fav heart "), for: UIControlState.normal)
         }
     }
     

@@ -1,10 +1,3 @@
-//
-//  quizScreenViewController.swift
-//  Healthy Homes Youth App
-//
-//  Created by osuappcenter on 7/26/18.
-//  Copyright © 2018 Tejasree V App Developement. All rights reserved.
-//
 
 import UIKit
 
@@ -29,7 +22,16 @@ class quizScreenViewController: UIViewController {
     
     @IBOutlet weak var nextButtonSelected: UIButton!
     
+    @IBOutlet weak var backgroundView: UIView!
+    
+    @IBOutlet weak var backButtonSelected: UIButton!
+    
+    @IBOutlet weak var endQuiz: UIButton!
+    
     @IBAction func backButton(_ sender: UIButton) {
+        if questionNumber == 0 {
+            backButtonSelected.isHidden = true
+        }
         if questionNumber > 0 {
             if sender.tag == 5 {
                 questionNumber -= 1
@@ -76,7 +78,27 @@ class quizScreenViewController: UIViewController {
         updateQuestion()
         updateUI()
         
-        // Do any additional setup after loading the view.
+        backgroundView.layer.cornerRadius = 5;
+        backgroundView.layer.masksToBounds = true;
+        
+        backButtonSelected.titleLabel?.textAlignment = .center
+        backButtonSelected.titleEdgeInsets = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
+        backButtonSelected.titleLabel?.adjustsFontSizeToFitWidth = true
+        backButtonSelected.layer.cornerRadius = 5
+        
+        nextButtonSelected.titleLabel?.textAlignment = .center
+        nextButtonSelected.titleEdgeInsets = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
+        nextButtonSelected.titleLabel?.adjustsFontSizeToFitWidth = true
+        nextButtonSelected.layer.cornerRadius = 5
+        
+        endQuiz.titleLabel?.adjustsFontSizeToFitWidth = true
+        backButtonSelected.layer.cornerRadius = 5
+        
+        endQuiz.titleLabel?.textAlignment = .center
+        nextButtonSelected.titleEdgeInsets = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
+        endQuiz.titleLabel?.adjustsFontSizeToFitWidth = true
+        endQuiz.layer.cornerRadius = 5
+        
     }
     
     override func didReceiveMemoryWarning() {

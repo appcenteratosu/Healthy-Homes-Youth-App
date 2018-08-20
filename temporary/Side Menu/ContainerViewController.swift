@@ -10,9 +10,7 @@ class ContainerViewController: UIViewController {
   }
   
   var centerNavigationController: UINavigationController!
-  var centerViewController: CenterViewController!
-    var mainViewController: MainViewController!
-  
+  var centerViewController: MainViewController!
   
   var currentState: SlideOutState = .bothCollapsed {
     didSet {
@@ -122,8 +120,8 @@ private extension UIStoryboard {
     return mainStoryboard().instantiateViewController(withIdentifier: "SlideOutViewController") as? SlideOutViewController
   }
   
-  static func centerViewController() -> CenterViewController? {
-    return mainStoryboard().instantiateViewController(withIdentifier: "CenterViewController") as? CenterViewController
+  static func centerViewController() -> MainViewController? {
+    return mainStoryboard().instantiateViewController(withIdentifier: "MainViewController") as? MainViewController
   }
     
     

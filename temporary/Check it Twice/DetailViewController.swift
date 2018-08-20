@@ -13,10 +13,14 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     @IBOutlet weak var backButton: UIButton!
     
+    @IBOutlet weak var MainMenu: UIButton!
     
-    @IBAction func MailButton(_ sender: UIButton) {
+    @IBOutlet weak var MailButton: UIBarButtonItem!
+    
+    @IBAction func MailButton(_ sender: Any) {
         convertToPDF()
     }
+    
     var question: Question? {
         didSet {
             refreshUI()
@@ -39,26 +43,40 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
         self.answersTableView.delegate = self
         self.answersTableView.dataSource = self
         self.answersTableView.separatorColor = UIColor.clear
-//        let defaults = UserDefaults.standard
-//        for questionIndex in 0...(self.allQuestions?.count)! {
-//            var tempQuestion = self.allQuestions![questionIndex]
-//            for optionIndex1 in 0...tempQuestion.answers.count {
-//               // let key = "checklist|" + (self.question?.name)! + "|" + (self.question?.answers[optionIndex])! + "|" + String(optionIndex)
-//                //let defaults = UserDefaults.standard
-//                //let existingAnswer = defaults.object(forKey:key) as? Bool
-//            }
-//        }
+        
+            //          Padding:
+        MainMenu.titleEdgeInsets = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
+            //           Min font:
+        MainMenu.titleLabel?.adjustsFontSizeToFitWidth = true
+            //         Corner radius:
+        MainMenu.layer.cornerRadius = 5
+            //        Alignment:
+        MainMenu.titleLabel?.textAlignment = .center
+        
+        //          Padding:
+        nextButton.titleEdgeInsets = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
+        //           Min font:
+        nextButton.titleLabel?.adjustsFontSizeToFitWidth = true
+        //         Corner radius:
+        nextButton.layer.cornerRadius = 5
+        //        Alignment:
+        nextButton.titleLabel?.textAlignment = .center
+        
+        //          Padding:
+        backButton.titleEdgeInsets = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
+        //           Min font:
+        backButton.titleLabel?.adjustsFontSizeToFitWidth = true
+        //         Corner radius:
+        backButton.layer.cornerRadius = 5
+        //        Alignment:
+        backButton.titleLabel?.textAlignment = .center
     }
     
     func refreshUI() {
         loadViewIfNeeded()
         nameLabel.text = question?.name
         answers = (question?.answers)!
-//        if self.currentIndex! !=nil && self.currentIndex! == 0 {
-//            backButton.isHidden = true
-//        }
         self.answersTableView.reloadData()
-        
     }
     
     var questionIndex = 0

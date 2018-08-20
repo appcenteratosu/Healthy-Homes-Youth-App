@@ -14,6 +14,8 @@ class QuizResultsViewController: UIViewController {
     
     @IBOutlet weak var percentageLabel: UILabel!
     
+    @IBOutlet var bottomNavButtons: [UIButton]!
+    
     var scoreText = Int()
     var total = Int()
     var percentage = Double()
@@ -25,10 +27,20 @@ class QuizResultsViewController: UIViewController {
         scoreLabel.text = "You got \(scoreText) out of \(25) right!"
         percentageLabel.text = "That means you achieved \(percentage)%"
         checkStatusArray = answerStatusArray
-        // Do any additional setup after loading the view.
+
+        backgroundView.layer.cornerRadius = 5;
+        backgroundView.layer.masksToBounds = true;
+        
+        for eachbutton in bottomNavButtons {
+            eachbutton.titleLabel?.textAlignment = .center
+            eachbutton.titleEdgeInsets = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
+            eachbutton.titleLabel?.adjustsFontSizeToFitWidth = true
+            eachbutton.layer.cornerRadius = 5
+        
+        }
     }
     
-    
+    @IBOutlet weak var backgroundView: UIView!
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ViewAnswersSegue" {

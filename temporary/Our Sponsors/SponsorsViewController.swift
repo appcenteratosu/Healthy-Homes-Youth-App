@@ -9,11 +9,72 @@
 import UIKit
 
 class SponsorsViewController: UIViewController {
-
+    
+    @IBOutlet var rightIconButtons: [UIButton]!
+    
+    @IBOutlet var leftIconButtons: [UIButton]!
+    
+    @IBOutlet weak var sponsor1: UIButton!
+    
+    @IBOutlet weak var sponsor2: UIButton!
+    
+    @IBOutlet weak var sponsor3: UIButton!
+    
+    @IBOutlet weak var sponsor4: UIButton!
+    
+    @IBOutlet weak var sponsor5: UIButton!
+    
+    
+    @IBOutlet weak var sponsor6: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        for eachbutton in rightIconButtons {
+            //          Padding:
+            eachbutton.titleEdgeInsets = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 25)
+            //           Min font:
+            eachbutton.titleLabel?.adjustsFontSizeToFitWidth = true
+     
+        }
+        
+        for eachbutton in leftIconButtons {
+            //          Padding:
+            eachbutton.titleEdgeInsets = UIEdgeInsets(top: 5, left: 25, bottom: 5, right: 5)
+            //           Min font:
+            eachbutton.titleLabel?.adjustsFontSizeToFitWidth = true
+            
+        }
+
+        sponsor1.setTitle("US DEPARTMENT OF HOUSING", for: UIControlState.normal)
+        sponsor1.titleEdgeInsets = UIEdgeInsets(top: 5, left: 25, bottom: 5, right: 5)
+        //           Min font:
+        sponsor1.titleLabel?.adjustsFontSizeToFitWidth = true
+        
+        sponsor2.setTitle("EQUAL HOUSING OPPORTUNITY", for: UIControlState.normal)
+        sponsor2.titleEdgeInsets = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 25)
+        //           Min font:
+        sponsor2.titleLabel?.adjustsFontSizeToFitWidth = true
+        
+        sponsor3.setTitle("HEALTHY HOMES PARTNERSHIP", for: UIControlState.normal)
+        sponsor3.titleEdgeInsets = UIEdgeInsets(top: 5, left: 25, bottom: 5, right: 5)
+        //           Min font:
+        sponsor3.titleLabel?.adjustsFontSizeToFitWidth = true
+        
+        sponsor4.setTitle("OFFICE OF LEAD HAZARD CONTROL", for: UIControlState.normal)
+        sponsor5.titleEdgeInsets = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 25)
+        //           Min font:
+        sponsor5.titleLabel?.adjustsFontSizeToFitWidth = true
+        
+        sponsor5.setTitle("US DEPARTMENT OF AGRICULTURE", for: UIControlState.normal)
+        sponsor5.titleEdgeInsets = UIEdgeInsets(top: 5, left: 25, bottom: 5, right: 5)
+        //           Min font:
+        sponsor5.titleLabel?.adjustsFontSizeToFitWidth = true
+        
+        sponsor6.setTitle("OKLAHOMA STATE APP CENTER", for: UIControlState.normal)
+        sponsor5.titleEdgeInsets = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 25)
+        //           Min font:
+        sponsor5.titleLabel?.adjustsFontSizeToFitWidth = true
     }
 
     override func didReceiveMemoryWarning() {
@@ -22,11 +83,12 @@ class SponsorsViewController: UIViewController {
     }
     
     @IBAction func firstSponsorButtonTapped(_ sender: Any) {
+        
         UIApplication.shared.openURL(URL(string: "https://www.hud.gov/")!)
     }
     
     @IBAction func secondSpaonsorButtonTapped(_ sender: Any) {
-        UIApplication.shared.openURL(URL(string: "")!)
+        UIApplication.shared.openURL(URL(string: "https://www.hud.gov/program_offices/fair_housing_equal_opp")!)
     }
     
     @IBAction func thirdSponsorButtonTapped(_ sender: Any) {

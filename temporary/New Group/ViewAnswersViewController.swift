@@ -23,6 +23,9 @@ class ViewAnswersViewController: UIViewController, UITableViewDelegate, UITableV
         self.ViewAnswersTableView.separatorColor = #colorLiteral(red: 0.1647058824, green: 0.5294117647, blue: 1, alpha: 1)
         self.ViewAnswersTableView.backgroundColor = UIColor.clear
         self.ViewAnswersTableView.layer.borderColor = #colorLiteral(red: 0.1647058824, green: 0.5294117647, blue: 1, alpha: 1)
+        let tempImageView = UIImageView(image: UIImage(named: "Big grid"))
+        tempImageView.frame = self.ViewAnswersTableView.frame
+        self.ViewAnswersTableView.backgroundView = tempImageView
     }
     
     override func didReceiveMemoryWarning() {
@@ -51,12 +54,17 @@ class ViewAnswersViewController: UIViewController, UITableViewDelegate, UITableV
         return 25
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 60
+    }
+    
     func tableView(_ ViewAnswersTableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = ViewAnswersTableView.dequeueReusableCell(withIdentifier: "ViewAnswersCell", for: indexPath) as! ViewAnswersTableViewCell
         
         cell.AnswersLabel.text = CorrectAnswers[indexPath.row]
         cell.AnswersLabel.textColor = #colorLiteral(red: 1, green: 0.05098039216, blue: 0.5019607843, alpha: 1)
         cell.backgroundColor = .clear
+        
         
         var isChecked = viewAnswersStatusArray[indexPath.row]
         

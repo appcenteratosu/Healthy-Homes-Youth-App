@@ -17,8 +17,10 @@ class PestsViewController: UIViewController {
     
     @IBOutlet weak var ChapterButton: UIButton!
     
-    @IBOutlet weak var NextButton: UIButton!    
-
+    @IBOutlet weak var NextButton: UIButton!
+    
+    @IBOutlet var BottomNavButtons: [UIButton]!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -26,37 +28,21 @@ class PestsViewController: UIViewController {
         value = UserDefaults.standard.bool(forKey: key)
         
         if value == true {
-            bookmarkButtonSelected.setBackgroundImage(UIImage(named: "checked box"), for: UIControlState.normal)
+            bookmarkButtonSelected.setBackgroundImage(UIImage(named: "liked heart icon"), for: UIControlState.normal)
         } else {
-            bookmarkButtonSelected.setBackgroundImage(UIImage(named: "check list box (unfilled)"), for: UIControlState.normal)
+            bookmarkButtonSelected.setBackgroundImage(UIImage(named: "fav heart "), for: UIControlState.normal)
         }
         
-        //      Padding:
-        backButton.titleEdgeInsets = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
-        //       Min font:
-        backButton.titleLabel?.adjustsFontSizeToFitWidth = true
-        //     Corner radius:
-        backButton.layer.cornerRadius = 5
-        //     Alignment:
-        backButton.titleLabel?.textAlignment = .center
-        
-        //      Padding:
-        ChapterButton.titleEdgeInsets = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
-        //       Min font:
-        ChapterButton.titleLabel?.adjustsFontSizeToFitWidth = true
-        //     Corner radius:
-        ChapterButton.layer.cornerRadius = 5
-        //     Alignment:
-        ChapterButton.titleLabel?.textAlignment = .center
-        
-        //      Padding:
-        NextButton.titleEdgeInsets = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
-        //       Min font:
-        NextButton.titleLabel?.adjustsFontSizeToFitWidth = true
-        //     Corner radius:
-        NextButton.layer.cornerRadius = 5
-        //     Alignment:
-        NextButton.titleLabel?.textAlignment = .center
+        for eachbutton in BottomNavButtons {
+            //          Padding:
+            eachbutton.titleEdgeInsets = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
+            //           Min font:
+            eachbutton.titleLabel?.adjustsFontSizeToFitWidth = true
+            //         Corner radius:
+            eachbutton.layer.cornerRadius = 5
+            //        Alignment:
+            eachbutton.titleLabel?.textAlignment = .center
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -79,13 +65,13 @@ class PestsViewController: UIViewController {
         if existingAnswer! {
             UserDefaults.standard.set(true, forKey: key)
             UserDefaults.standard.synchronize()
-            bookmarkButtonSelected.setBackgroundImage(UIImage(named: "checked box"), for: UIControlState.normal)
+            bookmarkButtonSelected.setBackgroundImage(UIImage(named: "liked heart icon"), for: UIControlState.normal)
         }
         else {
             UserDefaults.standard.set(false, forKey: key)
             UserDefaults.standard.synchronize()
             
-            bookmarkButtonSelected.setBackgroundImage(UIImage(named: "check list box (unfilled)"), for: UIControlState.normal)
+            bookmarkButtonSelected.setBackgroundImage(UIImage(named: "fav heart "), for: UIControlState.normal)
         }
     }
     

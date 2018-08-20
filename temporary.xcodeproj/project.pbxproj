@@ -34,6 +34,7 @@
 		18EBE949211E21580001A9C4 /* TrainyourBrainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EBE948211E21580001A9C4 /* TrainyourBrainViewController.swift */; };
 		18EBE94B211E217F0001A9C4 /* ViewAnswersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EBE94A211E217F0001A9C4 /* ViewAnswersTableViewCell.swift */; };
 		18EBE94D211E219F0001A9C4 /* ViewAnswersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EBE94C211E219F0001A9C4 /* ViewAnswersViewController.swift */; };
+		18F7CBE9212B0A5C00826194 /* BigStuffViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F7CBE8212B0A5C00826194 /* BigStuffViewController.swift */; };
 		A50E83B92117AC270026A0D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50E83B82117AC270026A0D6 /* AppDelegate.swift */; };
 		A50E83BB2117AC270026A0D6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50E83BA2117AC270026A0D6 /* ViewController.swift */; };
 		A50E83BE2117AC270026A0D6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A50E83BC2117AC270026A0D6 /* Main.storyboard */; };
@@ -80,6 +81,7 @@
 		18EBE948211E21580001A9C4 /* TrainyourBrainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainyourBrainViewController.swift; sourceTree = "<group>"; };
 		18EBE94A211E217F0001A9C4 /* ViewAnswersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewAnswersTableViewCell.swift; sourceTree = "<group>"; };
 		18EBE94C211E219F0001A9C4 /* ViewAnswersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewAnswersViewController.swift; sourceTree = "<group>"; };
+		18F7CBE8212B0A5C00826194 /* BigStuffViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigStuffViewController.swift; sourceTree = "<group>"; };
 		A50E83B52117AC270026A0D6 /* temporary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = temporary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A50E83B82117AC270026A0D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A50E83BA2117AC270026A0D6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -189,10 +191,10 @@
 		1827C8782127185600E91A86 /* Side Menu */ = {
 			isa = PBXGroup;
 			children = (
+				A50E83E72117D0C60026A0D6 /* MainViewController.swift */,
 				A50E83CA2117ADE80026A0D6 /* ContainerViewController.swift */,
 				A50E83E32117C1720026A0D6 /* SlideOutViewController.swift */,
 				A50E83D02117AE120026A0D6 /* CenterViewControllerDelegate.swift */,
-				A50E83CC2117AE060026A0D6 /* CenterViewController.swift */,
 			);
 			path = "Side Menu";
 			sourceTree = "<group>";
@@ -220,8 +222,9 @@
 				A50E83B82117AC270026A0D6 /* AppDelegate.swift */,
 				A50E83BA2117AC270026A0D6 /* ViewController.swift */,
 				A50E83BC2117AC270026A0D6 /* Main.storyboard */,
+				18F7CBE8212B0A5C00826194 /* BigStuffViewController.swift */,
 				183508872129B688007A6637 /* PrinciplesofHealthyHomesViewController.swift */,
-				A50E83E72117D0C60026A0D6 /* MainViewController.swift */,
+				A50E83CC2117AE060026A0D6 /* CenterViewController.swift */,
 				1827C8782127185600E91A86 /* Side Menu */,
 				1827C874212716E800E91A86 /* Principles for healthy homes */,
 				1827C8722127162200E91A86 /* The Big Stuff */,
@@ -341,6 +344,7 @@
 				A50E83B92117AC270026A0D6 /* AppDelegate.swift in Sources */,
 				18EBE94D211E219F0001A9C4 /* ViewAnswersViewController.swift in Sources */,
 				A50E83E42117C1720026A0D6 /* SlideOutViewController.swift in Sources */,
+				18F7CBE9212B0A5C00826194 /* BigStuffViewController.swift in Sources */,
 				1827C8652127159700E91A86 /* RadonViewController.swift in Sources */,
 				A50E8430211A79050026A0D6 /* DetailViewController.swift in Sources */,
 				A50E83F02117E4E60026A0D6 /* Checklist.swift in Sources */,

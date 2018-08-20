@@ -45,33 +45,33 @@ class HouseHoldChemicalsViewController: UIViewController {
         value5 = UserDefaults.standard.bool(forKey: key5)
         
         if value1 == true {
-            bookmarkSelected1.setBackgroundImage(UIImage(named: "checked box"), for: UIControlState.normal)
+            bookmarkSelected1.setBackgroundImage(UIImage(named: "liked heart icon"), for: UIControlState.normal)
         } else {
-            bookmarkSelected1.setBackgroundImage(UIImage(named: "check list box (unfilled)"), for: UIControlState.normal)
+            bookmarkSelected1.setBackgroundImage(UIImage(named: "fav heart "), for: UIControlState.normal)
         }
         
         if value2 == true {
-            bookmarkSelected2.setBackgroundImage(UIImage(named: "checked box"), for: UIControlState.normal)
+            bookmarkSelected2.setBackgroundImage(UIImage(named: "liked heart icon"), for: UIControlState.normal)
         } else {
-            bookmarkSelected2.setBackgroundImage(UIImage(named: "check list box (unfilled)"), for: UIControlState.normal)
+            bookmarkSelected2.setBackgroundImage(UIImage(named: "fav heart "), for: UIControlState.normal)
         }
         
         if value3 == true {
-            bookmarkSelected3.setBackgroundImage(UIImage(named: "checked box"), for: UIControlState.normal)
+            bookmarkSelected3.setBackgroundImage(UIImage(named: "liked heart icon"), for: UIControlState.normal)
         } else {
-            bookmarkSelected3.setBackgroundImage(UIImage(named: "check list box (unfilled)"), for: UIControlState.normal)
+            bookmarkSelected3.setBackgroundImage(UIImage(named: "fav heart "), for: UIControlState.normal)
         }
         
         if value4 == true {
-            bookmarkSelected4.setBackgroundImage(UIImage(named: "checked box"), for: UIControlState.normal)
+            bookmarkSelected4.setBackgroundImage(UIImage(named: "liked heart icon"), for: UIControlState.normal)
         } else {
-            bookmarkSelected4.setBackgroundImage(UIImage(named: "check list box (unfilled)"), for: UIControlState.normal)
+            bookmarkSelected4.setBackgroundImage(UIImage(named: "fav heart "), for: UIControlState.normal)
         }
         
         if value5 == true {
-            bookmarkSelected5.setBackgroundImage(UIImage(named: "checked box"), for: UIControlState.normal)
+            bookmarkSelected5.setBackgroundImage(UIImage(named: "liked heart icon"), for: UIControlState.normal)
         } else {
-            bookmarkSelected5.setBackgroundImage(UIImage(named: "check list box (unfilled)"), for: UIControlState.normal)
+            bookmarkSelected5.setBackgroundImage(UIImage(named: "fav heart "), for: UIControlState.normal)
         }
     }
 
@@ -93,12 +93,12 @@ class HouseHoldChemicalsViewController: UIViewController {
         if existingAnswer! {
             UserDefaults.standard.set(true, forKey: key1)
             UserDefaults.standard.synchronize()
-            bookmarkSelected1.setBackgroundImage(UIImage(named: "checked box"), for: UIControlState.normal)
+            bookmarkSelected1.setBackgroundImage(UIImage(named: "liked heart icon"), for: UIControlState.normal)
         } else {
             UserDefaults.standard.set(false, forKey: key1)
             UserDefaults.standard.synchronize()
             
-            bookmarkSelected1.setBackgroundImage(UIImage(named: "check list box (unfilled)"), for: UIControlState.normal)
+            bookmarkSelected1.setBackgroundImage(UIImage(named: "fav heart "), for: UIControlState.normal)
         }
     }
     
@@ -115,12 +115,12 @@ class HouseHoldChemicalsViewController: UIViewController {
         if existingAnswer! {
             UserDefaults.standard.set(true, forKey: key2)
             UserDefaults.standard.synchronize()
-            bookmarkSelected2.setBackgroundImage(UIImage(named: "checked box"), for: UIControlState.normal)
+            bookmarkSelected2.setBackgroundImage(UIImage(named: "liked heart icon"), for: UIControlState.normal)
         } else {
             UserDefaults.standard.set(false, forKey: key2)
             UserDefaults.standard.synchronize()
             
-            bookmarkSelected2.setBackgroundImage(UIImage(named: "check list box (unfilled)"), for: UIControlState.normal)
+            bookmarkSelected2.setBackgroundImage(UIImage(named: "fav heart "), for: UIControlState.normal)
         }
     }
     
@@ -137,12 +137,12 @@ class HouseHoldChemicalsViewController: UIViewController {
         if existingAnswer! {
             UserDefaults.standard.set(true, forKey: key3)
             UserDefaults.standard.synchronize()
-            bookmarkSelected3.setBackgroundImage(UIImage(named: "checked box"), for: UIControlState.normal)
+            bookmarkSelected3.setBackgroundImage(UIImage(named: "liked heart icon"), for: UIControlState.normal)
         } else {
             UserDefaults.standard.set(false, forKey: key3)
             UserDefaults.standard.synchronize()
             
-            bookmarkSelected3.setBackgroundImage(UIImage(named: "check list box (unfilled)"), for: UIControlState.normal)
+            bookmarkSelected3.setBackgroundImage(UIImage(named: "fav heart "), for: UIControlState.normal)
         }
     }
     
@@ -159,12 +159,12 @@ class HouseHoldChemicalsViewController: UIViewController {
         if existingAnswer! {
             UserDefaults.standard.set(true, forKey: key4)
             UserDefaults.standard.synchronize()
-            bookmarkSelected4.setBackgroundImage(UIImage(named: "checked box"), for: UIControlState.normal)
+            bookmarkSelected4.setBackgroundImage(UIImage(named: "liked heart icon"), for: UIControlState.normal)
         } else {
             UserDefaults.standard.set(false, forKey: key4)
             UserDefaults.standard.synchronize()
             
-            bookmarkSelected4.setBackgroundImage(UIImage(named: "check list box (unfilled)"), for: UIControlState.normal)
+            bookmarkSelected4.setBackgroundImage(UIImage(named: "fav heart "), for: UIControlState.normal)
         }
     }
     
@@ -181,12 +181,12 @@ class HouseHoldChemicalsViewController: UIViewController {
         if existingAnswer! {
             UserDefaults.standard.set(true, forKey: key5)
             UserDefaults.standard.synchronize()
-            bookmarkSelected5.setBackgroundImage(UIImage(named: "checked box"), for: UIControlState.normal)
+            bookmarkSelected5.setBackgroundImage(UIImage(named: "liked heart icon"), for: UIControlState.normal)
         } else {
             UserDefaults.standard.set(false, forKey: key5)
             UserDefaults.standard.synchronize()
             
-            bookmarkSelected5.setBackgroundImage(UIImage(named: "check list box (unfilled)"), for: UIControlState.normal)
+            bookmarkSelected5.setBackgroundImage(UIImage(named: "fav heart "), for: UIControlState.normal)
         }
     }
     

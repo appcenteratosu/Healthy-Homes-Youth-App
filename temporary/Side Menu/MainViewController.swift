@@ -17,7 +17,8 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        MenuButton.setBackgroundImage(UIImage(named: "hamburger menu"), for: UIControlState.normal, barMetrics: .default)
+
+        MenuButton.image = UIImage(named: "hamburger menu")
         
         for eachbutton in MainButtons {
             eachbutton.titleLabel?.textAlignment = .center
@@ -35,6 +36,7 @@ class MainViewController: UIViewController {
     @IBAction func MenuButton(_ sender: UIBarButtonItem) {
         delegate?.toggleRightPanel?()
     }
+    
     
     
 }

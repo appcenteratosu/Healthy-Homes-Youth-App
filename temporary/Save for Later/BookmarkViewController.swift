@@ -9,6 +9,8 @@ class BookmarkViewController: UIViewController, UITableViewDelegate, UITableView
         let cell = bookmarkTableView.dequeueReusableCell(withIdentifier: "bookmarks", for: indexPath)
         
         var bookmarkCell = cell.viewWithTag(1) as! UILabel
+//        var bookmarkTextView = cell.viewWithTag(3) as! UITextView
+        
         bookmarkCell.text = chapteAndSubChapterNames[indexPath.row]
         
         return cell;
@@ -47,8 +49,10 @@ class BookmarkViewController: UIViewController, UITableViewDelegate, UITableView
     func tableView(_ bookmarkTableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let cell = bookmarkTableView.cellForRow(at: indexPath) {
             let bookmarkCell = cell.viewWithTag(1) as! UILabel
+//            var bookmarkTextView = cell.viewWithTag(3) as! UITextView
+
             
-            if bookmarkCell.text == "8Principles|" + "Dry" {
+            if bookmarkCell.text! == "8Principles|" + "Dry" {
                 let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
                 
                 let nextViewController = storyBoard.instantiateViewController(withIdentifier: "keepItDryViewController") as! keepItDryViewController
