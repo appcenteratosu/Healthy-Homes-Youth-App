@@ -9,12 +9,12 @@
 import UIKit
 
 class pestFreeViewController: UIViewController {
-    let key1 = "bookmark|" + "BigStuff|" + "pestFree1|" + "Pests are unwanted living things in or around your..."
-    let key2 = "bookmark|" + "BigStuff|" + "pestFree2|" + "Inside your home, mice, rats and cockroaches may trigger..."
-    let key3 = "bookmark|" + "BigStuff|" + "pestFree3|" + "Pests travel into your home from outdoors or other..."
-    let key4 = "bookmark|" + "BigStuff|" + "pestFree4|" + "Help clean up after cooking and..."
-    let key5 = "bookmark|" + "BigStuff|" + "pestFree5|" + "Help keep your house tidy: Do not let..."
-    let key6 = "bookmark|" + "BigStuff|" + "pestFree6|" + "Help clean up your yard. Keep mulch, garden..."
+    let key1 = "bookmark|" + "BigStuff|" + "pestFree|" + "Pests are unwanted living things in or around your..."
+    let key2 = "bookmark|" + "BigStuff|" + "pestFree|" + "Inside your home, mice, rats and cockroaches may trigger..."
+    let key3 = "bookmark|" + "BigStuff|" + "pestFree|" + "Pests travel into your home from outdoors or other..."
+    let key4 = "bookmark|" + "BigStuff|" + "pestFree|" + "Help clean up after cooking and..."
+    let key5 = "bookmark|" + "BigStuff|" + "pestFree|" + "Help keep your house tidy: Do not let..."
+    let key6 = "bookmark|" + "BigStuff|" + "pestFree|" + "Help clean up your yard. Keep mulch, garden..."
     
     @IBOutlet weak var bookmarkSelected1: UIButton!
     
@@ -97,7 +97,7 @@ class pestFreeViewController: UIViewController {
     @IBAction func bookmarkButtonSelected1(_ sender: UIButton) {
         let defaults = UserDefaults.standard
         
-        let key1 = "bookmark|" + "BigStuff|" + "pestFree1|" + "Pests are unwanted living things in or around your..."
+        let key1 = "bookmark|" + "BigStuff|" + "pestFree|" + "Pests are unwanted living things in or around your..."
         var existingAnswer = defaults.object(forKey:key1) as? Bool
         if (existingAnswer == nil){
             existingAnswer = false
@@ -119,7 +119,7 @@ class pestFreeViewController: UIViewController {
     @IBAction func bookmarkButtonSelected2(_ sender: UIButton) {
         let defaults = UserDefaults.standard
         
-        let key2 = "bookmark|" + "BigStuff|" + "pestFree2|" + "Inside your home, mice, rats and cockroaches may trigger..."
+        let key2 = "bookmark|" + "BigStuff|" + "pestFree|" + "Inside your home, mice, rats and cockroaches may trigger..."
         var existingAnswer = defaults.object(forKey:key2) as? Bool
         if (existingAnswer == nil){
             existingAnswer = false
@@ -141,7 +141,7 @@ class pestFreeViewController: UIViewController {
     @IBAction func bookmarkButtonSelected3(_ sender: UIButton) {
         let defaults = UserDefaults.standard
         
-        let key3 = "bookmark|" + "BigStuff|" + "pestFree3|" + "Pests travel into your home from outdoors or other..."
+        let key3 = "bookmark|" + "BigStuff|" + "pestFree|" + "Pests travel into your home from outdoors or other..."
         var existingAnswer = defaults.object(forKey:key3) as? Bool
         if (existingAnswer == nil){
             existingAnswer = false
@@ -163,7 +163,7 @@ class pestFreeViewController: UIViewController {
     @IBAction func bookmarkButtonSelected4(_ sender: UIButton) {
         let defaults = UserDefaults.standard
         
-        let key4 = "bookmark|" + "BigStuff|" + "pestFree4|" + "Help clean up after cooking and..."
+        let key4 = "bookmark|" + "BigStuff|" + "pestFree|" + "Help clean up after cooking and..."
         var existingAnswer = defaults.object(forKey:key4) as? Bool
         if (existingAnswer == nil){
             existingAnswer = false
@@ -185,7 +185,7 @@ class pestFreeViewController: UIViewController {
     @IBAction func bookmarkButtonSelected5(_ sender: UIButton) {
         let defaults = UserDefaults.standard
         
-        let key5 = "bookmark|" + "BigStuff|" + "pestFree5|" + "Help keep your house tidy: Do not let..."
+        let key5 = "bookmark|" + "BigStuff|" + "pestFree|" + "Help keep your house tidy: Do not let..."
         var existingAnswer = defaults.object(forKey:key5) as? Bool
         if (existingAnswer == nil){
             existingAnswer = false
@@ -207,7 +207,7 @@ class pestFreeViewController: UIViewController {
     @IBAction func bookmarkButtonSelected6(_ sender: UIButton) {
         let defaults = UserDefaults.standard
         
-        let key6 = "bookmark|" + "BigStuff|" + "pestFree6|" + "Help clean up your yard. Keep mulch, garden..."
+        let key6 = "bookmark|" + "BigStuff|" + "pestFree|" + "Help clean up your yard. Keep mulch, garden..."
         var existingAnswer = defaults.object(forKey:key6) as? Bool
         if (existingAnswer == nil){
             existingAnswer = false

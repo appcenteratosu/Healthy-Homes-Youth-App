@@ -4,7 +4,6 @@ class keepItDryViewController: UIViewController {
     
     let key = "bookmark|" + "8Principles|" + "Dry|" + "Damp homes provide an environment for dust mites, roaches, rodents and molds..."
     
-    @IBOutlet weak var DryTextView: UITextView!
     
     @IBOutlet weak var bookmarkButtonSelected: UIButton!
     
@@ -39,13 +38,13 @@ class keepItDryViewController: UIViewController {
             bookmarkButtonSelected.setBackgroundImage(UIImage(named: "fav heart "), for: UIControlState.normal)
         }
         
-            DryTextView.contentInset = UIEdgeInsetsMake(5,5,5,5)
-        DryTextView.adjustsFontForContentSizeCategory = true
-        
-
-        
-            DryTextView.textAlignment = .center
-        DryTextView.textContainer.maximumNumberOfLines = 2
+//            DryTextView.contentInset = UIEdgeInsetsMake(5,5,5,5)
+//        DryTextView.adjustsFontForContentSizeCategory = true
+//
+//
+//
+//            DryTextView.textAlignment = .center
+//        DryTextView.textContainer.maximumNumberOfLines = 2
     }
 
     override func didReceiveMemoryWarning() {

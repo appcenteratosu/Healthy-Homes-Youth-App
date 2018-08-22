@@ -12,6 +12,7 @@ class ChecklistTableViewCell: UITableViewCell {
     
     @IBOutlet weak var checkBox : UIImageView!
     @IBOutlet weak var answerLabel : UILabel!
+    @IBOutlet weak var paragraph : UILabel!
     
     
     override func awakeFromNib() {

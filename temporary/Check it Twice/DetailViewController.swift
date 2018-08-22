@@ -115,7 +115,7 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
         let cell = answersTableView.dequeueReusableCell(withIdentifier: "possibleAnswer", for: indexPath) as! ChecklistTableViewCell
         let defaults = UserDefaults.standard
         
-        cell.backgroundColor = .clear
+        cell.layer.backgroundColor = UIColor.clear.cgColor
         cell.answerLabel.text = answers[indexPath.row]
         cell.answerLabel.numberOfLines = 0
         configureCheckmark(for: cell, at: indexPath)

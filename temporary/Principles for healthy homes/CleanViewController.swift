@@ -51,7 +51,7 @@ class CleanViewController: UIViewController {
     @IBAction func bookmarkButtonTapped(_ sender: UIButton) {
         let defaults = UserDefaults.standard
         
-        let key = "bookmark|" + "8Principles|" + "Clean|" + "Clean homes reduce pest infestation and exposures to..."
+        let key = "bookmark|" + "8Principles|" + "Clean|" + "Clean homes reduce pest infestation and exposures to ..."
         var existingAnswer = defaults.object(forKey:key) as? Bool
         if (existingAnswer == nil){
             existingAnswer = false

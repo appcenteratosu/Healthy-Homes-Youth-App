@@ -9,12 +9,12 @@
 import UIKit
 
 class LeadViewController: UIViewController {
-    let key1 = "bookmark|" + "BigStuff|" + "Lead1|" + "Lead poisoning is one of the biggest health risks for..."
-    let key2 = "bookmark|" + "BigStuff|" + "Lead2|" + "Lead can permanently damage your nervous..."
-    let key3 = "bookmark|" + "BigStuff|" + "Lead3|" + "Before 1978, lead was used in paint, water pipes, gasoline..."
-    let key4 = "bookmark|" + "BigStuff|" + "Lead4|" + "Run water for at least 30 seconds before drinking it..."
-    let key5 = "bookmark|" + "BigStuff|" + "Lead5|" + "Wash your hands and face often..."
-    let key6 = "bookmark|" + "BigStuff|" + "Lead6|" + "Stay away from areas where there..."
+    let key1 = "bookmark|" + "BigStuff|" + "Lead|" + "Lead poisoning is one of the biggest health risks for..."
+    let key2 = "bookmark|" + "BigStuff|" + "Lead|" + "Lead can permanently damage your nervous..."
+    let key3 = "bookmark|" + "BigStuff|" + "Lead|" + "Before 1978, lead was used in paint, water pipes, gasoline..."
+    let key4 = "bookmark|" + "BigStuff|" + "Lead|" + "Run water for at least 30 seconds before drinking it..."
+    let key5 = "bookmark|" + "BigStuff|" + "Lead|" + "Wash your hands and face often..."
+    let key6 = "bookmark|" + "BigStuff|" + "Lead|" + "Stay away from areas where there..."
     
  //   @IBOutlet weak var LeadImage1: UIImageView!
     
@@ -105,7 +105,7 @@ class LeadViewController: UIViewController {
     @IBAction func bookmark1Tapped(_ sender: UIButton) {
         let defaults = UserDefaults.standard
         
-        let key1 = "bookmark|" + "BigStuff|" + "Lead1|" + "Lead poisoning is one of the biggest health risks for..."
+        let key1 = "bookmark|" + "BigStuff|" + "Lead|" + "Lead poisoning is one of the biggest health risks for..."
         var existingAnswer = defaults.object(forKey:key1) as? Bool
         if (existingAnswer == nil){
             existingAnswer = false
@@ -127,7 +127,7 @@ class LeadViewController: UIViewController {
     @IBAction func bookmark2Tapped(_ sender: UIButton) {
         let defaults = UserDefaults.standard
         
-        let key2 = "bookmark|" + "BigStuff|" + "Lead2|" + "Lead can permanently damage your nervous..."
+        let key2 = "bookmark|" + "BigStuff|" + "Lead|" + "Lead can permanently damage your nervous..."
         var existingAnswer = defaults.object(forKey:key2) as? Bool
         if (existingAnswer == nil){
             existingAnswer = false
@@ -149,7 +149,7 @@ class LeadViewController: UIViewController {
     @IBAction func bookmark3Tapped(_ sender: UIButton) {
         let defaults = UserDefaults.standard
         
-        let key3 = "bookmark|" + "BigStuff|" + "Lead3|" + "Before 1978, lead was used in paint, water pipes, gasoline..."
+        let key3 = "bookmark|" + "BigStuff|" + "Lead|" + "Before 1978, lead was used in paint, water pipes, gasoline..."
         var existingAnswer = defaults.object(forKey:key3) as? Bool
         if (existingAnswer == nil){
             existingAnswer = false
@@ -171,7 +171,7 @@ class LeadViewController: UIViewController {
     @IBAction func bookmark4Tapped(_ sender: UIButton) {
         let defaults = UserDefaults.standard
         
-        let key4 = "bookmark|" + "BigStuff|" + "Lead4|" + "Run water for at least 30 seconds before drinking it..."
+        let key4 = "bookmark|" + "BigStuff|" + "Lead|" + "Run water for at least 30 seconds before drinking it..."
         var existingAnswer = defaults.object(forKey:key4) as? Bool
         if (existingAnswer == nil){
             existingAnswer = false
@@ -193,7 +193,7 @@ class LeadViewController: UIViewController {
     @IBAction func bookmark5Selected(_ sender: UIButton) {
         let defaults = UserDefaults.standard
         
-        let key5 = "bookmark|" + "BigStuff|" + "Lead5|" + "Wash your hands and face often..."
+        let key5 = "bookmark|" + "BigStuff|" + "Lead|" + "Wash your hands and face often..."
         var existingAnswer = defaults.object(forKey:key5) as? Bool
         if (existingAnswer == nil){
             existingAnswer = false
@@ -215,7 +215,7 @@ class LeadViewController: UIViewController {
     @IBAction func bookmark6Selected(_ sender: UIButton) {
         let defaults = UserDefaults.standard
         
-        let key6 = "bookmark|" + "BigStuff|" + "Lead6|" + "Stay away from areas where there..."
+        let key6 = "bookmark|" + "BigStuff|" + "Lead|" + "Stay away from areas where there..."
         var existingAnswer = defaults.object(forKey:key6) as? Bool
         if (existingAnswer == nil){
             existingAnswer = false

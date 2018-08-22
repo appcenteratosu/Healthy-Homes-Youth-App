@@ -16,11 +16,9 @@ class MainViewController: UIViewController {
     
     @IBOutlet weak var menuButtonSelected: UIButton!
     
-    @IBOutlet weak var TitleImage: UIImageView!
+    @IBOutlet weak var TitleTextView: UITextView!
     
-    @IBOutlet weak var TitleLabel: UILabel!
     
-    @IBOutlet weak var TitleView: UIView!
     @IBAction func returnMainMenu(segue: UIStoryboardSegue) {
         
     }
@@ -40,7 +38,7 @@ class MainViewController: UIViewController {
         let barButton = UIBarButtonItem(customView: menuButtonSelected)
 //        //assign button to navigationbar
         
-        self.navigationItem.titleView = TitleView
+        self.navigationItem.titleView = TitleTextView
         self.navigationItem.rightBarButtonItem = barButton
   //      self.navigationItem.titleView = TitleLabel
         

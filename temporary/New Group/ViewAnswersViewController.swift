@@ -66,7 +66,7 @@ class ViewAnswersViewController: UIViewController, UITableViewDelegate, UITableV
         
         cell.AnswersLabel.text = CorrectAnswers[indexPath.row]
         cell.AnswersLabel.textColor = #colorLiteral(red: 1, green: 0.05098039216, blue: 0.5019607843, alpha: 1)
-        cell.backgroundColor = .clear
+        cell.layer.backgroundColor = UIColor.clear.cgColor
         
         
         var isChecked = viewAnswersStatusArray[indexPath.row]

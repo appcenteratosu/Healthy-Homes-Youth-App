@@ -27,12 +27,12 @@ class MoldMoistureViewController: UIViewController {
         performSegue(withIdentifier: "ReturnMoldToBigStuff", sender: nil)
     }
     
-    let key1 = "bookmark|" + "BigStuff|" + "MoldMoisture1|" + "Molds are part of nature, but inside your home mold growth..."
-    let key2 = "bookmark|" + "BigStuff|" + "MoldMoisture2|" + "Many people are allergic or sensitive to mold..."
-    let key3 = "bookmark|" + "BigStuff|" + "MoldMoisture3|" + "Mold is usually found in areas of high humidity..."
-    let key4 = "bookmark|" + "BigStuff|" + "MoldMoisture4|" + "Use the exhaust fan while you are taking..."
-    let key5 = "bookmark|" + "BigStuff|" + "MoldMoisture5|" + "Tell someone of you see water and puddles..."
-    let key6 = "bookmark|" + "BigStuff|" + "MoldMoisture6|" + "See if your dryer vents to the..."
+    let key1 = "bookmark|" + "BigStuff|" + "Mold&Moisture|" + "Molds are part of nature, but inside your home mold growth..."
+    let key2 = "bookmark|" + "BigStuff|" + "Mold&Moisture|" + "Many people are allergic or sensitive to mold..."
+    let key3 = "bookmark|" + "BigStuff|" + "Mold&Moisture|" + "Mold is usually found in areas of high humidity..."
+    let key4 = "bookmark|" + "BigStuff|" + "Mold&Moisture|" + "Use the exhaust fan while you are taking..."
+    let key5 = "bookmark|" + "BigStuff|" + "Mold&Moisture|" + "Tell someone of you see water and puddles..."
+    let key6 = "bookmark|" + "BigStuff|" + "Mold&Moisture|" + "See if your dryer vents to the..."
 
 
     override func viewDidLoad() {
@@ -100,7 +100,7 @@ class MoldMoistureViewController: UIViewController {
     @IBAction func bookmarkTapped1(_ sender: UIButton) {
         let defaults = UserDefaults.standard
         
-        let key1 = "bookmark|" + "BigStuff|" + "MoldMoisture1|" + "Molds are part of nature, but inside your home mold growth..."
+        let key1 = "bookmark|" + "BigStuff|" + "Mold&Moisture|" + "Molds are part of nature, but inside your home mold growth..."
         var existingAnswer = defaults.object(forKey:key1) as? Bool
         if (existingAnswer == nil){
             existingAnswer = false
@@ -123,7 +123,7 @@ class MoldMoistureViewController: UIViewController {
     @IBAction func bookmarkTapped2(_ sender: UIButton) {
         let defaults = UserDefaults.standard
         
-        let key2 = "bookmark|" + "BigStuff|" + "MoldMoisture2|" + "Many people are allergic or sensitive to mold..."
+        let key2 = "bookmark|" + "BigStuff|" + "Mold&Moisture|" + "Many people are allergic or sensitive to mold..."
         var existingAnswer = defaults.object(forKey:key2) as? Bool
         if (existingAnswer == nil){
             existingAnswer = false
@@ -145,7 +145,7 @@ class MoldMoistureViewController: UIViewController {
     @IBAction func bookmarkTapped3(_ sender: UIButton) {
         let defaults = UserDefaults.standard
         
-        let key3 = "bookmark|" + "BigStuff|" + "MoldMoisture3|" + "Mold is usually found in areas of high humidity..."
+        let key3 = "bookmark|" + "BigStuff|" + "Mold&Moisture|" + "Mold is usually found in areas of high humidity..."
         var existingAnswer = defaults.object(forKey:key3) as? Bool
         if (existingAnswer == nil){
             existingAnswer = false
@@ -167,7 +167,7 @@ class MoldMoistureViewController: UIViewController {
     @IBAction func bookmarkTapped4(_ sender: UIButton) {
         let defaults = UserDefaults.standard
         
-        let key4 = "bookmark|" + "BigStuff|" + "MoldMoisture4|" + "Use the exhaust fan while you are taking..."
+        let key4 = "bookmark|" + "BigStuff|" + "Mold&Moisture|" + "Use the exhaust fan while you are taking..."
         var existingAnswer = defaults.object(forKey:key4) as? Bool
         if (existingAnswer == nil){
             existingAnswer = false
@@ -189,7 +189,7 @@ class MoldMoistureViewController: UIViewController {
     @IBAction func bookmarkTapped5(_ sender: UIButton) {
         let defaults = UserDefaults.standard
         
-        let key5 = "bookmark|" + "BigStuff|" + "MoldMoisture5|" + "Tell someone of you see water and puddles..."
+        let key5 = "bookmark|" + "BigStuff|" + "Mold&Moisture|" + "Tell someone of you see water and puddles..."
         var existingAnswer = defaults.object(forKey:key5) as? Bool
         if (existingAnswer == nil){
             existingAnswer = false
@@ -211,7 +211,7 @@ class MoldMoistureViewController: UIViewController {
     @IBAction func bookmarkTapped6(_ sender: UIButton) {
         let defaults = UserDefaults.standard
         
-        let key6 = "bookmark|" + "BigStuff|" + "MoldMoisture6|" + "See if your dryer vents to the..."
+        let key6 = "bookmark|" + "BigStuff|" + "Mold&Moisture|" + "See if your dryer vents to the..."
         var existingAnswer = defaults.object(forKey:key6) as? Bool
         if (existingAnswer == nil){
             existingAnswer = false

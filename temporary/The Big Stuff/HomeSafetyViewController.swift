@@ -9,12 +9,12 @@
 import UIKit
 
 class HomeSafetyViewController: UIViewController {
-    let key1 = "bookmark|" + "BigStuff|" + "HomeSafety1|" + "Your chances of getting hurt at home are much higher..."
-    let key2 = "bookmark|" + "BigStuff|" + "HomeSafety2|" + "Young children can get into everyday things..."
-    let key3 = "bookmark|" + "BigStuff|" + "HomeSafety3|" + "The leading causes of death and injury in homes..."
-    let key4 = "bookmark|" + "BigStuff|" + "HomeSafety4|" + "Help keep your home tidy: Keep..."
-    let key5 = "bookmark|" + "BigStuff|" + "HomeSafety5|" + "Install smoke detectors on each..."
-    let key6 = "bookmark|" + "BigStuff|" + "HomeSafety6|" + "Keep a flashlight near your bed for..."
+    let key1 = "bookmark|" + "BigStuff|" + "HomeSafety|" + "Your chances of getting hurt at home are much higher..."
+    let key2 = "bookmark|" + "BigStuff|" + "HomeSafety|" + "Young children can get into everyday things..."
+    let key3 = "bookmark|" + "BigStuff|" + "HomeSafety|" + "The leading causes of death and injury in homes..."
+    let key4 = "bookmark|" + "BigStuff|" + "HomeSafety|" + "Help keep your home tidy: Keep..."
+    let key5 = "bookmark|" + "BigStuff|" + "HomeSafety|" + "Install smoke detectors on each..."
+    let key6 = "bookmark|" + "BigStuff|" + "HomeSafety|" + "Keep a flashlight near your bed for..."
     
     @IBOutlet weak var bookmarkSelected1: UIButton!
     
@@ -98,7 +98,7 @@ class HomeSafetyViewController: UIViewController {
     @IBAction func bookmarkButtonTapped1(_ sender: UIButton) {
         let defaults = UserDefaults.standard
         
-        let key1 = "bookmark|" + "BigStuff|" + "HomeSafety1|" + "Your chances of getting hurt at home are much higher..."
+        let key1 = "bookmark|" + "BigStuff|" + "HomeSafety|" + "Your chances of getting hurt at home are much higher..."
         var existingAnswer = defaults.object(forKey:key1) as? Bool
         if (existingAnswer == nil){
             existingAnswer = false
@@ -120,7 +120,7 @@ class HomeSafetyViewController: UIViewController {
     @IBAction func bookmarkButtonTapped2(_ sender: UIButton) {
         let defaults = UserDefaults.standard
         
-        let key2 = "bookmark|" + "BigStuff|" + "HomeSafety2|" + "Young children can get into everyday things..."
+        let key2 = "bookmark|" + "BigStuff|" + "HomeSafety|" + "Young children can get into everyday things..."
         var existingAnswer = defaults.object(forKey:key2) as? Bool
         if (existingAnswer == nil){
             existingAnswer = false
@@ -142,7 +142,7 @@ class HomeSafetyViewController: UIViewController {
     @IBAction func bookmarkButtonTapped3(_ sender: UIButton) {
         let defaults = UserDefaults.standard
         
-        let key3 = "bookmark|" + "BigStuff|" + "HomeSafety3|" + "The leading causes of death and injury in homes..."
+        let key3 = "bookmark|" + "BigStuff|" + "HomeSafety|" + "The leading causes of death and injury in homes..."
         var existingAnswer = defaults.object(forKey:key3) as? Bool
         if (existingAnswer == nil){
             existingAnswer = false
@@ -164,7 +164,7 @@ class HomeSafetyViewController: UIViewController {
     @IBAction func bookmarkButtonTapped4(_ sender: UIButton) {
         let defaults = UserDefaults.standard
         
-        let key4 = "bookmark|" + "BigStuff|" + "HomeSafety4|" + "Help keep your home tidy: Keep..."
+        let key4 = "bookmark|" + "BigStuff|" + "HomeSafety|" + "Help keep your home tidy: Keep..."
         var existingAnswer = defaults.object(forKey:key4) as? Bool
         if (existingAnswer == nil){
             existingAnswer = false
@@ -186,7 +186,7 @@ class HomeSafetyViewController: UIViewController {
     @IBAction func bookmarkButtonTapped5(_ sender: UIButton) {
         let defaults = UserDefaults.standard
         
-        let key5 = "bookmark|" + "BigStuff|" + "HomeSafety5|" + "Install smoke detectors on each..."
+        let key5 = "bookmark|" + "BigStuff|" + "HomeSafety|" + "Install smoke detectors on each..."
         var existingAnswer = defaults.object(forKey:key5) as? Bool
         if (existingAnswer == nil){
             existingAnswer = false
@@ -208,7 +208,7 @@ class HomeSafetyViewController: UIViewController {
     @IBAction func bookmarkButtonTapped6(_ sender: UIButton) {
         let defaults = UserDefaults.standard
         
-        let key6 = "bookmark|" + "BigStuff|" + "HomeSafety6|" + "Keep a flashlight near your bed for..."
+        let key6 = "bookmark|" + "BigStuff|" + "HomeSafety|" + "Keep a flashlight near your bed for..."
         var existingAnswer = defaults.object(forKey:key6) as? Bool
         if (existingAnswer == nil){
             existingAnswer = false

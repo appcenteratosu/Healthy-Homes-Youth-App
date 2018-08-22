@@ -9,13 +9,13 @@
 import UIKit
 
 class HomeTempControlViewController: UIViewController {
-    let key1 = "bookmark|" + "BigStuff|" + "HomeTempControl1|" + "A healthy home has comfortable temperature..."
-    let key2 = "bookmark|" + "BigStuff|" + "HomeTempControl2|" + "Homes that do not have comfortable temperatures..."
-    let key3 = "bookmark|" + "BigStuff|" + "HomeTempControl3|" + "Homes with temperature and humidity..."
-    let key4 = "bookmark|" + "BigStuff|" + "HomeTempControl4|" + "Have the heating and air conditioning systems..."
-    let key5 = "bookmark|" + "BigStuff|" + "HomeTempControl5|" + "Clean or change the air filters when they..."
-    let key6 = "bookmark|" + "BigStuff|" + "HomeTempControl6|" + "Consider having a home energy audit from your..."
-    let key7 = "bookmark|" + "BigStuff|" + "HomeTempControl7|" + "Find temporary shelter for elderly or ill family..."
+    let key1 = "bookmark|" + "BigStuff|" + "HomeTempControl|" + "A healthy home has comfortable temperature..."
+    let key2 = "bookmark|" + "BigStuff|" + "HomeTempControl|" + "Homes that do not have comfortable temperatures..."
+    let key3 = "bookmark|" + "BigStuff|" + "HomeTempControl|" + "Homes with temperature and humidity..."
+    let key4 = "bookmark|" + "BigStuff|" + "HomeTempControl|" + "Have the heating and air conditioning systems..."
+    let key5 = "bookmark|" + "BigStuff|" + "HomeTempControl|" + "Clean or change the air filters when they..."
+    let key6 = "bookmark|" + "BigStuff|" + "HomeTempControl|" + "Consider having a home energy audit from your..."
+    let key7 = "bookmark|" + "BigStuff|" + "HomeTempControl|" + "Find temporary shelter for elderly or ill family..."
     
     @IBOutlet weak var bookmarkSelected1: UIButton!
     
@@ -110,7 +110,7 @@ class HomeTempControlViewController: UIViewController {
     @IBAction func bookmarkButtonTapped1(_ sender: UIButton) {
         let defaults = UserDefaults.standard
         
-        let key1 = "bookmark|" + "BigStuff|" + "HomeTempControl1|" + "A healthy home has comfortable temperature..."
+        let key1 = "bookmark|" + "BigStuff|" + "HomeTempControl|" + "A healthy home has comfortable temperature..."
         var existingAnswer = defaults.object(forKey:key1) as? Bool
         if (existingAnswer == nil){
             existingAnswer = false
@@ -132,7 +132,7 @@ class HomeTempControlViewController: UIViewController {
     @IBAction func bookmarkButtonTapped2(_ sender: UIButton) {
         let defaults = UserDefaults.standard
         
-        let key2 = "bookmark|" + "BigStuff|" + "HomeTempControl2|" + "Homes that do not have comfortable temperatures..."
+        let key2 = "bookmark|" + "BigStuff|" + "HomeTempControl|" + "Homes that do not have comfortable temperatures..."
         var existingAnswer = defaults.object(forKey:key2) as? Bool
         if (existingAnswer == nil){
             existingAnswer = false
@@ -154,7 +154,7 @@ class HomeTempControlViewController: UIViewController {
     @IBAction func bookmarkButtonTapped3(_ sender: UIButton) {
         let defaults = UserDefaults.standard
         
-        let key3 = "bookmark|" + "BigStuff|" + "HomeTempControl3|" + "Homes with temperature and humidity..."
+        let key3 = "bookmark|" + "BigStuff|" + "HomeTempControl|" + "Homes with temperature and humidity..."
         var existingAnswer = defaults.object(forKey:key3) as? Bool
         if (existingAnswer == nil){
             existingAnswer = false
@@ -176,7 +176,7 @@ class HomeTempControlViewController: UIViewController {
     @IBAction func bookmarkButtonTapped4(_ sender: UIButton) {
         let defaults = UserDefaults.standard
         
-        let key4 = "bookmark|" + "BigStuff|" + "HomeTempControl4|" + "Have the heating and air conditioning systems..."
+        let key4 = "bookmark|" + "BigStuff|" + "HomeTempControl|" + "Have the heating and air conditioning systems..."
         var existingAnswer = defaults.object(forKey:key4) as? Bool
         if (existingAnswer == nil){
             existingAnswer = false
@@ -198,7 +198,7 @@ class HomeTempControlViewController: UIViewController {
     @IBAction func bookmarkButtonTapped5(_ sender: UIButton) {
         let defaults = UserDefaults.standard
         
-        let key5 = "bookmark|" + "BigStuff|" + "HomeTempControl5|" + "Clean or change the air filters when they..."
+        let key5 = "bookmark|" + "BigStuff|" + "HomeTempControl|" + "Clean or change the air filters when they..."
         var existingAnswer = defaults.object(forKey:key5) as? Bool
         if (existingAnswer == nil){
             existingAnswer = false
@@ -220,7 +220,7 @@ class HomeTempControlViewController: UIViewController {
     @IBAction func bookmarkButtonTapped6(_ sender: UIButton) {
         let defaults = UserDefaults.standard
         
-        let key6 = "bookmark|" + "BigStuff|" + "HomeTempControl6|" + "Consider having a home energy audit from your..."
+        let key6 = "bookmark|" + "BigStuff|" + "HomeTempControl|" + "Consider having a home energy audit from your..."
         var existingAnswer = defaults.object(forKey:key6) as? Bool
         if (existingAnswer == nil){
             existingAnswer = false
@@ -242,7 +242,7 @@ class HomeTempControlViewController: UIViewController {
     @IBAction func bookmarkButtonTapped7(_ sender: UIButton) {
         let defaults = UserDefaults.standard
         
-        let key7 = "bookmark|" + "BigStuff|" + "HomeTempControl7|" + "Find temporary shelter for elderly or ill family..."
+        let key7 = "bookmark|" + "BigStuff|" + "HomeTempControl|" + "Find temporary shelter for elderly or ill family..."
         var existingAnswer = defaults.object(forKey:key7) as? Bool
         if (existingAnswer == nil){
             existingAnswer = false

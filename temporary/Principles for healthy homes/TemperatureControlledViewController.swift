@@ -32,7 +32,7 @@ class TemperatureControlledViewController: UIViewController {
     @IBAction func bookmarkButtonTapped(_ sender: UIButton) {
         let defaults = UserDefaults.standard
         
-        let key = "bookmark|" + "8Principles|" + "TempControlled|" + "Homes that do not have balanced and consistent temperatures "
+        let key = "bookmark|" + "8Principles|" + "TempControlled|" + "Homes that do not have balanced and consistent temperatures..."
         var existingAnswer = defaults.object(forKey:key) as? Bool
         if (existingAnswer == nil){
             existingAnswer = false
