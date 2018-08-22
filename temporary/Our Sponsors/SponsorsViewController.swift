@@ -24,8 +24,11 @@ class SponsorsViewController: UIViewController {
     
     @IBOutlet weak var sponsor5: UIButton!
     
-    
     @IBOutlet weak var sponsor6: UIButton!
+    
+    @IBAction func ReturnSponsorsToMainMenu(_ sender: Any) {
+        performSegue(withIdentifier: "UnwindSponsorsToMainMenu", sender: nil)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

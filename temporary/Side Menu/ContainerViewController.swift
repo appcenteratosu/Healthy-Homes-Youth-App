@@ -124,9 +124,5 @@ private extension UIStoryboard {
     return mainStoryboard().instantiateViewController(withIdentifier: "MainViewController") as? MainViewController
   }
     
-    
-  
-//  static func welcomeViewController() -> WelcomeViewController? {
-//    return mainStoryboard().instantiateViewController(withIdentifier: "WelcomeViewController") as? WelcomeViewController
-//  }
+   
 }

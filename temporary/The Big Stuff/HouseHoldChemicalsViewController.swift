@@ -9,12 +9,11 @@
 import UIKit
 
 class HouseHoldChemicalsViewController: UIViewController {
-    let key1 = "bookmark|" + "BigStuff|" + "HouseHoldChemicals1"
-    let key2 = "bookmark|" + "BigStuff|" + "HouseHoldChemicals2"
-    let key3 = "bookmark|" + "BigStuff|" + "HouseHoldChemicals3"
-    let key4 = "bookmark|" + "BigStuff|" + "HouseHoldChemicals4"
-    let key5 = "bookmark|" + "BigStuff|" + "HouseHoldChemicals5"
-    let key6 = "bookmark|" + "BigStuff|" + "HouseHoldChemicals6"
+    let key1 = "bookmark|" + "BigStuff|" + "HouseHoldChemicals1|" + "A hazardous household chemical is a product..."
+    let key2 = "bookmark|" + "BigStuff|" + "HouseHoldChemicals2|" + "Some hazardous products burn you or poison..."
+    let key3 = "bookmark|" + "BigStuff|" + "HouseHoldChemicals3|" + "Examples of hazardous household chemicals..."
+    let key4 = "bookmark|" + "BigStuff|" + "HouseHoldChemicals4|" + "Learn more about ways to go..."
+    let key5 = "bookmark|" + "BigStuff|" + "HouseHoldChemicals5|" + "Tell someone if you see chemicals that are not..."
     
     @IBOutlet weak var bookmarkSelected1: UIButton!
     
@@ -25,6 +24,11 @@ class HouseHoldChemicalsViewController: UIViewController {
     @IBOutlet weak var bookmarkSelected4: UIButton!
     
     @IBOutlet weak var bookmarkSelected5: UIButton!
+    
+    @IBAction func ReturnHouseHoldToBigStuff(_ sender: Any) {
+        performSegue(withIdentifier: "UnwindHouseHoldToBigStuff", sender: nil)
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -83,7 +87,7 @@ class HouseHoldChemicalsViewController: UIViewController {
     @IBAction func bookmarkTapped1(_ sender: UIButton) {
         let defaults = UserDefaults.standard
         
-        let key1 = "bookmark|" + "BigStuff|" + "HouseHoldChemicals1"
+        let key1 = "bookmark|" + "BigStuff|" + "HouseHoldChemicals1|" + "A hazardous household chemical is a product..."
         var existingAnswer = defaults.object(forKey:key1) as? Bool
         if (existingAnswer == nil){
             existingAnswer = false
@@ -105,7 +109,7 @@ class HouseHoldChemicalsViewController: UIViewController {
     @IBAction func bookmarkTapped2(_ sender: UIButton) {
         let defaults = UserDefaults.standard
         
-        let key2 = "bookmark|" + "BigStuff|" + "HouseHoldChemicals2"
+        let key2 = "bookmark|" + "BigStuff|" + "HouseHoldChemicals2|" + "Some hazardous products burn you or poison..."
         var existingAnswer = defaults.object(forKey:key2) as? Bool
         if (existingAnswer == nil){
             existingAnswer = false
@@ -127,7 +131,7 @@ class HouseHoldChemicalsViewController: UIViewController {
     @IBAction func bookmarkTapped3(_ sender: UIButton) {
         let defaults = UserDefaults.standard
         
-        let key3 = "bookmark|" + "BigStuff|" + "HouseHoldChemicals3"
+        let key3 = "bookmark|" + "BigStuff|" + "HouseHoldChemicals3|" + "Examples of hazardous household chemicals..."
         var existingAnswer = defaults.object(forKey:key3) as? Bool
         if (existingAnswer == nil){
             existingAnswer = false
@@ -149,7 +153,7 @@ class HouseHoldChemicalsViewController: UIViewController {
     @IBAction func bookmarkTapped4(_ sender: UIButton) {
         let defaults = UserDefaults.standard
         
-        let key4 = "bookmark|" + "BigStuff|" + "HouseHoldChemicals4"
+        let key4 = "bookmark|" + "BigStuff|" + "HouseHoldChemicals4|" + "Learn more about ways to go..."
         var existingAnswer = defaults.object(forKey:key4) as? Bool
         if (existingAnswer == nil){
             existingAnswer = false
@@ -171,7 +175,7 @@ class HouseHoldChemicalsViewController: UIViewController {
     @IBAction func bookmarkTapped5(_ sender: UIButton) {
         let defaults = UserDefaults.standard
         
-        let key5 = "bookmark|" + "BigStuff|" + "HouseHoldChemicals5"
+        let key5 = "bookmark|" + "BigStuff|" + "HouseHoldChemicals5|" + "Tell someone if you see chemicals that are not..."
         var existingAnswer = defaults.object(forKey:key5) as? Bool
         if (existingAnswer == nil){
             existingAnswer = false

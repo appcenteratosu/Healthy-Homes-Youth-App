@@ -11,9 +11,13 @@ import UIKit
 class WellVentilatedViewController: UIViewController {
 
     @IBOutlet weak var bookmarkButtonSelected: UIButton!
-    let key = "bookmark|" + "8Principles|" + "Ventilated"
+    let key = "bookmark|" + "8Principles|" + "Ventilated|" + "Having a good fresh air supply to your home is important"
 
     @IBOutlet var BottomNavButtons: [UIButton]!
+    
+    @IBAction func ReturnVentilatedToPrinciple(_ sender: Any) {
+        performSegue(withIdentifier: "ReturnVentilatedToPrinciple", sender: nil)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,7 +51,7 @@ class WellVentilatedViewController: UIViewController {
     @IBAction func bookmarkButtonTapped(_ sender: UIButton) {
         let defaults = UserDefaults.standard
         
-        let key = "bookmark|" + "8Principles|" + "Ventilated"
+        let key = "bookmark|" + "8Principles|" + "Ventilated|" + "Having a good fresh air supply to your home is important"
         var existingAnswer = defaults.object(forKey:key) as! Bool
         if (existingAnswer == nil){
             existingAnswer = false

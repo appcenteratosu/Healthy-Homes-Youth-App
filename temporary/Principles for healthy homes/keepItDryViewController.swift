@@ -2,7 +2,7 @@ import UIKit
 
 class keepItDryViewController: UIViewController {
     
-    let key = "bookmark|" + "8Principles|" + "Dry"
+    let key = "bookmark|" + "8Principles|" + "Dry|" + "Damp homes provide an environment for dust mites, roaches, rodents and molds..."
     
     @IBOutlet weak var DryTextView: UITextView!
     
@@ -10,6 +10,10 @@ class keepItDryViewController: UIViewController {
     
     @IBOutlet var BottomNavButtons: [UIButton]!
     
+    @IBAction func ChpaterMenu(_ sender: UIButton) {
+        performSegue(withIdentifier: "UnwindToPrincipleMenu", sender: nil)
+    }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,7 +57,7 @@ class keepItDryViewController: UIViewController {
         
         let defaults = UserDefaults.standard
         
-        let key = "bookmark|" + "8Principles|" + "Dry"
+        let key = "bookmark|" + "8Principles|" + "Dry|" + "Damp homes provide an environment for dust mites, roaches, rodents and molds..."
         var existingAnswer = defaults.object(forKey:key) as? Bool
         if (existingAnswer == nil){
             existingAnswer = false

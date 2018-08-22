@@ -22,5 +22,16 @@ class TrainyourBrainViewController: UIViewController {
     }
     
     @IBOutlet weak var brainBGView: UIView!
+    
+    
    
+    @IBAction func ReturnQuizToMainMenu(_ sender: Any) {
+        performSegue(withIdentifier: "UnwindQuizToMainMenu", sender: nil)
+    }
+    
+    @IBAction func ReturnQuizResultsToQuizMain(segue: UIStoryboardSegue) {
+        
+    }
+    
+    
 }

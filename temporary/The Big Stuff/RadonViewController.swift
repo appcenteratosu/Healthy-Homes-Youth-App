@@ -9,12 +9,11 @@
 import UIKit
 
 class RadonViewController: UIViewController {
-    let key1 = "bookmark|" + "BigStuff|" + "Radon1"
-    let key2 = "bookmark|" + "BigStuff|" + "Radon2"
-    let key3 = "bookmark|" + "BigStuff|" + "Radon3"
-    let key4 = "bookmark|" + "BigStuff|" + "Radon4"
-    let key5 = "bookmark|" + "BigStuff|" + "Radon5"
-    let key6 = "bookmark|" + "BigStuff|" + "Radon6"
+    let key1 = "bookmark|" + "BigStuff|" + "Radon1|" + "Radon comes from the natural radioactive breakdown..."
+    let key2 = "bookmark|" + "BigStuff|" + "Radon2|" + "When you breathe air containing radon, you..."
+    let key3 = "bookmark|" + "BigStuff|" + "Radon3|" + "Radon typically moves up through the ground..."
+    let key4 = "bookmark|" + "BigStuff|" + "Radon4|" + "Learn more about..."
+    let key5 = "bookmark|" + "BigStuff|" + "Radon5|" + "Have your home tested..."
     
     @IBOutlet weak var bookmarkSelected1: UIButton!
     
@@ -25,6 +24,11 @@ class RadonViewController: UIViewController {
     @IBOutlet weak var bookmarkSelected4: UIButton!
     
     @IBOutlet weak var bookmarkSelected5: UIButton!
+    
+    @IBAction func ReturnRadonToBigStuff(_ sender: Any) {
+        performSegue(withIdentifier: "UnwindRadonToBigStuff", sender: nil)
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,9 +47,6 @@ class RadonViewController: UIViewController {
         
         var value5 = false
         value5 = UserDefaults.standard.bool(forKey: key5)
-        
-        var value6 = false
-        value6 = UserDefaults.standard.bool(forKey: key6)
         
         if value1 == true {
             bookmarkSelected1.setBackgroundImage(UIImage(named: "liked heart icon"), for: UIControlState.normal)
@@ -86,7 +87,7 @@ class RadonViewController: UIViewController {
     @IBAction func bookmarkTapped1(_ sender: UIButton) {
         let defaults = UserDefaults.standard
         
-        let key1 = "bookmark|" + "BigStuff|" + "Radon1"
+        let key1 = "bookmark|" + "BigStuff|" + "Radon1|" + "Radon comes from the natural radioactive breakdown..."
         var existingAnswer = defaults.object(forKey:key1) as? Bool
         if (existingAnswer == nil){
             existingAnswer = false
@@ -108,7 +109,7 @@ class RadonViewController: UIViewController {
     @IBAction func bookmarkTapped2(_ sender: UIButton) {
         let defaults = UserDefaults.standard
         
-        let key2 = "bookmark|" + "BigStuff|" + "Radon2"
+        let key2 = "bookmark|" + "BigStuff|" + "Radon2|" + "When you breathe air containing radon, you..."
         var existingAnswer = defaults.object(forKey:key2) as? Bool
         if (existingAnswer == nil){
             existingAnswer = false
@@ -130,7 +131,7 @@ class RadonViewController: UIViewController {
     @IBAction func bookmarkTapped3(_ sender: UIButton) {
         let defaults = UserDefaults.standard
         
-        let key3 = "bookmark|" + "BigStuff|" + "Radon3"
+        let key3 = "bookmark|" + "BigStuff|" + "Radon3|" + "Radon typically moves up through the ground..."
         var existingAnswer = defaults.object(forKey:key3) as? Bool
         if (existingAnswer == nil){
             existingAnswer = false
@@ -152,7 +153,7 @@ class RadonViewController: UIViewController {
     @IBAction func bookmarkTapped4(_ sender: UIButton) {
         let defaults = UserDefaults.standard
         
-        let key4 = "bookmark|" + "BigStuff|" + "Radon4"
+        let key4 = "bookmark|" + "BigStuff|" + "Radon4|" + "Learn more about..."
         var existingAnswer = defaults.object(forKey:key4) as? Bool
         if (existingAnswer == nil){
             existingAnswer = false
@@ -174,7 +175,7 @@ class RadonViewController: UIViewController {
     @IBAction func bookmarkTapped5(_ sender: UIButton) {
         let defaults = UserDefaults.standard
         
-        let key5 = "bookmark|" + "BigStuff|" + "Radon5"
+        let key5 = "bookmark|" + "BigStuff|" + "Radon5|" + "Have your home tested..."
         var existingAnswer = defaults.object(forKey:key5) as? Bool
         if (existingAnswer == nil){
             existingAnswer = false

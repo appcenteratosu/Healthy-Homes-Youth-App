@@ -12,10 +12,14 @@ class WellMaintainedViewController: UIViewController {
 
     @IBOutlet weak var bookmarkButtonTapped: UIButton!
     
-    let key = "bookmark|" + "8Principles|" + "Maintained"
+    let key = "bookmark|" + "8Principles|" + "Maintained|" + "Poorly maintained homes are at risk for moisture, pest problems..."
     
     @IBOutlet var BottomNavButtons: [UIButton]!
 
+    @IBAction func returnMaintainedToPrinciple(_ sender: Any) {
+        performSegue(withIdentifier: "UnwindMaintainedToPrinciples", sender: nil)
+    }
+        
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -50,7 +54,7 @@ class WellMaintainedViewController: UIViewController {
     @IBAction func bookmarkButtonSelected(_ sender: UIButton) {
         let defaults = UserDefaults.standard
         
-        let key = "bookmark|" + "8Principles|" + "Maintained"
+        let key = "bookmark|" + "8Principles|" + "Maintained|" + "Poorly maintained homes are at risk for moisture, pest problems..."
         var existingAnswer = defaults.object(forKey:key) as? Bool
         if (existingAnswer == nil){
             existingAnswer = false

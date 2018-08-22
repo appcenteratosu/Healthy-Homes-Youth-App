@@ -10,13 +10,18 @@ import UIKit
 
 class keepItContaminentFreeViewController: UIViewController {
     
-    let key = "bookmark|" + "8Principles|" + "ContaminantFree"
+    let key = "bookmark|" + "8Principles|" + "ContaminantFree|" + "Levels of contaminants such as lead, radon, carbon monoxide, asbestos,..."
     
     @IBOutlet weak var bookmarkButtonSelected: UIButton!
     
     @IBOutlet weak var speechBubbleText: UITextView!
     
     @IBOutlet var BottomNavButtons: [UIButton]!
+    
+    @IBAction func returnToPrincipleMenu(_ sender: Any) {
+        performSegue(withIdentifier: "UnwindContToPrincipleMenu", sender: nil)
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,7 +62,7 @@ class keepItContaminentFreeViewController: UIViewController {
     @IBAction func bookmarkButtonTapped(_ sender: UIButton) {
         let defaults = UserDefaults.standard
         
-        let key = "bookmark|" + "8Principles|" + "ContaminantFree"
+        let key = "bookmark|" + "8Principles|" + "ContaminantFree|" + "Levels of contaminants such as lead, radon, carbon monoxide, asbestos,..."
         var existingAnswer = defaults.object(forKey:key) as? Bool
         if (existingAnswer == nil){
             existingAnswer = false

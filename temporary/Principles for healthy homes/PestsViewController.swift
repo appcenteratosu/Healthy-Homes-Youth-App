@@ -11,7 +11,7 @@ import UIKit
 class PestsViewController: UIViewController {
 
     @IBOutlet weak var bookmarkButtonSelected: UIButton!
-    let key = "bookmark|" + "8Principles|" + "Pest"
+    let key = "bookmark|" + "8Principles|" + "Pest|" + "Exposure to pests such as roaches and rodents can trigger an asthma attack..."
     
     @IBOutlet weak var backButton: UIButton!
     
@@ -20,6 +20,12 @@ class PestsViewController: UIViewController {
     @IBOutlet weak var NextButton: UIButton!
     
     @IBOutlet var BottomNavButtons: [UIButton]!
+    
+    
+    @IBAction func UnwindToPrincipleMenu(_ sender: Any) {
+        performSegue(withIdentifier: "returnPestToPrincipleMenu", sender: nil)
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,7 +59,7 @@ class PestsViewController: UIViewController {
     @IBAction func bookmarkButtonTapped(_ sender: UIButton) {
         let defaults = UserDefaults.standard
         
-        let key = "bookmark|" + "8Principles|" + "Pest"
+        let key = "bookmark|" + "8Principles|" + "Pest|" + "Exposure to pests such as roaches and rodents can trigger an asthma attack..."
 
         var existingAnswer = defaults.object(forKey:key) as? Bool
         if (existingAnswer == nil){

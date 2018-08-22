@@ -28,6 +28,10 @@ class quizScreenViewController: UIViewController {
     
     @IBOutlet weak var endQuiz: UIButton!
     
+    @IBAction func returnToQuizScreen (segue: UIStoryboardSegue) {
+        
+    }
+    
     @IBAction func backButton(_ sender: UIButton) {
         if questionNumber == 0 {
             backButtonSelected.isHidden = true

@@ -16,7 +16,14 @@ class PrinciplesofHealthyHomesViewController: UIViewController {
     @IBOutlet var MainButtons: [UIButton]!
    
     
-
+    @IBAction func unWindToManiMenu(_ sender: Any) {
+        performSegue(withIdentifier: "UnwindToMainmenu", sender: nil)
+    }
+    
+    @IBAction func returnPricipleToMainMenu(segue: UIStoryboardSegue) {
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

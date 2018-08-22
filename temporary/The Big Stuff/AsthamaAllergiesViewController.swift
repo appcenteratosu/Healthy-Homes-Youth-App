@@ -10,12 +10,12 @@ import UIKit
 
 class AsthamaAllergiesViewController: UIViewController {
     
-    let key1 = "bookmark|" + "BigStuff|" + "AsthamaAllergies1"
-    let key2 = "bookmark|" + "BigStuff|" + "AsthamaAllergies2"
-    let key3 = "bookmark|" + "BigStuff|" + "AsthamaAllergies3"
-    let key4 = "bookmark|" + "BigStuff|" + "AsthamaAllergies4"
-    let key5 = "bookmark|" + "BigStuff|" + "AsthamaAllergies5"
-    let key6 = "bookmark|" + "BigStuff|" + "AsthamaAllergies6"
+    let key1 = "bookmark|" + "BigStuff|" + "AsthamaAllergies1|" + "Asthma is a lung disease. More than 7 million children in the United..."
+    let key2 = "bookmark|" + "BigStuff|" + "AsthamaAllergies2|" + "Asthma makes it hard to breathe. If you have as..."
+    let key3 = "bookmark|" + "BigStuff|" + "AsthamaAllergies3|" + " There can cause asthma attacks, and they are called..."
+    let key4 = "bookmark|" + "BigStuff|" + "AsthamaAllergies4|" + "Don’t allow anyone to smoke..."
+    let key5 = "bookmark|" + "BigStuff|" + "AsthamaAllergies5|" + "Keep pets away from bedrooms..."
+    let key6 = "bookmark|" + "BigStuff|" + "AsthamaAllergies6|" + "Avoid air fresheners, incense..."
     
     @IBOutlet weak var bookmarkSelected1: UIButton!
     
@@ -29,6 +29,11 @@ class AsthamaAllergiesViewController: UIViewController {
     
     @IBOutlet weak var bookmarkSelected6: UIButton!
    
+    @IBAction func ReturnAsthamaToBigStuff(_ sender: Any) {
+        performSegue(withIdentifier: "UnwindAsthamaToBigStuff", sender: nil)
+
+    }
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -97,7 +102,7 @@ class AsthamaAllergiesViewController: UIViewController {
     @IBAction func bookmarkButtonTapped1(_ sender: UIButton) {
         let defaults = UserDefaults.standard
         
-        let key1 = "bookmark|" + "BigStuff|" + "AsthamaAllergies1"
+        let key1 = "bookmark|" + "BigStuff|" + "AsthamaAllergies1|" + "Asthma is a lung disease. More than 7 million children in the United..."
         var existingAnswer = defaults.object(forKey:key1) as? Bool
         if (existingAnswer == nil){
             existingAnswer = false
@@ -119,7 +124,7 @@ class AsthamaAllergiesViewController: UIViewController {
     @IBAction func bookmarkButtonTapped2(_ sender: UIButton) {
         let defaults = UserDefaults.standard
         
-        let key2 = "bookmark|" + "BigStuff|" + "AsthamaAllergies2"
+        let key2 = "bookmark|" + "BigStuff|" + "AsthamaAllergies2|" + "Asthma makes it hard to breathe. If you have as..."
         var existingAnswer = defaults.object(forKey:key2) as? Bool
         if (existingAnswer == nil){
             existingAnswer = false
@@ -141,7 +146,7 @@ class AsthamaAllergiesViewController: UIViewController {
     @IBAction func bookmarkButtonTapped3(_ sender: UIButton) {
         let defaults = UserDefaults.standard
         
-        let key3 = "bookmark|" + "BigStuff|" + "AsthamaAllergies3"
+        let key3 = "bookmark|" + "BigStuff|" + "AsthamaAllergies3|" + " There can cause asthma attacks, and they are called..."
         var existingAnswer = defaults.object(forKey:key3) as? Bool
         if (existingAnswer == nil){
             existingAnswer = false
@@ -163,7 +168,7 @@ class AsthamaAllergiesViewController: UIViewController {
     @IBAction func bookmarkButtonTapped4(_ sender: UIButton) {
         let defaults = UserDefaults.standard
         
-        let key4 = "bookmark|" + "BigStuff|" + "AsthamaAllergies4"
+        let key4 = "bookmark|" + "BigStuff|" + "AsthamaAllergies4|" + "Don’t allow anyone to smoke..."
         var existingAnswer = defaults.object(forKey:key4) as? Bool
         if (existingAnswer == nil){
             existingAnswer = false
@@ -185,7 +190,7 @@ class AsthamaAllergiesViewController: UIViewController {
     @IBAction func bookmarkButtonTapped5(_ sender: UIButton) {
         let defaults = UserDefaults.standard
         
-        let key5 = "bookmark|" + "BigStuff|" + "AsthamaAllergies5"
+        let key5 = "bookmark|" + "BigStuff|" + "AsthamaAllergies5|" + "Keep pets away from bedrooms..."
         var existingAnswer = defaults.object(forKey:key5) as? Bool
         if (existingAnswer == nil){
             existingAnswer = false
@@ -207,7 +212,7 @@ class AsthamaAllergiesViewController: UIViewController {
     @IBAction func bookmarkButtonTapped6(_ sender: UIButton) {
         let defaults = UserDefaults.standard
         
-        let key6 = "bookmark|" + "BigStuff|" + "AsthamaAllergies6"
+        let key6 = "bookmark|" + "BigStuff|" + "AsthamaAllergies6|" + "Avoid air fresheners, incense..."
         var existingAnswer = defaults.object(forKey:key6) as? Bool
         if (existingAnswer == nil){
             existingAnswer = false

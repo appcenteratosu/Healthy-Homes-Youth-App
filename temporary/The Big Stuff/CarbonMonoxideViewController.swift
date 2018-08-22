@@ -9,12 +9,12 @@
 import UIKit
 
 class CarbonMonoxideViewController: UIViewController {
-    let key1 = "bookmark|" + "BigStuff|" + "CarbonMonoxide1"
-    let key2 = "bookmark|" + "BigStuff|" + "CarbonMonoxide2"
-    let key3 = "bookmark|" + "BigStuff|" + "CarbonMonoxide3"
-    let key4 = "bookmark|" + "BigStuff|" + "CarbonMonoxide4"
-    let key5 = "bookmark|" + "BigStuff|" + "CarbonMonoxide5"
-    let key6 = "bookmark|" + "BigStuff|" + "CarbonMonoxide6"
+    let key1 = "bookmark|" + "BigStuff|" + "CarbonMonoxide1|" + "Carbon monoxide (CO) is a dangerous gas and it is not..."
+    let key2 = "bookmark|" + "BigStuff|" + "CarbonMonoxide2|" + "If you are exposed to CO, you might get headaches..."
+    let key3 = "bookmark|" + "BigStuff|" + "CarbonMonoxide3|" + "Fuel burning appliances and automobiles..."
+    let key4 = "bookmark|" + "BigStuff|" + "CarbonMonoxide4|" + "Install a carbon monoxide alarm..."
+    let key5 = "bookmark|" + "BigStuff|" + "CarbonMonoxide5|" + "If your carbon monoxide detector goes..."
+    let key6 = "bookmark|" + "BigStuff|" + "CarbonMonoxide6|" + "Do not use your oven or stove..."
     
     @IBOutlet weak var bookmarkSelected1: UIButton!
     
@@ -28,6 +28,9 @@ class CarbonMonoxideViewController: UIViewController {
     
     @IBOutlet weak var bookmarkSelected6: UIButton!
     
+    @IBAction func ReturnCOToBigStuff(_ sender: Any) {
+        performSegue(withIdentifier: "UnwindCOToBigStuff", sender: nil)
+    }
     
 
     override func viewDidLoad() {
@@ -96,7 +99,7 @@ class CarbonMonoxideViewController: UIViewController {
     @IBAction func bookmarkButtonTapped1(_ sender: UIButton) {
         let defaults = UserDefaults.standard
         
-        let key1 = "bookmark|" + "BigStuff|" + "CarbonMonoxide1"
+        let key1 = "bookmark|" + "BigStuff|" + "CarbonMonoxide1|" + "Carbon monoxide (CO) is a dangerous gas and it is not..."
         var existingAnswer = defaults.object(forKey:key1) as? Bool
         if (existingAnswer == nil){
             existingAnswer = false
@@ -118,7 +121,7 @@ class CarbonMonoxideViewController: UIViewController {
     @IBAction func bookmarkButtonTapped2(_ sender: UIButton) {
         let defaults = UserDefaults.standard
         
-        let key2 = "bookmark|" + "BigStuff|" + "CarbonMonoxide2"
+        let key2 = "bookmark|" + "BigStuff|" + "CarbonMonoxide2|" + "If you are exposed to CO, you might get headaches..."
         var existingAnswer = defaults.object(forKey:key2) as? Bool
         if (existingAnswer == nil){
             existingAnswer = false
@@ -140,7 +143,7 @@ class CarbonMonoxideViewController: UIViewController {
     @IBAction func bookmarkButtonTapped3(_ sender: UIButton) {
         let defaults = UserDefaults.standard
         
-        let key3 = "bookmark|" + "BigStuff|" + "CarbonMonoxide3"
+        let key3 = "bookmark|" + "BigStuff|" + "CarbonMonoxide3|" + "Fuel burning appliances and automobiles..."
         var existingAnswer = defaults.object(forKey:key3) as? Bool
         if (existingAnswer == nil){
             existingAnswer = false
@@ -162,7 +165,7 @@ class CarbonMonoxideViewController: UIViewController {
     @IBAction func bookmarkButtonTapped4(_ sender: UIButton) {
         let defaults = UserDefaults.standard
         
-        let key4 = "bookmark|" + "BigStuff|" + "CarbonMonoxide4"
+        let key4 = "bookmark|" + "BigStuff|" + "CarbonMonoxide4|" + "Install a carbon monoxide alarm..."
         var existingAnswer = defaults.object(forKey:key4) as? Bool
         if (existingAnswer == nil){
             existingAnswer = false
@@ -184,7 +187,7 @@ class CarbonMonoxideViewController: UIViewController {
     @IBAction func bookmarkButtonTapped5(_ sender: UIButton) {
         let defaults = UserDefaults.standard
         
-        let key5 = "bookmark|" + "BigStuff|" + "CarbonMonoxide5"
+        let key5 = "bookmark|" + "BigStuff|" + "CarbonMonoxide5|" + "If your carbon monoxide detector goes..."
         var existingAnswer = defaults.object(forKey:key5) as? Bool
         if (existingAnswer == nil){
             existingAnswer = false
@@ -206,7 +209,7 @@ class CarbonMonoxideViewController: UIViewController {
     @IBAction func bookmarkButtonSelected6(_ sender: UIButton) {
         let defaults = UserDefaults.standard
         
-        let key6 = "bookmark|" + "BigStuff|" + "CarbonMonoxide6"
+        let key6 = "bookmark|" + "BigStuff|" + "CarbonMonoxide6|" + "Do not use your oven or stove..."
         var existingAnswer = defaults.object(forKey:key6) as? Bool
         if (existingAnswer == nil){
             existingAnswer = false

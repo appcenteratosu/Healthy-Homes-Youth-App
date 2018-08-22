@@ -40,6 +40,10 @@ class QuizResultsViewController: UIViewController {
         }
     }
     
+    @IBAction func ReturnQuizResultsToQuizScreen(_ sender: Any) {
+        performSegue(withIdentifier: "UnwindQuizResultsToQuizScreen", sender: nil)
+    }
+    
     @IBOutlet weak var backgroundView: UIView!
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

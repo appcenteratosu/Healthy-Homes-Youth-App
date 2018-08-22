@@ -15,10 +15,11 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     @IBOutlet weak var MainMenu: UIButton!
     
-    @IBOutlet weak var MailButton: UIBarButtonItem!
+    @IBOutlet weak var MailButton: UIButton!
     
-    @IBAction func MailButton(_ sender: Any) {
+    @IBAction func MailButtonTapped(_ sender: UIButton) {
         convertToPDF()
+
     }
     
     var question: Question? {
@@ -43,6 +44,8 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
         self.answersTableView.delegate = self
         self.answersTableView.dataSource = self
         self.answersTableView.separatorColor = UIColor.clear
+        
+        
         
             //          Padding:
         MainMenu.titleEdgeInsets = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)

@@ -35,6 +35,9 @@ class ViewAnswersViewController: UIViewController, UITableViewDelegate, UITableV
     
     @IBOutlet weak var ViewAnswersTableView: UITableView!
     
+    @IBAction func ReturnQuizResultsToQuizMain(_ sender: Any) {
+        performSegue(withIdentifier: "UnwindQuizResultsToQuizMain", sender: nil)
+    }
     
     
     let CorrectAnswers : [String] = ["1. D: All of the above", "2. D: Keep it beautiful", "3. D: All of the above",

@@ -1,18 +1,15 @@
-//
-//  TemperatureControlledViewController.swift
-//  temporary
-//
-//  Created by apple on 17/08/18.
-//  Copyright © 2018 Tejasree V App Developement. All rights reserved.
-//
 
 import UIKit
 
 class TemperatureControlledViewController: UIViewController {
 
     @IBOutlet weak var bookmarkButtonSelected: UIButton!
-    let key = "bookmark|" + "8Principles|" + "TempControlled"
+    let key = "bookmark|" + "8Principles|" + "TempControlled|" + "Homes that do not have balanced and consistent temperatures..."
 
+    @IBAction func returnTempToPrinciple(_ sender: Any) {
+        performSegue(withIdentifier: "ReturnTempToPrinciple", sender: nil)
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,7 +32,7 @@ class TemperatureControlledViewController: UIViewController {
     @IBAction func bookmarkButtonTapped(_ sender: UIButton) {
         let defaults = UserDefaults.standard
         
-        let key = "bookmark|" + "8Principles|" + "TempControlled"
+        let key = "bookmark|" + "8Principles|" + "TempControlled|" + "Homes that do not have balanced and consistent temperatures "
         var existingAnswer = defaults.object(forKey:key) as? Bool
         if (existingAnswer == nil){
             existingAnswer = false
