@@ -11,10 +11,6 @@ class BookmarkViewController: UIViewController, UITableViewDelegate, UITableView
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
-
-//    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-//        return 10
-//    }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = bookmarkTableView.dequeueReusableCell(withIdentifier: "bookmarks", for: indexPath)
@@ -25,13 +21,13 @@ class BookmarkViewController: UIViewController, UITableViewDelegate, UITableView
     
         bookmarkCell.text = chapteAndSubChapterNames[indexPath.row]
         
-        paragraphCell.text = paragraghs[indexPath.section]
+        paragraphCell.text = paragraghs[indexPath.row]
         
         return cell;
     }
     
     @IBAction func ReturnSavedForLaterToMainMenu(_ sender: Any) {
-        performSegue(withIdentifier: "UnwindSavedForLaterToMainMenu", sender: nil)
+        performSegue(withIdentifier: "ReturnSavedForLaterToMainMenu", sender: nil)
     }
     
     var chapteAndSubChapterNames = [String]()

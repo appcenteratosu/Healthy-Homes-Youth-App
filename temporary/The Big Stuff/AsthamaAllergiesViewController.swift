@@ -30,7 +30,7 @@ class AsthamaAllergiesViewController: UIViewController {
     @IBOutlet weak var bookmarkSelected6: UIButton!
    
     @IBAction func ReturnAsthamaToBigStuff(_ sender: Any) {
-        performSegue(withIdentifier: "UnwindAsthamaToBigStuff", sender: nil)
+        performSegue(withIdentifier: "ReturnAsthamaToBigStuff", sender: nil)
 
     }
     

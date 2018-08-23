@@ -6,6 +6,8 @@ protocol ChecklistSelectionDelegate: class {
 
 class SlideOutViewController: UIViewController {
     
+    var isChecked = Bool()
+    
     weak var delegate: ChecklistSelectionDelegate?
     
     @IBOutlet var HealthyHomesButton: [UIButton]!
@@ -26,6 +28,31 @@ class SlideOutViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    
+    @IBOutlet weak var MainMenuSelected: UIButton!
+    
+    
+    
+    @IBOutlet weak var UpDownArrow: UIImageView!
+    
+    @IBAction func MainMenuTapped(_ sender: UIButton) {
+        if isChecked == true {
+            UpDownArrow.image = UIImage(named: "checked box")
+            isChecked = false
+            
+        }
+        else {
+            if isChecked == nil {
+                isChecked = false
+            }
+            UpDownArrow.image = UIImage(named: "check list box (unfilled)")
+            isChecked = true
+        }
+//        MainMenuSelected.setImage(UIImage(named: "fav heart"), for: UIControlState.normal)
+//        MainMenuSelected.isSelected = false
+
+    }
+    
     
     let questions = [
         Question(name: "Living, Dining, and Family Rooms", answers: ["If your home was built before 1978, check painted doors, windows, trim, and walls for lead", "Vacuum carpets regularly to reduce asthma triggers", "Move blind cords out of reach of children to prevent strangulation", "Check lighting and extension cords for fraying or bare wires", "Avoid having lighting and extension cords in floor pathways", "Purchase children’s toys that do not have small parts for choking and do not contain lead", "Secure heavy items (televisions, bookcases) to walls to prevent tip overs"]),

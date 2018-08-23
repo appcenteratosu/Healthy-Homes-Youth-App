@@ -40,6 +40,12 @@ class QuizResultsViewController: UIViewController {
         }
     }
     
+    @IBAction func returnToMainMenu(_ sender: Any) {
+        performSegue(withIdentifier: "UnwindToMainMenu", sender: nil)
+
+    }
+    
+    
     @IBAction func ReturnQuizResultsToQuizScreen(_ sender: Any) {
         performSegue(withIdentifier: "UnwindQuizResultsToQuizScreen", sender: nil)
     }

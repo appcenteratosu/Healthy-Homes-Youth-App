@@ -35,12 +35,8 @@ class MainViewController: UIViewController {
             eachbutton.layer.cornerRadius = 5
         }
 
-        let barButton = UIBarButtonItem(customView: menuButtonSelected)
-//        //assign button to navigationbar
-        
-        self.navigationItem.titleView = TitleTextView
-        self.navigationItem.rightBarButtonItem = barButton
-  //      self.navigationItem.titleView = TitleLabel
+
+        //      self.navigationItem.titleView = TitleLabel
         
     
         navigationController?.navigationBar.barTintColor = #colorLiteral(red: 0.2745098039, green: 0.8156862745, blue: 0.9921568627, alpha: 1)

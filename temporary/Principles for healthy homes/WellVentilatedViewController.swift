@@ -72,5 +72,30 @@ class WellVentilatedViewController: UIViewController {
             
             bookmarkButtonSelected.setBackgroundImage(UIImage(named: "fav heart "), for: UIControlState.normal)
         }
+        
+        /*
+         let defaults = UserDefaults.standard
+         
+         let key = "bookmark|" + "8Principles|" + "Safe|" + "Injuries such as falls, burns, and poisonings occur most often..."
+         var existingAnswer = defaults.object(forKey:key) as? Bool
+         if (existingAnswer == nil){
+         existingAnswer = false
+         }
+         
+         existingAnswer = !existingAnswer!
+         
+         if existingAnswer! {
+         UserDefaults.standard.set(true, forKey: key)
+         UserDefaults.standard.synchronize()
+         bookmarkSelected.setBackgroundImage(UIImage(named: "liked heart icon"), for: UIControlState.normal)
+         } else {
+         UserDefaults.standard.set(false, forKey: key)
+         UserDefaults.standard.synchronize()
+         
+         bookmarkSelected.setBackgroundImage(UIImage(named: "fav heart "), for: UIControlState.normal)
+         }
+ */
+        
+        
     }
 }

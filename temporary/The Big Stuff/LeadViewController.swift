@@ -9,6 +9,11 @@
 import UIKit
 
 class LeadViewController: UIViewController {
+    
+    @IBAction func returnLeadtoBigStuff(_ sender: Any) {
+        performSegue(withIdentifier: "returnLeadtoBigStuff", sender: nil)
+    }
+    
     let key1 = "bookmark|" + "BigStuff|" + "Lead|" + "Lead poisoning is one of the biggest health risks for..."
     let key2 = "bookmark|" + "BigStuff|" + "Lead|" + "Lead can permanently damage your nervous..."
     let key3 = "bookmark|" + "BigStuff|" + "Lead|" + "Before 1978, lead was used in paint, water pipes, gasoline..."
@@ -31,10 +36,6 @@ class LeadViewController: UIViewController {
     @IBOutlet weak var bookmarkSelected5: UIButton!
     
     @IBOutlet weak var bookmarkSelected6: UIButton!
-    
-    @IBAction func returnLeadtoBigStuff(_ sender: Any) {
-        performSegue(withIdentifier: "UnwindLeadToBigStuff", sender: nil)
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
