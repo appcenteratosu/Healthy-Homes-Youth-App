@@ -5,16 +5,16 @@ class BookmarkViewController: UIViewController, UITableViewDelegate, UITableView
     let formattedString = NSMutableAttributedString()
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return self.chapteAndSubChapterNames.count
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return self.chapteAndSubChapterNames.count
+        return 1
     }
 
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 10
-    }
+//    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+//        return 10
+//    }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = bookmarkTableView.dequeueReusableCell(withIdentifier: "bookmarks", for: indexPath)
@@ -23,7 +23,7 @@ class BookmarkViewController: UIViewController, UITableViewDelegate, UITableView
         
         var paragraphCell = cell.viewWithTag(5) as! UILabel
     
-        bookmarkCell.text = chapteAndSubChapterNames[indexPath.section]
+        bookmarkCell.text = chapteAndSubChapterNames[indexPath.row]
         
         paragraphCell.text = paragraghs[indexPath.section]
         

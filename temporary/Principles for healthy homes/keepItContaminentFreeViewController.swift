@@ -26,6 +26,16 @@ class keepItContaminentFreeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        for eachbutton in BottomNavButtons {
+            eachbutton.titleEdgeInsets = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
+            //           Min font:
+            eachbutton.titleLabel?.adjustsFontSizeToFitWidth = true
+            //         Corner radius:
+            eachbutton.layer.cornerRadius = 5
+            //        Alignment:
+            eachbutton.titleLabel?.textAlignment = .center
+        }
+        
         var value = false
         value = UserDefaults.standard.bool(forKey: key)
         
@@ -39,19 +49,6 @@ class keepItContaminentFreeViewController: UIViewController {
         speechBubbleText.adjustsFontForContentSizeCategory = true
         speechBubbleText.textAlignment = .center
         speechBubbleText.textContainer.maximumNumberOfLines = 2
-        
-        for eachbutton in BottomNavButtons {
-            //          Padding:
-            eachbutton.titleEdgeInsets = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
-            //           Min font:
-            eachbutton.titleLabel?.adjustsFontSizeToFitWidth = true
-            //         Corner radius:
-            eachbutton.layer.cornerRadius = 5
-            //        Alignment:
-            eachbutton.titleLabel?.textAlignment = .center
-        }
-        
-        
     }
 
     override func didReceiveMemoryWarning() {

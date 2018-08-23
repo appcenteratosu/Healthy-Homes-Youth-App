@@ -34,32 +34,32 @@ class SponsorsViewController: UIViewController {
         super.viewDidLoad()
 
         sponsor1.setTitle("US DEPARTMENT OF HOUSING", for: UIControlState.normal)
-        sponsor1.titleEdgeInsets = UIEdgeInsets(top: 5, left: 85, bottom: 5, right: 40)
+        sponsor1.titleEdgeInsets = UIEdgeInsets(top: 5, left: 100, bottom: 5, right: 25)
         //           Min font:
         sponsor1.titleLabel?.adjustsFontSizeToFitWidth = true
         
         sponsor2.setTitle("EQUAL HOUSING OPPORTUNITY", for: UIControlState.normal)
-        sponsor2.titleEdgeInsets = UIEdgeInsets(top: 5, left: 40, bottom: 5, right: 85)
+        sponsor2.titleEdgeInsets = UIEdgeInsets(top: 5, left: 25, bottom: 5, right: 100)
         //           Min font:
         sponsor2.titleLabel?.adjustsFontSizeToFitWidth = true
         
         sponsor3.setTitle("HEALTHY HOMES PARTNERSHIP", for: UIControlState.normal)
-        sponsor3.titleEdgeInsets = UIEdgeInsets(top: 5, left: 85, bottom: 5, right: 40)
+        sponsor3.titleEdgeInsets = UIEdgeInsets(top: 5, left: 100, bottom: 5, right: 25)
         //           Min font:
         sponsor3.titleLabel?.adjustsFontSizeToFitWidth = true
         
         sponsor4.setTitle("OFFICE OF LEAD HAZARD CONTROL", for: UIControlState.normal)
-        sponsor4.titleEdgeInsets = UIEdgeInsets(top: 5, left: 40, bottom: 5, right: 85)
+        sponsor4.titleEdgeInsets = UIEdgeInsets(top: 5, left: 25, bottom: 5, right: 100)
         //           Min font:
         sponsor4.titleLabel?.adjustsFontSizeToFitWidth = true
         
         sponsor5.setTitle("US DEPARTMENT OF AGRICULTURE", for: UIControlState.normal)
-        sponsor5.titleEdgeInsets = UIEdgeInsets(top: 5, left: 85, bottom: 5, right: 40)
+        sponsor5.titleEdgeInsets = UIEdgeInsets(top: 5, left: 100, bottom: 5, right: 25)
         //           Min font:
         sponsor5.titleLabel?.adjustsFontSizeToFitWidth = true
         
         sponsor6.setTitle("OKLAHOMA STATE APP CENTER", for: UIControlState.normal)
-        sponsor6.titleEdgeInsets = UIEdgeInsets(top: 5, left: 40, bottom: 5, right: 85)
+        sponsor6.titleEdgeInsets = UIEdgeInsets(top: 5, left: 25, bottom: 5, right: 100)
         //           Min font:
         sponsor6.titleLabel?.adjustsFontSizeToFitWidth = true
     }

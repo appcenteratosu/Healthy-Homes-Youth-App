@@ -34,7 +34,6 @@ class CheckItTwiceViewController: UIViewController {
         Question(name: "Outside Continued", answers: ["If your home was built before 1978, check hardboard siding for asbestos", "Make sure private wells are sealed and capped.", "Consider testing your well for pesticides, organic chemicals, and heavy metals before you use it for the first time.", "Test private water supplies annually for nitrate and coliform bacteria to detect contaminations problems early", "Do not leave open garbage containers near the home", "Repair broken glass in windows and doors.", "Seal holes in walls and around windows and doors to keep rodents and pests out of living spaces"]),
         Question(name: "General", answers: ["If your home was built before 1978, use lead‐safe work practices for all renovation and repairs and test children in the home for lead exposure", "Check piping connecting your home to the water main and the piping in your home for lead (lead pipes are dull and can be scratched easily with a penny). Lead pipes are more likely to be found in homes built before 1986", "No smoking inside the home, especially with children in the same home", "Have a professional maintain yearly all gas appliances and check for carbon monoxide leaks and proper venting", "Do not use candles or incense in the home when adult supervision is not present", "Secure balcony and stair railings, and install no‐slip nosings"]),
         Question(name: "General Continued", answers: ["Replace burned‐out bulbs in lights over stairs and landings", "Run a dehumidifier if indoor humidity is above 50 percent or you see condensation on windows", "Make sure all gas burning appliances, furnaces, heaters, and fireplaces ventilate to the outside", "Replace the furnace filter with a MERV 8 or better every three months", "If mold is visible in any room, refer to mold removal guidelines from the EPA, CDC, or HUD", "Install child‐proof locks on cabinets and child‐proof covers on electrical outlets", "Keep water temperature at less than 120 degrees", "Keep firearms in locked safes", "Use pest management recommendations or safer alternative products before applying pesticides", "Keep all cleaning products in original containers and do not mix two products together"])
-        
     ]
     var selectedQuestion = Question(name: "Living, Dining, and Family Rooms", answers: ["If your home was built before 1978, check painted doors, windows, trim, and walls for lead", "Vacuum carpets regularly to reduce asthma triggers", "Move blind cords out of reach of children to prevent strangulation", "Check lighting and extension cords for fraying or bare wires", "Avoid having lighting and extension cords in floor pathways", "Purchase children’s toys that do not have small parts for choking and do not contain lead", "Secure heavy items (televisions, bookcases) to walls to prevent tip overs"])
     
@@ -102,6 +101,21 @@ class CheckItTwiceViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        // for loop over questions
+        for ques in questions {
+            for answerIndex in 0...(ques.answers.count-1){
+                let key = "checklist|" + (ques.name) + "|" + (ques.answers[answerIndex]) + "|" + String(answerIndex)
+            var existingAnswer = UserDefaults.standard.object(forKey:key) as? Bool
+            if (existingAnswer == nil){
+                existingAnswer = true
+            }
+                // put answer in nsuserdefault
+                UserDefaults.standard.set(!existingAnswer!, forKey: key)
+                UserDefaults.standard.synchronize()
+            }
+        }
+        
+        
         for eachbutton in CheckButtons {
             //          Padding:
             eachbutton.titleEdgeInsets = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)

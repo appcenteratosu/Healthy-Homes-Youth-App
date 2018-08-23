@@ -37,7 +37,7 @@ class CenterViewController: UIViewController {
 
 extension NSMutableAttributedString {
     @discardableResult func bold(_ text: String) -> NSMutableAttributedString {
-        let attrs: [NSAttributedStringKey: Any] = [.font: UIFont(name: "Times New Roman",size: 17)!]
+        let attrs: [NSAttributedStringKey: Any] = [.font: UIFont(name: "helvetica neue",size: 17)!]
         let boldString = NSMutableAttributedString(string:text, attributes: attrs)
         append(boldString)
         

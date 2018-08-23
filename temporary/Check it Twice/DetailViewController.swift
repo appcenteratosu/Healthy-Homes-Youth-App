@@ -41,10 +41,12 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.answersTableView.tableFooterView = UIView()
         self.answersTableView.delegate = self
         self.answersTableView.dataSource = self
         self.answersTableView.separatorColor = UIColor.clear
-        
+        self.answersTableView.tableFooterView = UIView()
+        self.answersTableView.backgroundColor = #colorLiteral(red: 1, green: 0.9345881343, blue: 0.1666745543, alpha: 0)
         
         
             //          Padding:
@@ -135,6 +137,16 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         return cell;
     }
+    
+    func tableview(_ answersTableView: UITableView,cellforRowAtIndexPath: IndexPath) {
+    
+    }
+    
+//    - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cellforRowAtIndexPath:(NSIndexPath *)indexPath
+//
+//    {
+//    [cell setBackgroundColor:[UIColor clearColor]];
+//    }
     
     func tableView(_ answersTableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         

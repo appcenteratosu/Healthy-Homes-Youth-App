@@ -10,9 +10,10 @@ class keepItDryViewController: UIViewController {
     @IBOutlet var BottomNavButtons: [UIButton]!
     
     @IBAction func ChpaterMenu(_ sender: UIButton) {
-        performSegue(withIdentifier: "UnwindToPrincipleMenu", sender: nil)
+        performSegue(withIdentifier: "unwindToPrinciple", sender: nil)
     }
 
+    @IBAction func unwindToPrinciple(segue: UIStoryboardSegue) {}
     
     override func viewDidLoad() {
         super.viewDidLoad()
