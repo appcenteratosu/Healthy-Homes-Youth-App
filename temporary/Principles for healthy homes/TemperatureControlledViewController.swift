@@ -4,10 +4,10 @@ import UIKit
 class TemperatureControlledViewController: UIViewController {
 
     @IBOutlet weak var bookmarkButtonSelected: UIButton!
-    let key = "bookmark|" + "8Principles|" + "TempControlled|" + "Homes that do not have balanced and consistent temperatures..."
+    let key = "bookmarks|" + "Eight Principles of Healthy Homes|" + "Keep it TEMPERATURE CONTROLLED|" + "Homes that do not have balanced and consistent temperatures..."
 
-    @IBAction func returnTempToPrinciple(_ sender: Any) {
-        performSegue(withIdentifier: "ReturnTempToPrinciple", sender: nil)
+    @IBAction func UnwindTempToPrinciple(_ sender: Any) {
+        performSegue(withIdentifier: "UnwindTempToPrinciple", sender: nil)
     }
     
     
@@ -20,7 +20,7 @@ class TemperatureControlledViewController: UIViewController {
         if value == true {
             bookmarkButtonSelected.setBackgroundImage(UIImage(named: "liked heart icon"), for: UIControlState.normal)
         } else {
-            bookmarkButtonSelected.setBackgroundImage(UIImage(named: "fav heart "), for: UIControlState.normal)
+            bookmarkButtonSelected.setBackgroundImage(UIImage(named: "fav heart"), for: UIControlState.normal)
         }
     }
 
@@ -32,7 +32,7 @@ class TemperatureControlledViewController: UIViewController {
     @IBAction func bookmarkButtonTapped(_ sender: UIButton) {
         let defaults = UserDefaults.standard
         
-        let key = "bookmark|" + "8Principles|" + "TempControlled|" + "Homes that do not have balanced and consistent temperatures..."
+        let key = "bookmarks|" + "Eight Principles of Healthy Homes|" + "Keep it TEMPERATURE CONTROLLED|" + "Homes that do not have balanced and consistent temperatures..."
         var existingAnswer = defaults.object(forKey:key) as? Bool
         if (existingAnswer == nil){
             existingAnswer = false
@@ -48,7 +48,7 @@ class TemperatureControlledViewController: UIViewController {
             UserDefaults.standard.set(false, forKey: key)
             UserDefaults.standard.synchronize()
             
-            bookmarkButtonSelected.setBackgroundImage(UIImage(named: "fav heart "), for: UIControlState.normal)
+            bookmarkButtonSelected.setBackgroundImage(UIImage(named: "fav heart"), for: UIControlState.normal)
         }
     }
     

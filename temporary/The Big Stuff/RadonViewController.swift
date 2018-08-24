@@ -9,11 +9,11 @@
 import UIKit
 
 class RadonViewController: UIViewController {
-    let key1 = "bookmark|" + "BigStuff|" + "Radon|" + "Radon comes from the natural radioactive breakdown..."
-    let key2 = "bookmark|" + "BigStuff|" + "Radon|" + "When you breathe air containing radon, you..."
-    let key3 = "bookmark|" + "BigStuff|" + "Radon|" + "Radon typically moves up through the ground..."
-    let key4 = "bookmark|" + "BigStuff|" + "Radon|" + "Learn more about..."
-    let key5 = "bookmark|" + "BigStuff|" + "Radon|" + "Have your home tested..."
+    let key1 = "bookmarks|" + "The Big Stuff|" + "Radon|" + "Radon comes from the natural radioactive breakdown..."
+    let key2 = "bookmarks|" + "The Big Stuff|" + "Radon|" + "When you breathe air containing radon, you..."
+    let key3 = "bookmarks|" + "The Big Stuff|" + "Radon|" + "Radon typically moves up through the ground..."
+    let key4 = "bookmarks|" + "The Big Stuff|" + "Radon|" + "Learn more about..."
+    let key5 = "bookmarks|" + "The Big Stuff|" + "Radon|" + "Have your home tested..."
     
     @IBOutlet weak var bookmarkSelected1: UIButton!
     
@@ -87,7 +87,7 @@ class RadonViewController: UIViewController {
     @IBAction func bookmarkTapped1(_ sender: UIButton) {
         let defaults = UserDefaults.standard
         
-        let key1 = "bookmark|" + "BigStuff|" + "Radon|" + "Radon comes from the natural radioactive breakdown..."
+        let key1 = "bookmarks|" + "The Big Stuff|" + "Radon|" + "Radon comes from the natural radioactive breakdown..."
         var existingAnswer = defaults.object(forKey:key1) as? Bool
         if (existingAnswer == nil){
             existingAnswer = false
@@ -109,7 +109,7 @@ class RadonViewController: UIViewController {
     @IBAction func bookmarkTapped2(_ sender: UIButton) {
         let defaults = UserDefaults.standard
         
-        let key2 = "bookmark|" + "BigStuff|" + "Radon|" + "When you breathe air containing radon, you..."
+        let key2 = "bookmarks|" + "The Big Stuff|" + "Radon|" + "When you breathe air containing radon, you..."
         var existingAnswer = defaults.object(forKey:key2) as? Bool
         if (existingAnswer == nil){
             existingAnswer = false
@@ -131,7 +131,7 @@ class RadonViewController: UIViewController {
     @IBAction func bookmarkTapped3(_ sender: UIButton) {
         let defaults = UserDefaults.standard
         
-        let key3 = "bookmark|" + "BigStuff|" + "Radon|" + "Radon typically moves up through the ground..."
+        let key3 = "bookmarks|" + "The Big Stuff|" + "Radon|" + "Radon typically moves up through the ground..."
         var existingAnswer = defaults.object(forKey:key3) as? Bool
         if (existingAnswer == nil){
             existingAnswer = false
@@ -153,7 +153,7 @@ class RadonViewController: UIViewController {
     @IBAction func bookmarkTapped4(_ sender: UIButton) {
         let defaults = UserDefaults.standard
         
-        let key4 = "bookmark|" + "BigStuff|" + "Radon|" + "Learn more about..."
+        let key4 = "bookmarks|" + "The Big Stuff|" + "Radon|" + "Learn more about..."
         var existingAnswer = defaults.object(forKey:key4) as? Bool
         if (existingAnswer == nil){
             existingAnswer = false
@@ -175,7 +175,7 @@ class RadonViewController: UIViewController {
     @IBAction func bookmarkTapped5(_ sender: UIButton) {
         let defaults = UserDefaults.standard
         
-        let key5 = "bookmark|" + "BigStuff|" + "Radon|" + "Have your home tested..."
+        let key5 = "bookmarks|" + "The Big Stuff|" + "Radon|" + "Have your home tested..."
         var existingAnswer = defaults.object(forKey:key5) as? Bool
         if (existingAnswer == nil){
             existingAnswer = false

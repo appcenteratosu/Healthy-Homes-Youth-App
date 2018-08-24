@@ -2,18 +2,18 @@ import UIKit
 
 class keepItDryViewController: UIViewController {
     
-    let key = "bookmark|" + "8Principles|" + "Dry|" + "Damp homes provide an environment for dust mites, roaches, rodents and molds..."
+    let key = "bookmarks|" + "Eight Principles of Healthy Homes|" + "Keep it DRY|" + "Damp homes provide an environment for dust mites, roaches, rodents and molds..."
     
     
     @IBOutlet weak var bookmarkButtonSelected: UIButton!
     
     @IBOutlet var BottomNavButtons: [UIButton]!
     
-    @IBAction func ChpaterMenu(_ sender: UIButton) {
-        performSegue(withIdentifier: "unwindToPrinciple", sender: nil)
+    @IBAction func UnwindDryToPrinciple(_ sender: UIButton) {
+        performSegue(withIdentifier: "UnwindDryToPrinciple", sender: nil)
     }
 
-    @IBAction func unwindToPrinciple(segue: UIStoryboardSegue) {}
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,7 +57,7 @@ class keepItDryViewController: UIViewController {
         
         let defaults = UserDefaults.standard
         
-        let key = "bookmark|" + "8Principles|" + "Dry|" + "Damp homes provide an environment for dust mites, roaches, rodents and molds..."
+        let key = "bookmarks|" + "Eight Principles of Healthy Homes|" + "Keep it DRY|" + "Damp homes provide an environment for dust mites, roaches, rodents and molds..."
         var existingAnswer = defaults.object(forKey:key) as? Bool
         if (existingAnswer == nil){
             existingAnswer = false

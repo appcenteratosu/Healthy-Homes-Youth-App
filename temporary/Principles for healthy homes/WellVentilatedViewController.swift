@@ -11,12 +11,12 @@ import UIKit
 class WellVentilatedViewController: UIViewController {
 
     @IBOutlet weak var bookmarkButtonSelected: UIButton!
-    let key = "bookmark|" + "8Principles|" + "Ventilated|" + "Having a good fresh air supply to your home is important"
+    let key = "bookmarks|" + "Eight Principles of Healthy Homes|" + "Keep it WELL VENTILATED|" + "Having a good fresh air supply to your home is important..."
 
     @IBOutlet var BottomNavButtons: [UIButton]!
     
-    @IBAction func ReturnVentilatedToPrinciple(_ sender: Any) {
-        performSegue(withIdentifier: "ReturnVentilatedToPrinciple", sender: nil)
+    @IBAction func UnwindVentilatedToPrinciple(_ sender: Any) {
+        performSegue(withIdentifier: "UnwindVentilatedToPrinciple", sender: nil)
     }
     
     override func viewDidLoad() {
@@ -51,18 +51,16 @@ class WellVentilatedViewController: UIViewController {
     @IBAction func bookmarkButtonTapped(_ sender: UIButton) {
         let defaults = UserDefaults.standard
         
-        let key = "bookmark|" + "8Principles|" + "Ventilated|" + "Having a good fresh air supply to your home is important"
-        var existingAnswer = defaults.object(forKey:key) as! Bool
+        let key = "bookmarks|" + "Eight Principles of Healthy Homes|" + "Keep it WELL VENTILATED|" + "Having a good fresh air supply to your home is important..."
+        var existingAnswer = defaults.object(forKey:key) as? Bool
         if (existingAnswer == nil){
             existingAnswer = false
         }
+
+        existingAnswer = !existingAnswer!
         
-        var check = existingAnswer
-        check = !check
-        
-    //    existingAnswer = !existingAnswer!
-        
-        if check {
+        if existingAnswer!
+        {
             UserDefaults.standard.set(true, forKey: key)
             UserDefaults.standard.synchronize()
             bookmarkButtonSelected.setBackgroundImage(UIImage(named: "liked heart icon"), for: UIControlState.normal)
@@ -73,29 +71,6 @@ class WellVentilatedViewController: UIViewController {
             bookmarkButtonSelected.setBackgroundImage(UIImage(named: "fav heart "), for: UIControlState.normal)
         }
         
-        /*
-         let defaults = UserDefaults.standard
-         
-         let key = "bookmark|" + "8Principles|" + "Safe|" + "Injuries such as falls, burns, and poisonings occur most often..."
-         var existingAnswer = defaults.object(forKey:key) as? Bool
-         if (existingAnswer == nil){
-         existingAnswer = false
-         }
-         
-         existingAnswer = !existingAnswer!
-         
-         if existingAnswer! {
-         UserDefaults.standard.set(true, forKey: key)
-         UserDefaults.standard.synchronize()
-         bookmarkSelected.setBackgroundImage(UIImage(named: "liked heart icon"), for: UIControlState.normal)
-         } else {
-         UserDefaults.standard.set(false, forKey: key)
-         UserDefaults.standard.synchronize()
-         
-         bookmarkSelected.setBackgroundImage(UIImage(named: "fav heart "), for: UIControlState.normal)
-         }
- */
-        
-        
+       
     }
 }

@@ -9,12 +9,12 @@
 import UIKit
 
 class SafeViewController: UIViewController {
-    let key = "bookmark|" + "8Principles|" + "Safe|" + "Injuries such as falls, burns, and poisonings occur most often..."
+    let key = "bookmarks|" + "Eight Principles of Healthy Homes|" + "Keep it SAFE|" + "Injuries such as falls, burns, and poisonings occur most often..."
 
     @IBOutlet weak var bookmarkSelected: UIButton!
     
-    @IBAction func ChaperMenu(_ sender: Any) {
-        performSegue(withIdentifier: "UnwindSafeToPrincipleMenu", sender: nil)        
+    @IBAction func UnwindSafeToPrinciple(_ sender: Any) {
+        performSegue(withIdentifier: "UnwindSafeToPrinciple", sender: nil)        
     }
     
     @IBOutlet var bottomNavButtons: [UIButton]!
@@ -46,7 +46,7 @@ class SafeViewController: UIViewController {
     @IBAction func bookmarkButtonTapped(_ sender: UIButton) {
         let defaults = UserDefaults.standard
         
-        let key = "bookmark|" + "8Principles|" + "Safe|" + "Injuries such as falls, burns, and poisonings occur most often..."
+        let key = "bookmarks|" + "Eight Principles of Healthy Homes|" + "Keep it SAFE|" + "Injuries such as falls, burns, and poisonings occur most often..."
         var existingAnswer = defaults.object(forKey:key) as? Bool
         if (existingAnswer == nil){
             existingAnswer = false

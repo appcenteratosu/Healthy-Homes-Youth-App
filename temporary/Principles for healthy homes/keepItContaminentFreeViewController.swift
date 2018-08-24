@@ -10,7 +10,7 @@ import UIKit
 
 class keepItContaminentFreeViewController: UIViewController {
     
-    let key = "bookmark|" + "8Principles|" + "ContaminantFree|" + "Levels of contaminants such as lead, radon, carbon monoxide, asbestos,..."
+    let key = "bookmarks|" + "Eight Principles of Healthy Homes|" + "Keep it CONTAMINANT FREE|" + "Levels of contaminants such as lead, radon, carbon monoxide, asbestos,..."
     
     @IBOutlet weak var bookmarkButtonSelected: UIButton!
     
@@ -18,8 +18,8 @@ class keepItContaminentFreeViewController: UIViewController {
     
     @IBOutlet var BottomNavButtons: [UIButton]!
     
-    @IBAction func returnToPrincipleMenu(_ sender: Any) {
-        performSegue(withIdentifier: "UnwindContToPrincipleMenu", sender: nil)
+    @IBAction func UnwindContFreeToPrinciple(_ sender: Any) {
+        performSegue(withIdentifier: "UnwindContFreeToPrinciple", sender: nil)
     }
     
     
@@ -42,13 +42,8 @@ class keepItContaminentFreeViewController: UIViewController {
         if value == true {
             bookmarkButtonSelected.setBackgroundImage(UIImage(named: "liked heart icon"), for: UIControlState.normal)
         } else {
-            bookmarkButtonSelected.setBackgroundImage(UIImage(named: "fav heart "), for: UIControlState.normal)
+            bookmarkButtonSelected.setBackgroundImage(UIImage(named: "fav heart"), for: UIControlState.normal)
         }
-
-        speechBubbleText.contentInset = UIEdgeInsetsMake(5,5,5,5)
-        speechBubbleText.adjustsFontForContentSizeCategory = true
-        speechBubbleText.textAlignment = .center
-        speechBubbleText.textContainer.maximumNumberOfLines = 2
     }
 
     override func didReceiveMemoryWarning() {
@@ -59,7 +54,7 @@ class keepItContaminentFreeViewController: UIViewController {
     @IBAction func bookmarkButtonTapped(_ sender: UIButton) {
         let defaults = UserDefaults.standard
         
-        let key = "bookmark|" + "8Principles|" + "ContaminantFree|" + "Levels of contaminants such as lead, radon, carbon monoxide, asbestos,..."
+        let key = "bookmarks|" + "Eight Principles of Healthy Homes|" + "Keep it CONTAMINANT FREE|" + "Levels of contaminants such as lead, radon, carbon monoxide, asbestos,..."
         var existingAnswer = defaults.object(forKey:key) as? Bool
         if (existingAnswer == nil){
             existingAnswer = false
@@ -76,7 +71,7 @@ class keepItContaminentFreeViewController: UIViewController {
             UserDefaults.standard.set(false, forKey: key)
             UserDefaults.standard.synchronize()
             
-            bookmarkButtonSelected.setBackgroundImage(UIImage(named: "fav heart "), for: UIControlState.normal)
+            bookmarkButtonSelected.setBackgroundImage(UIImage(named: "fav heart"), for: UIControlState.normal)
         }
        
     }

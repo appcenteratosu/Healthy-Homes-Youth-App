@@ -16,10 +16,28 @@ class SlideOutViewController: UIViewController {
     
     @IBOutlet var CheckItTwiceButton: [UIButton]!
     
+    @IBOutlet var BigStuffImageView: [UIImageView]!
+    
+    @IBOutlet var FamilyBorders: [UIImageView]!
+    
+    @IBOutlet var BigStuffBorders: [UIImageView]!
+    
+    @IBOutlet var FamilyImageView: [UIImageView]!
+    
+    @IBOutlet var CheckItTwiceImageView: [UIImageView]!
+    
+    
+    @IBOutlet var CheckItTwiceBorders: [UIImageView]!
+    
     var allQuestions : [Question]!
     
     var questionIndex : Int!
     
+    @IBOutlet weak var LeadButtonSelected: UIButton!
+    
+    @IBAction func LeadButtonTapped(_ sender: Any) {
+        LeadButtonSelected.setImage(UIImage(named: "orange dot"), for: UIControlState.normal)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,28 +48,24 @@ class SlideOutViewController: UIViewController {
     }
     
     @IBOutlet weak var MainMenuSelected: UIButton!
-    
-    
-    
-    @IBOutlet weak var UpDownArrow: UIImageView!
-    
-    @IBAction func MainMenuTapped(_ sender: UIButton) {
-        if isChecked == true {
-            UpDownArrow.image = UIImage(named: "checked box")
-            isChecked = false
-            
-        }
-        else {
-            if isChecked == nil {
-                isChecked = false
-            }
-            UpDownArrow.image = UIImage(named: "check list box (unfilled)")
-            isChecked = true
-        }
-//        MainMenuSelected.setImage(UIImage(named: "fav heart"), for: UIControlState.normal)
-//        MainMenuSelected.isSelected = false
 
-    }
+//    @IBAction func MainMenuTapped(_ sender: UIButton) {
+//        if isChecked == true {
+//            UpDownArrow.image = UIImage(named: "checked box")
+//            isChecked = false
+//            
+//        }
+//        else {
+//            if isChecked == nil {
+//                isChecked = false
+//            }
+//            UpDownArrow.image = UIImage(named: "check list box (unfilled)")
+//            isChecked = true
+//        }
+////        MainMenuSelected.setImage(UIImage(named: "fav heart"), for: UIControlState.normal)
+////        MainMenuSelected.isSelected = false
+//
+//    }
     
     
     let questions = [
@@ -85,20 +99,42 @@ class SlideOutViewController: UIViewController {
     @IBAction func familyHomesSelection(_ sender: Any) {
         HealthyHomesButton.forEach { (button) in
             button.isHidden = !button.isHidden
+            button.contentHorizontalAlignment = .left
         }
+        FamilyBorders.forEach { (border) in
+            border.isHidden = !border.isHidden
+        }
+        FamilyImageView.forEach { (imageView) in
+            imageView.isHidden = !imageView.isHidden
+        }
+        
     }
     
     @IBAction func BigStuffSelection(_ sender: Any) {
         BigStuffButton.forEach { (button) in
             button.isHidden = !button.isHidden
-            
+            button.contentHorizontalAlignment = .left
+        }
+        BigStuffImageView.forEach { (imageView) in
+            imageView.isHidden = !imageView.isHidden
+        }
+        BigStuffBorders.forEach{ (border) in
+            border.isHidden = !border.isHidden
         }
     }
     
     @IBAction func CheckItTwiceSelection(_ sender: Any) {
         CheckItTwiceButton.forEach { (button) in
             button.isHidden = !button.isHidden
+            button.contentHorizontalAlignment = .left
         }
+        CheckItTwiceBorders.forEach { (border) in
+            border.isHidden = !border.isHidden
+        }
+        CheckItTwiceImageView.forEach { (imageView) in
+            imageView.isHidden = !imageView.isHidden
+        }
+        
     }
     
     @IBOutlet var CheckItTwiceButtons: [UIButton]!

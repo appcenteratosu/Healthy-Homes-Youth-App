@@ -11,7 +11,7 @@ import UIKit
 class PestsViewController: UIViewController {
 
     @IBOutlet weak var bookmarkButtonSelected: UIButton!
-    let key = "bookmark|" + "8Principles|" + "Pest|" + "Exposure to pests such as roaches and rodents can trigger an asthma attack..."
+    let key = "bookmarks|" + "Eight Principles of Healthy Homes|" + "Keep it PEST FREE|" + "Exposure to pests such as roaches and rodents can trigger an asthma attack..."
     
     @IBOutlet weak var backButton: UIButton!
     
@@ -59,7 +59,7 @@ class PestsViewController: UIViewController {
     @IBAction func bookmarkButtonTapped(_ sender: UIButton) {
         let defaults = UserDefaults.standard
         
-        let key = "bookmark|" + "8Principles|" + "Pest|" + "Exposure to pests such as roaches and rodents can trigger an asthma attack..."
+        let key = "bookmarks|" + "Eight Principles of Healthy Homes|" + "Keep it PEST FREE|" + "Exposure to pests such as roaches and rodents can trigger an asthma attack..."
 
         var existingAnswer = defaults.object(forKey:key) as? Bool
         if (existingAnswer == nil){

@@ -9,7 +9,7 @@
 import UIKit
 
 class CleanViewController: UIViewController {
-    let key = "bookmark|" + "8Principles|" + "Clean|" + "Clean homes reduce pest infestation and exposures to ..."
+    let key = "bookmarks|" + "Eight Principles of Healthy Homes|" + "Keep it CLEAN|" + "Clean homes reduce pest infestation and exposures to ..."
 
     @IBOutlet weak var bookmarkButtonSelected: UIButton!
     
@@ -17,6 +17,12 @@ class CleanViewController: UIViewController {
     @IBOutlet var BottomNavButtons: [UIButton]!
     
     @IBOutlet weak var CleanTableView: UIView!
+    
+    @IBAction func UnwindCleanToPrinciple(_ sender: Any) {
+        
+        performSegue(withIdentifier: "UnwindCleanToPrinciple", sender: nil)
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,7 +57,7 @@ class CleanViewController: UIViewController {
     @IBAction func bookmarkButtonTapped(_ sender: UIButton) {
         let defaults = UserDefaults.standard
         
-        let key = "bookmark|" + "8Principles|" + "Clean|" + "Clean homes reduce pest infestation and exposures to ..."
+        let key = "bookmarks|" + "Eight Principles of Healthy Homes|" + "Keep it CLEAN|" + "Clean homes reduce pest infestation and exposures to ..."
         var existingAnswer = defaults.object(forKey:key) as? Bool
         if (existingAnswer == nil){
             existingAnswer = false

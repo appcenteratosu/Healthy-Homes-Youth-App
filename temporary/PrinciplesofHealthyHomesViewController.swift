@@ -20,7 +20,7 @@ class PrinciplesofHealthyHomesViewController: UIViewController {
         performSegue(withIdentifier: "UnwindToMainmenu", sender: nil)
     }
     
-    @IBAction func returnPricipleToMainMenu(segue: UIStoryboardSegue) {
+    @IBAction func returnToPrinciple(segue: UIStoryboardSegue) {
         
     }
     

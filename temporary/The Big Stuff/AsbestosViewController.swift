@@ -9,12 +9,12 @@
 import UIKit
 
 class AsbestosViewController: UIViewController {
-    let key1 = "bookmark|" + "BigStuff|" + "Asbestos|" + "Asbestos fibers are dangerous if they get into the air..."
-    let key2 = "bookmark|" + "BigStuff|" + "Asbestos|" + "Asbestos can cause serious long-term health problems..."
-    let key3 = "bookmark|" + "BigStuff|" + "Asbestos|" + "Asbestos was commonly used in homes in the past..."
-    let key4 = "bookmark|" + "BigStuff|" + "Asbestos|" + "If your home was built before 1978 and you are planning..."
-    let key5 = "bookmark|" + "BigStuff|" + "Asbestos|" + "If your home has asbestos materials, do..."
-    let key6 = "bookmark|" + "BigStuff|" + "Asbestos|" + "In areas with damaged asbestos, keep activities..."
+    let key1 = "bookmarks|" + "The Big Stuff|" + "Asbestos|" + "Asbestos fibers are dangerous if they get into the air..."
+    let key2 = "bookmarks|" + "The Big Stuff|" + "Asbestos|" + "Asbestos can cause serious long-term health problems..."
+    let key3 = "bookmarks|" + "The Big Stuff|" + "Asbestos|" + "Asbestos was commonly used in homes in the past..."
+    let key4 = "bookmarks|" + "The Big Stuff|" + "Asbestos|" + "If your home was built before 1978 and you are planning..."
+    let key5 = "bookmarks|" + "The Big Stuff|" + "Asbestos|" + "If your home has asbestos materials, do..."
+    let key6 = "bookmarks|" + "The Big Stuff|" + "Asbestos|" + "In areas with damaged asbestos, keep activities..."
     
     @IBOutlet weak var bookmarkSelected1: UIButton!
     
@@ -100,7 +100,7 @@ class AsbestosViewController: UIViewController {
     @IBAction func bookmarkTapped1(_ sender: UIButton) {
         let defaults = UserDefaults.standard
         
-        let key1 = "bookmark|" + "BigStuff|" + "Asbestos|" + "Asbestos fibers are dangerous if they get into the air..."
+        let key1 = "bookmarks|" + "The Big Stuff|" + "Asbestos|" + "Asbestos fibers are dangerous if they get into the air..."
         var existingAnswer = defaults.object(forKey:key1) as? Bool
         if (existingAnswer == nil){
             existingAnswer = false
@@ -122,7 +122,7 @@ class AsbestosViewController: UIViewController {
     @IBAction func bookmarkTapped2(_ sender: UIButton) {
         let defaults = UserDefaults.standard
         
-        let key2 = "bookmark|" + "BigStuff|" + "Asbestos|" + "Asbestos can cause serious long-term health problems..."
+        let key2 = "bookmarks|" + "The Big Stuff|" + "Asbestos|" + "Asbestos can cause serious long-term health problems..."
         var existingAnswer = defaults.object(forKey:key2) as? Bool
         if (existingAnswer == nil){
             existingAnswer = false
@@ -144,7 +144,7 @@ class AsbestosViewController: UIViewController {
     @IBAction func bookmarkTapped3(_ sender: UIButton) {
         let defaults = UserDefaults.standard
         
-        let key3 = "bookmark|" + "BigStuff|" + "Asbestos|" + "Asbestos was commonly used in homes in the past..."
+        let key3 = "bookmarks|" + "The Big Stuff|" + "Asbestos|" + "Asbestos was commonly used in homes in the past..."
         var existingAnswer = defaults.object(forKey:key3) as? Bool
         if (existingAnswer == nil){
             existingAnswer = false
@@ -166,7 +166,7 @@ class AsbestosViewController: UIViewController {
     @IBAction func bookmarkTapped4(_ sender: UIButton) {
         let defaults = UserDefaults.standard
         
-        let key4 = "bookmark|" + "BigStuff|" + "Asbestos|" + "If your home was built before 1978 and you are planning..."
+        let key4 = "bookmarks|" + "The Big Stuff|" + "Asbestos|" + "If your home was built before 1978 and you are planning..."
         var existingAnswer = defaults.object(forKey:key4) as? Bool
         if (existingAnswer == nil){
             existingAnswer = false
@@ -188,7 +188,7 @@ class AsbestosViewController: UIViewController {
     @IBAction func bookmarkTapped5(_ sender: UIButton) {
         let defaults = UserDefaults.standard
         
-        let key5 = "bookmark|" + "BigStuff|" + "Asbestos|" + "If your home has asbestos materials, do..."
+        let key5 = "bookmarks|" + "The Big Stuff|" + "Asbestos|" + "If your home has asbestos materials, do..."
         var existingAnswer = defaults.object(forKey:key5) as? Bool
         if (existingAnswer == nil){
             existingAnswer = false
@@ -210,7 +210,7 @@ class AsbestosViewController: UIViewController {
     @IBAction func bookmarkTapped6(_ sender: UIButton) {
         let defaults = UserDefaults.standard
         
-        let key6 = "bookmark|" + "BigStuff|" + "Asbestos|" + "In areas with damaged asbestos, keep activities..."
+        let key6 = "bookmarks|" + "The Big Stuff|" + "Asbestos|" + "In areas with damaged asbestos, keep activities..."
         var existingAnswer = defaults.object(forKey:key6) as? Bool
         if (existingAnswer == nil){
             existingAnswer = false

@@ -2,10 +2,11 @@ import UIKit
 import MessageUI
 import Foundation
 
-class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, MFMailComposeViewControllerDelegate {
+class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, MFMailComposeViewControllerDelegate, UITextViewDelegate {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var answersTableView: UITableView!
-    
+    @IBOutlet weak var ChecklistTextBox : UITextView!
+
     var answers : [String]!
     var rowChecked = false
     
@@ -44,6 +45,7 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
         self.answersTableView.tableFooterView = UIView()
         self.answersTableView.delegate = self
         self.answersTableView.dataSource = self
+        self.ChecklistTextBox.delegate = self
         self.answersTableView.separatorColor = UIColor.clear
         self.answersTableView.tableFooterView = UIView()
         self.answersTableView.backgroundColor = #colorLiteral(red: 1, green: 0.9345881343, blue: 0.1666745543, alpha: 0)
@@ -82,6 +84,7 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
         nameLabel.text = question?.name
         answers = (question?.answers)!
         self.answersTableView.reloadData()
+        
     }
     
     var questionIndex = 0
@@ -141,12 +144,7 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
     func tableview(_ answersTableView: UITableView,cellforRowAtIndexPath: IndexPath) {
     
     }
-    
-//    - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cellforRowAtIndexPath:(NSIndexPath *)indexPath
-//
-//    {
-//    [cell setBackgroundColor:[UIColor clearColor]];
-//    }
+
     
     func tableView(_ answersTableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
