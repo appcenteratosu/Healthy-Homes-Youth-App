@@ -50,7 +50,10 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
         self.answersTableView.separatorColor = UIColor.clear
         self.answersTableView.tableFooterView = UIView()
         self.answersTableView.backgroundColor = #colorLiteral(red: 1, green: 0.9345881343, blue: 0.1666745543, alpha: 0)
-
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(DetailViewController.keyboardWillShow(notification:)), name: Notification.Name.UIKeyboardWillShow, object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(DetailViewController.keyboardWillHide(notification:)), name: Notification.Name.UIKeyboardWillHide, object: nil)
         
             //          Padding:
         MainMenu.titleEdgeInsets = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
@@ -78,6 +81,8 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
         backButton.layer.cornerRadius = 5
         //        Alignment:
         backButton.titleLabel?.textAlignment = .center
+// get user's old answer for this question and set that here
+        
     }
     
     func refreshUI() {
@@ -85,7 +90,10 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
         nameLabel.text = question?.name
         answers = (question?.answers)!
         self.answersTableView.reloadData()
-        self.ChecklistTextBox.reloadInputViews()
+// snbada       self.ChecklistTextBox.reloadInputViews()
+        // get user's old answer for this question, set the text view to that and reload it
+        let notesKey = "notes|" + (self.question?.name)!
+        ChecklistTextBox.text = UserDefaults.standard.object(forKey: notesKey) as! String
     }
     
     var questionIndex = 0
@@ -188,18 +196,28 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
         }
     }
     
-    func textViewDidEndEditing(_ ChecklistTextBox: UITextView) {
-        let key1 = "checklist|" + (self.question?.name)!
-        let existingAnswer = UserDefaults.standard.object(forKey:key1) as? String
-        if (existingAnswer != "") {
-            ChecklistTextBox.text = UserDefaults.standard.object(forKey:key1) as? String
-        } else{
-            if (existingAnswer == nil){
-                UserDefaults.standard.set("", forKey: key1)
-                UserDefaults.standard.synchronize()
-            }
-            ChecklistTextBox.text = UserDefaults.standard.object(forKey:key1) as? String
+    @objc func keyboardWillShow(notification: Notification) {
+        self.view.frame.origin.y = -150
+    }
+    
+    @objc func keyboardWillHide(notification: Notification) {
+        self.view.frame.origin.y = 0
+    }
+    
+    func textView(_ ChecklistTextBox: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        if(text == "\n") {
+            ChecklistTextBox.resignFirstResponder()
+            return false
         }
+        return true
+    }
+    
+    func textViewDidChange(_ ChecklistTextBox: UITextView) {
+        let notesKey = "notes|" + (self.question?.name)!
+        // get users answer
+        // save that in nsuserdefaultss
+        UserDefaults.standard.set(ChecklistTextBox.text, forKey: notesKey)
+        UserDefaults.standard.synchronize()
     }
     
     func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
@@ -214,13 +232,14 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
             mail.setSubject("Healthy Homes Youth Checklist")
             mail.setMessageBody("PFA", isHTML: false)
             
-            var checklistData : String = "<br><a href=\"www.healthyhomespartnership.net\" style=\"font-size: 13px;\"><div align=\"center\">www.healthyhomespartnership.net</a>"
+            var checklistData : String = "<br><a ``=\"www.healthyhomespartnership.net\" style=\"font-size: 13px;\"><div align=\"center\">www.healthyhomespartnership.net</a>"
             checklistData  += "<a href=\"www.extensionhealthyhomes.org\" style=\"font-size: 13px;\">,&nbspwww.extensionhealthyhomes.org</a>"
             checklistData  += "<a href=\"www.hud.gov/healthyhomes\" style=\"font-size: 13px;\">,&nbspwww.hud.gov/healthyhomes</div></a>"
             checklistData += "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<h2 align=\"center\">Healthy Homes Partners Checklist</h2><br><br>"
             let keys = UserDefaults.standard.dictionaryRepresentation().keys
             var chapterNames = [String]()
             var checkListArray = [[String]]()
+            var notesAnswers = [String]()
             
             for key in keys
             {
@@ -248,10 +267,17 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
                         columnArray.append(option_name)
                         checkListArray.append(columnArray)
                     }
-                    
                 }
-                
+                // if key contains notes add to notes answers array add its html content
+                if key.contains("notes|") {
+                    //get the answer and put its html into array
+                    var notes_content = UserDefaults.standard.value(forKey: key) as! String
+                    var notesDataOptions = key.components(separatedBy: "|") as [String]
+                    
+                       notesAnswers.append(notes_content)
+                }
             }
+            
             for index in 0..<chapterNames.count
             {
                 checklistData = checklistData + "<b><i>Chapter : \(chapterNames[index])</i></b>" + "<br>"
@@ -259,6 +285,7 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
                 {
                     checklistData = checklistData + option + "<br>"
                 }
+                checklistData = checklistData + notesAnswers[index] + "<br>"
                 checklistData = checklistData + "<br><br>"
             }
             
@@ -292,11 +319,11 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
                 {
                     // Draw image on top of page
                     var image = UIImage(named: "Group 2701")
-                    image?.draw(in: CGRect(x: 20, y: 21, width: 80,height: 80))
+                    image?.draw(in: CGRect(x: 60, y: 21, width: 80,height: 80))
                     image = UIImage(named: "Group 2702")
-                    image?.draw(in: CGRect(x: 110, y: 21, width: 80,height: 80)) //190
+                    image?.draw(in: CGRect(x: 160, y: 21, width: 80,height: 80)) //190
                     image = UIImage(named: "healthy homes logo")
-                    image?.draw(in: CGRect(x: 195, y: 21, width: 210,height: 90))
+                    image?.draw(in: CGRect(x: 255, y: 21, width: 210,height: 90))
                     //doc 1 : 180, 51.5 //390 = 210 y: 35
                     //doc 2 : 175, 52 //385 = 212.5
                     //doc 3 : 175, 50  //385 = 212.5
@@ -304,7 +331,7 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
             //        image = UIImage(named: "logo_iphone")
            //         image?.draw(in: CGRect(x: 410, y: 21, width: 80,height: 80)) //
                     image = UIImage(named: "Group 2700")
-                    image?.draw(in: CGRect(x: 500, y: 21, width: 80,height: 80))
+                    image?.draw(in: CGRect(x: 480, y: 21, width: 80,height: 80))
                 }
                 // page number on right
                 let pageNumberString: NSString = "\(i)" as NSString
