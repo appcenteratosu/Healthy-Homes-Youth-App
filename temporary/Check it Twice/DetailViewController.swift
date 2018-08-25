@@ -9,6 +9,7 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
 
     var answers : [String]!
     var rowChecked = false
+    var extraNotes : String!
     
     @IBOutlet weak var nextButton: UIButton!
     
@@ -49,7 +50,7 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
         self.answersTableView.separatorColor = UIColor.clear
         self.answersTableView.tableFooterView = UIView()
         self.answersTableView.backgroundColor = #colorLiteral(red: 1, green: 0.9345881343, blue: 0.1666745543, alpha: 0)
-        
+
         
             //          Padding:
         MainMenu.titleEdgeInsets = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
@@ -84,7 +85,7 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
         nameLabel.text = question?.name
         answers = (question?.answers)!
         self.answersTableView.reloadData()
-        
+        self.ChecklistTextBox.reloadInputViews()
     }
     
     var questionIndex = 0
@@ -123,6 +124,8 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
         cell.layer.backgroundColor = UIColor.clear.cgColor
         cell.answerLabel.text = answers[indexPath.row]
         cell.answerLabel.numberOfLines = 0
+        cell.answerLabel.layer.masksToBounds = true
+        cell.answerLabel.layer.cornerRadius = 5
         configureCheckmark(for: cell, at: indexPath)
         
         let optionIndex = indexPath.row
@@ -140,9 +143,7 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         return cell;
     }
-    
     func tableview(_ answersTableView: UITableView,cellforRowAtIndexPath: IndexPath) {
-    
     }
 
     
@@ -163,17 +164,14 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
                 checkBox.image = UIImage(named: "check list box (unfilled)")
             }
         }
-        
         let key = "checklist|" + (self.question?.name)! + "|" + (self.question?.answers[indexPath.row])! + "|" + String(indexPath.row)
         var existingAnswer = UserDefaults.standard.object(forKey:key) as? Bool
         if (existingAnswer == nil){
             existingAnswer = false
         }
-        
         UserDefaults.standard.set(!existingAnswer!, forKey: key)
         UserDefaults.standard.synchronize()
     }
-    
     
     func configureCheckmark(for cell: UITableViewCell, at indexPath: IndexPath) {
         
@@ -188,16 +186,27 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
         } else {
             checkBox.image = UIImage(named: "check list box (unfilled)")
         }
-        
+    }
+    
+    func textViewDidEndEditing(_ ChecklistTextBox: UITextView) {
+        let key1 = "checklist|" + (self.question?.name)!
+        let existingAnswer = UserDefaults.standard.object(forKey:key1) as? String
+        if (existingAnswer != "") {
+            ChecklistTextBox.text = UserDefaults.standard.object(forKey:key1) as? String
+        } else{
+            if (existingAnswer == nil){
+                UserDefaults.standard.set("", forKey: key1)
+                UserDefaults.standard.synchronize()
+            }
+            ChecklistTextBox.text = UserDefaults.standard.object(forKey:key1) as? String
+        }
     }
     
     func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
         controller.dismiss(animated: true, completion: nil)
     }
     
-    
     func convertToPDF() {
-        
         if MFMailComposeViewController.canSendMail() {
             let mail = MFMailComposeViewController()
             mail.mailComposeDelegate = self;
@@ -222,14 +231,18 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
                     var option_name = checklistDataOptions[2]
                     
                     if(value == true)
-                    { option_name = "<input type=\"checkbox\"  width=8px checked >&nbsp" + option_name}
-                    else {option_name =  "<input type=\"checkbox\" width=8px>&nbsp" + option_name}
+                    {
+                        option_name = "<input type=\"checkbox\"  width=8px checked >&nbsp" + option_name                        
+                    }
+                    else {
+                        option_name =  "<input type=\"checkbox\" width=8px>&nbsp" + option_name
+                    }
                     
                     let chapterIndex = chapterNames.index(of: chapter_name)
                     if chapterIndex != nil{
                         checkListArray[chapterIndex!].append(option_name)
                     }
-                    else{
+                    else {
                         chapterNames.append(chapter_name)
                         var columnArray = [String]()
                         columnArray.append(option_name)
@@ -242,12 +255,10 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
             for index in 0..<chapterNames.count
             {
                 checklistData = checklistData + "<b><i>Chapter : \(chapterNames[index])</i></b>" + "<br>"
-                
                 for option in checkListArray[index]
                 {
                     checklistData = checklistData + option + "<br>"
                 }
-                
                 checklistData = checklistData + "<br><br>"
             }
             

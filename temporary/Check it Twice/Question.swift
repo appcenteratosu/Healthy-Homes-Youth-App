@@ -38,6 +38,7 @@ class Question {
     let name: String
     let answers: [String]
     
+    
     init(name: String, answers: [String]){
         self.name = name
         self.answers = answers

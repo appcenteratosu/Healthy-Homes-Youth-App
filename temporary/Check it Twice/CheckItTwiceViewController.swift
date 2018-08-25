@@ -105,14 +105,21 @@ class CheckItTwiceViewController: UIViewController {
         for ques in questions {
             for answerIndex in 0...(ques.answers.count-1){
                 let key = "checklist|" + (ques.name) + "|" + (ques.answers[answerIndex]) + "|" + String(answerIndex)
-            var existingAnswer = UserDefaults.standard.object(forKey:key) as? Bool
-            if (existingAnswer == nil){
-                existingAnswer = true
-            }
+                var existingAnswer = UserDefaults.standard.object(forKey:key) as? Bool
+                if (existingAnswer == nil){
+                    existingAnswer = true
+                }
                 // put answer in nsuserdefault
                 UserDefaults.standard.set(!existingAnswer!, forKey: key)
                 UserDefaults.standard.synchronize()
             }
+            let notesKey = "checklist|" + (ques.name)
+            var existingNotesAnswer = UserDefaults.standard.object(forKey: notesKey) as? String
+            if (existingNotesAnswer == nil) {
+                existingNotesAnswer = ""
+            }
+            UserDefaults.standard.set(existingNotesAnswer!, forKey: notesKey)
+            UserDefaults.standard.synchronize()
         }
         
         

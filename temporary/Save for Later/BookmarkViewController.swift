@@ -14,6 +14,8 @@ class BookmarkViewController: UIViewController, UITableViewDelegate, UITableView
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = bookmarkTableView.dequeueReusableCell(withIdentifier: "bookmarks", for: indexPath)
+        cell.layer.cornerRadius = 8
+        cell.layer.masksToBounds = true
         
         var bookmarkCell = cell.viewWithTag(1) as! UILabel
         

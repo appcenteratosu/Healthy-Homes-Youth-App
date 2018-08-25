@@ -26,18 +26,16 @@ class SlideOutViewController: UIViewController {
     
     @IBOutlet var CheckItTwiceImageView: [UIImageView]!
     
+    @IBOutlet var familyStackViews: [UIStackView]!
+    
+    @IBOutlet var BigStuffStackViews: [UIStackView]!
+    
     
     @IBOutlet var CheckItTwiceBorders: [UIImageView]!
     
     var allQuestions : [Question]!
     
     var questionIndex : Int!
-    
-    @IBOutlet weak var LeadButtonSelected: UIButton!
-    
-    @IBAction func LeadButtonTapped(_ sender: Any) {
-        LeadButtonSelected.setImage(UIImage(named: "orange dot"), for: UIControlState.normal)
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,23 +47,7 @@ class SlideOutViewController: UIViewController {
     
     @IBOutlet weak var MainMenuSelected: UIButton!
 
-//    @IBAction func MainMenuTapped(_ sender: UIButton) {
-//        if isChecked == true {
-//            UpDownArrow.image = UIImage(named: "checked box")
-//            isChecked = false
-//            
-//        }
-//        else {
-//            if isChecked == nil {
-//                isChecked = false
-//            }
-//            UpDownArrow.image = UIImage(named: "check list box (unfilled)")
-//            isChecked = true
-//        }
-////        MainMenuSelected.setImage(UIImage(named: "fav heart"), for: UIControlState.normal)
-////        MainMenuSelected.isSelected = false
-//
-//    }
+    @IBOutlet var CheckItTwiceStackView: [UIStackView]!
     
     
     let questions = [
@@ -101,11 +83,18 @@ class SlideOutViewController: UIViewController {
             button.isHidden = !button.isHidden
             button.contentHorizontalAlignment = .left
         }
+        
         FamilyBorders.forEach { (border) in
             border.isHidden = !border.isHidden
         }
+        
         FamilyImageView.forEach { (imageView) in
             imageView.isHidden = !imageView.isHidden
+        }
+        
+        familyStackViews.forEach { (stackView) in
+            
+                        stackView.isHidden = !stackView.isHidden
         }
         
     }
@@ -115,11 +104,17 @@ class SlideOutViewController: UIViewController {
             button.isHidden = !button.isHidden
             button.contentHorizontalAlignment = .left
         }
-        BigStuffImageView.forEach { (imageView) in
+        CheckItTwiceImageView.forEach { (imageView) in
             imageView.isHidden = !imageView.isHidden
         }
+        
         BigStuffBorders.forEach{ (border) in
             border.isHidden = !border.isHidden
+        }
+        
+        BigStuffStackViews.forEach { (stackView) in
+            
+            stackView.isHidden = !stackView.isHidden
         }
     }
     
@@ -128,16 +123,23 @@ class SlideOutViewController: UIViewController {
             button.isHidden = !button.isHidden
             button.contentHorizontalAlignment = .left
         }
+        
         CheckItTwiceBorders.forEach { (border) in
             border.isHidden = !border.isHidden
         }
-        CheckItTwiceImageView.forEach { (imageView) in
+        
+        BigStuffImageView.forEach { (imageView) in
             imageView.isHidden = !imageView.isHidden
         }
         
+        CheckItTwiceStackView.forEach { (stackView) in
+            
+            stackView.isHidden = !stackView.isHidden
+        }
+
     }
     
-    @IBOutlet var CheckItTwiceButtons: [UIButton]!
+//    @IBOutlet var CheckItTwiceButtons: [UIButton]!
     
     @IBAction func CheckItTwiceButtons(_ sender: UIButton) {
         let title : String = sender.currentTitle!
@@ -186,11 +188,5 @@ class SlideOutViewController: UIViewController {
             selectedIndex = 11
             self.performSegue(withIdentifier: "ChecklistSideMenu", sender: self)
         }
-    }
-    
-    @IBAction func keepItDryTouched(_ sender: UIButton) {
-        let mainStoreboard : UIStoryboard = UIStoryboard(name: "Main", bundle : nil)
-        let DVC = mainStoreboard.instantiateViewController(withIdentifier: "keepItDryViewController") as! keepItDryViewController
-        self.navigationController?.pushViewController(DVC, animated: true)
     }
 }
