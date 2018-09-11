@@ -198,7 +198,7 @@
                                 <rect key="frame" x="0.0" y="83" width="320" height="361"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="252" image="big speech bubble" translatesAutoresizingMaskIntoConstraints="NO" id="fqr-Oz-bK8">
-                                <rect key="frame" x="40" y="113" width="240" height="210"/>
+                                <rect key="frame" x="40" y="92" width="240" height="210"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="210" id="ceC-ey-M1o"/>
                                 </constraints>
@@ -222,7 +222,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" layoutMarginsFollowReadableWidth="YES" image="top-right fluffy guy" translatesAutoresizingMaskIntoConstraints="NO" id="fxX-TG-1O1">
-                                <rect key="frame" x="100" y="323" width="120" height="94"/>
+                                <rect key="frame" x="100" y="302" width="120" height="115"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Click below to see more!" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="YuC-lv-y7H">
                                 <rect key="frame" x="241" y="329" width="64" height="53"/>
@@ -231,7 +231,7 @@
                                 <color key="highlightedColor" red="1" green="0.050980392156862744" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="tWm-tt-Z2a">
-                                <rect key="frame" x="70" y="128" width="195" height="160"/>
+                                <rect key="frame" x="70" y="107" width="195" height="160"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -1911,19 +1911,19 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dry speech bubble" translatesAutoresizingMaskIntoConstraints="NO" id="Ww6-OB-2sV">
-                                <rect key="frame" x="10" y="252" width="300" height="130"/>
+                                <rect key="frame" x="10" y="257" width="300" height="130"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="130" id="PD7-xm-WdC"/>
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="top-left fluffy guy" translatesAutoresizingMaskIntoConstraints="NO" id="gj6-G9-BGr">
-                                <rect key="frame" x="250" y="342" width="70" height="115"/>
+                                <rect key="frame" x="250" y="347" width="70" height="110"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="rain cloud" translatesAutoresizingMaskIntoConstraints="NO" id="yoh-YY-2QB">
-                                <rect key="frame" x="43.5" y="134" width="233" height="108"/>
+                                <rect key="frame" x="43.5" y="134" width="233" height="113"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nEE-rF-W02">
-                                <rect key="frame" x="275" y="337" width="25" height="25"/>
+                                <rect key="frame" x="275" y="342" width="25" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="IFY-id-hc7"/>
                                     <constraint firstAttribute="width" constant="25" id="fQd-Be-oRG"/>
@@ -1934,7 +1934,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="H3K-Pu-ATn">
-                                <rect key="frame" x="35" y="267" width="260" height="80"/>
+                                <rect key="frame" x="35" y="272" width="260" height="80"/>
                                 <string key="text">Damp homes provide an environment for dust mites, roaches, rodents and molds. All of these can cause or worsen asthma. In addition, moisture can damage the building materials in your home.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <nil key="textColor"/>
@@ -2668,7 +2668,7 @@
                                 <rect key="frame" x="0.0" y="145" width="320" height="277"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Introduction" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="7o5-Fu-6lc">
-                                        <rect key="frame" x="30" y="-6.5" width="260" height="40"/>
+                                        <rect key="frame" x="30" y="-11.5" width="260" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="uNK-WF-Nel"/>
                                         </constraints>
@@ -2677,9 +2677,9 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A home can:" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="gAc-tv-W6E">
-                                        <rect key="frame" x="10" y="33.5" width="300" height="55"/>
+                                        <rect key="frame" x="10" y="28.5" width="300" height="60"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="55" id="5S0-gD-Rgx"/>
+                                            <constraint firstAttribute="height" constant="60" id="5S0-gD-Rgx"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <color key="textColor" red="0.1647058824" green="0.52941176469999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -2921,7 +2921,7 @@
                                 <color key="backgroundColor" red="1" green="0.93333333330000001" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="hCp-Jq-2Vm">
-                                <rect key="frame" x="0.0" y="179.5" width="320" height="210"/>
+                                <rect key="frame" x="0.0" y="169" width="320" height="231"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Results" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="MtT-Mq-LSh">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="36"/>
@@ -2948,7 +2948,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="top-right fluffy guy" translatesAutoresizingMaskIntoConstraints="NO" id="GWt-cc-vKx">
-                                        <rect key="frame" x="0.0" y="116" width="320" height="94"/>
+                                        <rect key="frame" x="0.0" y="116" width="320" height="115"/>
                                     </imageView>
                                 </subviews>
                                 <constraints>
@@ -3321,7 +3321,7 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="top-left fluffy guy" translatesAutoresizingMaskIntoConstraints="NO" id="jZd-QR-3Bp">
-                                <rect key="frame" x="250" y="332" width="70" height="115"/>
+                                <rect key="frame" x="250" y="337" width="70" height="110"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mga-b8-1F6">
                                 <rect key="frame" x="0.0" y="87" width="320" height="61"/>
@@ -6308,10 +6308,10 @@
                                                 </constraints>
                                             </imageView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="fVz-z7-bqA">
-                                                <rect key="frame" x="20" y="1206" width="280" height="54"/>
+                                                <rect key="frame" x="20" y="1201" width="280" height="59"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AGK-EO-TzQ">
-                                                        <rect key="frame" x="0.0" y="0.0" width="86.5" height="54"/>
+                                                        <rect key="frame" x="0.0" y="2.5" width="86.5" height="54"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                         <state key="normal" title="Back" backgroundImage="yellow option buttons"/>
                                                         <connections>
@@ -6319,7 +6319,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="gB7-LV-Ti0">
-                                                        <rect key="frame" x="96.5" y="0.0" width="87" height="54"/>
+                                                        <rect key="frame" x="96.5" y="2.5" width="87" height="54"/>
                                                         <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="20"/>
                                                         <state key="normal" title="Chapter Menu" backgroundImage="yellow option buttons"/>
                                                         <connections>
@@ -6328,7 +6328,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hrK-2A-FGA">
-                                                        <rect key="frame" x="193.5" y="0.0" width="86.5" height="54"/>
+                                                        <rect key="frame" x="193.5" y="2.5" width="86.5" height="54"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                         <state key="normal" title="Next" backgroundImage="yellow option buttons"/>
                                                         <connections>
@@ -6367,7 +6367,7 @@
                                                 </constraints>
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="top-left fluffy guy" translatesAutoresizingMaskIntoConstraints="NO" id="7Ea-Rb-6KO">
-                                                <rect key="frame" x="205" y="1065" width="115" height="115"/>
+                                                <rect key="frame" x="205" y="1065" width="115" height="110"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="115" id="waS-IJ-GvN"/>
                                                 </constraints>
@@ -6673,10 +6673,10 @@
                                                 </constraints>
                                             </imageView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="mrZ-cF-EtQ">
-                                                <rect key="frame" x="20" y="1105" width="280" height="55"/>
+                                                <rect key="frame" x="20" y="1106" width="280" height="54"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5hv-AJ-JNY">
-                                                        <rect key="frame" x="0.0" y="0.5" width="86.5" height="54"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="86.5" height="54"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                         <state key="normal" title="Back" backgroundImage="yellow option buttons"/>
                                                         <connections>
@@ -6684,7 +6684,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="NLP-kG-JMY">
-                                                        <rect key="frame" x="96.5" y="0.5" width="87" height="54"/>
+                                                        <rect key="frame" x="96.5" y="0.0" width="87" height="54"/>
                                                         <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="20"/>
                                                         <state key="normal" title="Chapter Menu" backgroundImage="yellow option buttons"/>
                                                         <connections>
@@ -6693,7 +6693,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ry0-Nx-lrA">
-                                                        <rect key="frame" x="193.5" y="0.5" width="86.5" height="54"/>
+                                                        <rect key="frame" x="193.5" y="0.0" width="86.5" height="54"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                         <state key="normal" title="Next" backgroundImage="yellow option buttons"/>
                                                         <connections>
@@ -6749,7 +6749,7 @@
                                                 </constraints>
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="top-right fluffy guy" translatesAutoresizingMaskIntoConstraints="NO" id="12m-23-oAh">
-                                                <rect key="frame" x="0.0" y="984" width="100" height="94"/>
+                                                <rect key="frame" x="0.0" y="984" width="100" height="95"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="100" id="enb-2g-1PF"/>
                                                 </constraints>
@@ -8235,10 +8235,10 @@
                                                 </constraints>
                                             </imageView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="m1m-HD-jfP">
-                                                <rect key="frame" x="20" y="1195" width="280" height="65"/>
+                                                <rect key="frame" x="20" y="1206" width="280" height="54"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DlH-IX-dMl">
-                                                        <rect key="frame" x="0.0" y="5.5" width="86.5" height="54"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="86.5" height="54"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                         <state key="normal" title="Back" backgroundImage="yellow option buttons"/>
                                                         <connections>
@@ -8246,7 +8246,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="E11-Ok-NxR">
-                                                        <rect key="frame" x="96.5" y="5.5" width="87" height="54"/>
+                                                        <rect key="frame" x="96.5" y="0.0" width="87" height="54"/>
                                                         <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="20"/>
                                                         <state key="normal" title="Chapter Menu" backgroundImage="yellow option buttons"/>
                                                         <connections>
@@ -8255,7 +8255,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0rf-iV-cSl">
-                                                        <rect key="frame" x="193.5" y="5.5" width="86.5" height="54"/>
+                                                        <rect key="frame" x="193.5" y="0.0" width="86.5" height="54"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                         <state key="normal" title="Next" backgroundImage="yellow option buttons"/>
                                                         <connections>
@@ -8289,7 +8289,7 @@
                                                 </constraints>
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="top-right fluffy guy" translatesAutoresizingMaskIntoConstraints="NO" id="IVj-ot-4Gy">
-                                                <rect key="frame" x="0.0" y="1074" width="100" height="94"/>
+                                                <rect key="frame" x="0.0" y="1074" width="100" height="105"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="100" id="uRa-ts-2Vg"/>
                                                 </constraints>
@@ -9502,7 +9502,7 @@ AABUAAAAAAAAAAAAAAAAAAAT6w
         <image name="lead text box 4" width="195" height="113"/>
         <image name="lead text box 5" width="180" height="80"/>
         <image name="lead text box 6" width="218" height="72"/>
-        <image name="left house man" width="126" height="144"/>
+        <image name="left house man" width="95" height="108"/>
         <image name="long scribbles" width="280" height="1184"/>
         <image name="main menu icon" width="19" height="18"/>
         <image name="maintained fluffy man" width="171" height="167"/>
@@ -9555,8 +9555,8 @@ AABUAAAAAAAAAAAAAAAAAAAT6w
         <image name="the big stuff icon" width="18" height="20"/>
         <image name="top nav bar" width="343" height="48"/>
         <image name="top yellow button" width="270" height="57"/>
-        <image name="top-left fluffy guy" width="118" height="115"/>
-        <image name="top-right fluffy guy" width="96" height="94"/>
+        <image name="top-left fluffy guy" width="113" height="110"/>
+        <image name="top-right fluffy guy" width="118" height="115"/>
         <image name="top-right fluffy man" width="90" height="88"/>
         <image name="train your brain icon" width="20" height="17"/>
         <image name="transparent rectangle" width="325" height="373"/>
