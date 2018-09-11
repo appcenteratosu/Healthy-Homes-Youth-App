@@ -25,15 +25,16 @@ class keepItContaminentFreeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let frame = UIScreen.main.bounds
         
-        for eachbutton in BottomNavButtons {
-            eachbutton.titleEdgeInsets = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
-            //           Min font:
-            eachbutton.titleLabel?.adjustsFontSizeToFitWidth = true
-            //         Corner radius:
-            eachbutton.layer.cornerRadius = 5
-            //        Alignment:
-            eachbutton.titleLabel?.textAlignment = .center
+        for button in BottomNavButtons {
+            if frame.height > 850 && frame.width > 450  {
+                button.titleLabel?.font = UIFont(name: "Helvetica Neue", size: 27)
+            }
+            else
+            {
+                button.titleLabel?.font = UIFont(name: "Helvetica Neue", size: 15)
+            }
         }
         
         var value = false

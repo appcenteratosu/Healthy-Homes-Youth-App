@@ -16,6 +16,8 @@ class SlideOutViewController: UIViewController {
     
     @IBOutlet var CheckItTwiceButton: [UIButton]!
     
+    @IBOutlet var MainMenus: [UIButton]!
+    
     @IBOutlet var BigStuffImageView: [UIImageView]!
     
     @IBOutlet var FamilyBorders: [UIImageView]!
@@ -39,6 +41,57 @@ class SlideOutViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let frame = UIScreen.main.bounds
+        
+        for button in HealthyHomesButton {
+            if frame.height > 850 && frame.width > 450  {
+                    button.titleLabel?.font = UIFont(name: "Helvetica Neue", size: 27)
+                }
+            else
+            {
+                button.titleLabel?.font = UIFont(name: "Helvetica Neue", size: 15)
+            }
+            
+        }
+        
+        for button in BigStuffButton {
+            if frame.height > 850 && frame.width > 450  {
+                button.titleLabel?.font = UIFont(name: "Helvetica Neue", size: 27)
+            }
+            else
+            {
+                button.titleLabel?.font = UIFont(name: "Helvetica Neue", size: 15)
+            }
+        }
+        
+        for button in CheckItTwiceButton {
+            if frame.height > 850 && frame.width > 450  {
+                button.titleLabel?.font = UIFont(name: "Helvetica Neue", size: 27)
+            }
+            else
+            {
+                button.titleLabel?.font = UIFont(name: "Helvetica Neue", size: 15)
+            }
+        }
+        
+        for button in MainMenus {
+            if frame.height > 850 && frame.width > 450  {
+                button.titleLabel?.font = UIFont(name: "Helvetica Neue", size: 27)
+            }
+            else
+            {
+                button.titleLabel?.font = UIFont(name: "Helvetica Neue", size: 15)
+            }
+            
+        }
+        
+        if frame.height > 850 && frame.width > 450  {
+            MainMenuSelected.titleLabel?.font = UIFont(name: "Helvetica Neue", size: 27)
+        }
+        else
+        {
+            MainMenuSelected.titleLabel?.font = UIFont(name: "Helvetica Neue", size: 15)
+        }        
     }
     
     override func didReceiveMemoryWarning() {

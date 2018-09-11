@@ -2,7 +2,7 @@
 //  PestsViewController.swift
 //  temporary
 //
-//  Created by apple on 17/08/18.
+//  Created by apple on 15/08/18.
 //  Copyright © 2018 Tejasree V App Developement. All rights reserved.
 //
 
@@ -38,16 +38,17 @@ class PestsViewController: UIViewController {
         } else {
             bookmarkButtonSelected.setBackgroundImage(UIImage(named: "fav heart "), for: UIControlState.normal)
         }
+
+        let frame = UIScreen.main.bounds
         
-        for eachbutton in BottomNavButtons {
-            //          Padding:
-            eachbutton.titleEdgeInsets = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
-            //           Min font:
-            eachbutton.titleLabel?.adjustsFontSizeToFitWidth = true
-            //         Corner radius:
-            eachbutton.layer.cornerRadius = 5
-            //        Alignment:
-            eachbutton.titleLabel?.textAlignment = .center
+        for button in BottomNavButtons {
+            if frame.height > 850 && frame.width > 450  {
+                button.titleLabel?.font = UIFont(name: "Helvetica Neue", size: 27)
+            }
+            else
+            {
+                button.titleLabel?.font = UIFont(name: "Helvetica Neue", size: 15)
+            }
         }
     }
 

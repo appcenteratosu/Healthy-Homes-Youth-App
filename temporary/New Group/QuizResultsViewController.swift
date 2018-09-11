@@ -29,14 +29,22 @@ class QuizResultsViewController: UIViewController {
         checkStatusArray = answerStatusArray
 
         backgroundView.layer.cornerRadius = 5;
-        backgroundView.layer.masksToBounds = true;
+        backgroundView.layer.masksToBounds = true
         
-        for eachbutton in bottomNavButtons {
-            eachbutton.titleLabel?.textAlignment = .center
-            eachbutton.titleEdgeInsets = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
-            eachbutton.titleLabel?.adjustsFontSizeToFitWidth = true
-            eachbutton.layer.cornerRadius = 5
+        let frame = UIScreen.main.bounds
         
+        for button in bottomNavButtons {
+            if frame.height > 850 && frame.width > 450  {
+                button.titleLabel?.font = UIFont(name: "Helvetica Neue", size: 27)
+                button.titleLabel?.textAlignment = .center
+            }
+            else
+            {
+                button.titleLabel?.font = UIFont(name: "Helvetica Neue", size: 17)
+                
+            button.titleLabel?.textAlignment = .center
+                
+            }
         }
     }
     

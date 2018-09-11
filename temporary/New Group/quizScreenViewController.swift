@@ -74,6 +74,35 @@ class quizScreenViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let frame = UIScreen.main.bounds
+        
+        if frame.height > 850 && frame.width > 450  {
+            nextButtonSelected.titleLabel?.font = UIFont(name: "Helvetica Neue", size: 27)
+        }
+        else
+        {
+            nextButtonSelected.titleLabel?.font = UIFont(name: "Helvetica Neue", size: 15)
+        }
+        
+        if frame.height > 850 && frame.width > 450  {
+            backButtonSelected.titleLabel?.font = UIFont(name: "Helvetica Neue", size: 27)
+        }
+        else
+        {
+            backButtonSelected.titleLabel?.font = UIFont(name: "Helvetica Neue", size: 15)
+        }
+        
+        if frame.height > 850 && frame.width > 450  {
+            endQuiz.titleLabel?.font = UIFont(name: "Helvetica Neue", size: 27)
+        }
+        else
+        {
+            endQuiz.titleLabel?.font = UIFont(name: "Helvetica Neue", size: 15)
+        }
+        
+        quesName.adjustsFontSizeToFitWidth = false
+        
         //you should update answer here only if he hasnt clicked
         StatusArray = ["skipped","skipped","skipped","skipped","skipped","skipped","skipped","skipped",
         "skipped","skipped","skipped","skipped","skipped","skipped","skipped","skipped","skipped",

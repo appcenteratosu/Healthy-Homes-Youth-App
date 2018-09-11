@@ -40,9 +40,23 @@ class BookmarkViewController: UIViewController, UITableViewDelegate, UITableView
     var chapter_name = String()
     var sub_chapter = String()
     var paragraph = String()
+    
+    @IBOutlet weak var MainManu: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+       
+        let frame = UIScreen.main.bounds
+        
+       
+            if frame.height > 850 && frame.width > 450  {
+                MainManu.titleLabel?.font = UIFont(name: "Helvetica Neue", size: 27)
+            }
+            else
+            {
+                MainManu.titleLabel?.font = UIFont(name: "Helvetica Neue", size: 15)
+            }
+        
         self.bookmarkTableView.delegate = self
         self.bookmarkTableView.dataSource = self
         self.bookmarkTableView.separatorColor = UIColor.clear
@@ -60,7 +74,7 @@ class BookmarkViewController: UIViewController, UITableViewDelegate, UITableView
                 chapter_name =  bookmarkDataOptions[1]
                 sub_chapter = bookmarkDataOptions[2]
                     paragraph = bookmarkDataOptions[3]
-                chapteAndSubChapterNames.append(chapter_name + "|" + sub_chapter)
+                chapteAndSubChapterNames.append(chapter_name + " | " + sub_chapter)
                     
                     paragraghs.append(paragraph)
                     

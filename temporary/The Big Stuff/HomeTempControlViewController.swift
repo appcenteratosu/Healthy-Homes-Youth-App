@@ -2,7 +2,7 @@
 //  HomeTempControlViewController.swift
 //  temporary
 //
-//  Created by apple on 17/08/18.
+//  Created by apple on 15/08/18.
 //  Copyright © 2018 Tejasree V App Developement. All rights reserved.
 //
 
@@ -16,6 +16,8 @@ class HomeTempControlViewController: UIViewController {
     let key5 = "bookmarks|" + "The Big Stuff|" + "HomeTempControl|" + "Clean or change the air filters when they..."
     let key6 = "bookmarks|" + "The Big Stuff|" + "HomeTempControl|" + "Consider having a home energy audit from your..."
     let key7 = "bookmarks|" + "The Big Stuff|" + "HomeTempControl|" + "Find temporary shelter for elderly or ill family..."
+    
+    
     
     @IBOutlet weak var bookmarkSelected1: UIButton!
     
@@ -31,6 +33,8 @@ class HomeTempControlViewController: UIViewController {
     
     @IBOutlet weak var bookmarkSelected7: UIButton!
     
+    @IBOutlet var BottomNavButtons: [UIButton]!    
+    
     @IBAction func ReturnHomeTempToBigStuff(_ sender: UIButton) {
         performSegue(withIdentifier: "UnwindHomeTempToBigStuff", sender: nil)
     }
@@ -38,6 +42,18 @@ class HomeTempControlViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        let frame = UIScreen.main.bounds
+        
+        for button in BottomNavButtons {
+            if frame.height > 850 && frame.width > 450  {
+                button.titleLabel?.font = UIFont(name: "Helvetica Neue", size: 27)
+            }
+            else
+            {
+                button.titleLabel?.font = UIFont(name: "Helvetica Neue", size: 15)
+            }
+        }
+        
         var value1 = false
         value1 = UserDefaults.standard.bool(forKey: key1)
         

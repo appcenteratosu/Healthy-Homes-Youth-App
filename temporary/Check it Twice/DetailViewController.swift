@@ -41,6 +41,8 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
         }
     }
     
+    @IBOutlet var BottomNavButtons: [UIButton]!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.answersTableView.tableFooterView = UIView()
@@ -55,34 +57,17 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         NotificationCenter.default.addObserver(self, selector: #selector(DetailViewController.keyboardWillHide(notification:)), name: Notification.Name.UIKeyboardWillHide, object: nil)
         
-            //          Padding:
-        MainMenu.titleEdgeInsets = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
-            //           Min font:
-        MainMenu.titleLabel?.adjustsFontSizeToFitWidth = true
-            //         Corner radius:
-        MainMenu.layer.cornerRadius = 5
-            //        Alignment:
-        MainMenu.titleLabel?.textAlignment = .center
+        let frame = UIScreen.main.bounds
         
-        //          Padding:
-        nextButton.titleEdgeInsets = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
-        //           Min font:
-        nextButton.titleLabel?.adjustsFontSizeToFitWidth = true
-        //         Corner radius:
-        nextButton.layer.cornerRadius = 5
-        //        Alignment:
-        nextButton.titleLabel?.textAlignment = .center
-        
-        //          Padding:
-        backButton.titleEdgeInsets = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
-        //           Min font:
-        backButton.titleLabel?.adjustsFontSizeToFitWidth = true
-        //         Corner radius:
-        backButton.layer.cornerRadius = 5
-        //        Alignment:
-        backButton.titleLabel?.textAlignment = .center
-// get user's old answer for this question and set that here
-        
+        for button in BottomNavButtons {
+            if frame.height > 850 && frame.width > 450  {
+                button.titleLabel?.font = UIFont(name: "Helvetica Neue", size: 27)
+            }
+            else
+            {
+                button.titleLabel?.font = UIFont(name: "Helvetica Neue", size: 15)
+            }
+        }
     }
     
     func refreshUI() {

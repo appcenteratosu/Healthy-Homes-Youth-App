@@ -31,9 +31,9 @@ class CheckItTwiceViewController: UIViewController {
         Question(name: "Basement (or Crawlspace)", answers: ["If your home was built before 1978, check painted doors, windows, trim, and walls for lead", "Check if the pipe that connects your home to the water main (the service line) is made from lead", "Seal holes in walls and around windows and doors to keep rodents and pests out of living spaces", "Clean up clutter to prevent rodents and insects from finding places to nest", "Test the home for radon. If test shows radon above EPA recommended levels, seal slab and foundation wall cracks, and if the problem persists, consider installing a radon mitigation system", "Keep pesticides and cleaning supplies locked away and out of reach of children", "Seal all cracks in slabs and foundation walls for moisture, radon, and pest protection"]),
         Question(name: "Garage", answers: ["Never run lawnmowers, cars, or combustion equipment inside the garage with garage door closed", "Keep gasoline, pesticides, and cleaning supplies out of reach of children.", "Clean up oil, gasoline, and other spills immediately", "If a floor drain is present, make sure it drains to well beyond the outside of the home"]),
         Question(name: "Outside", answers: ["If your home was built before 1978, check painted doors, windows, trim, and walls for lead", "If your home was built before 1978, check painted doors, windows, trim, and walls for lead", "Remove leaves and debris from gutters regularly and extend downspouts to drain away from the house", "Replace missing or broken shingles or flashings", "Clean window wells of trash and debris", "Install and maintain fences completely around pools with openings less than 1/4 inch"]),
-        Question(name: "Outside Continued", answers: ["If your home was built before 1978, check hardboard siding for asbestos", "Make sure private wells are sealed and capped.", "Consider testing your well for pesticides, organic chemicals, and heavy metals before you use it for the first time.", "Test private water supplies annually for nitrate and coliform bacteria to detect contaminations problems early", "Do not leave open garbage containers near the home", "Repair broken glass in windows and doors.", "Seal holes in walls and around windows and doors to keep rodents and pests out of living spaces"]),
+        Question(name: "Outside (Continued)", answers: ["If your home was built before 1978, check hardboard siding for asbestos", "Make sure private wells are sealed and capped.", "Consider testing your well for pesticides, organic chemicals, and heavy metals before you use it for the first time.", "Test private water supplies annually for nitrate and coliform bacteria to detect contaminations problems early", "Do not leave open garbage containers near the home", "Repair broken glass in windows and doors.", "Seal holes in walls and around windows and doors to keep rodents and pests out of living spaces"]),
         Question(name: "General", answers: ["If your home was built before 1978, use lead‐safe work practices for all renovation and repairs and test children in the home for lead exposure", "Check piping connecting your home to the water main and the piping in your home for lead (lead pipes are dull and can be scratched easily with a penny). Lead pipes are more likely to be found in homes built before 1986", "No smoking inside the home, especially with children in the same home", "Have a professional maintain yearly all gas appliances and check for carbon monoxide leaks and proper venting", "Do not use candles or incense in the home when adult supervision is not present", "Secure balcony and stair railings, and install no‐slip nosings"]),
-        Question(name: "General Continued", answers: ["Replace burned‐out bulbs in lights over stairs and landings", "Run a dehumidifier if indoor humidity is above 50 percent or you see condensation on windows", "Make sure all gas burning appliances, furnaces, heaters, and fireplaces ventilate to the outside", "Replace the furnace filter with a MERV 8 or better every three months", "If mold is visible in any room, refer to mold removal guidelines from the EPA, CDC, or HUD", "Install child‐proof locks on cabinets and child‐proof covers on electrical outlets", "Keep water temperature at less than 120 degrees", "Keep firearms in locked safes", "Use pest management recommendations or safer alternative products before applying pesticides", "Keep all cleaning products in original containers and do not mix two products together"])
+        Question(name: "General (Continued)", answers: ["Replace burned‐out bulbs in lights over stairs and landings", "Run a dehumidifier if indoor humidity is above 50 percent or you see condensation on windows", "Make sure all gas burning appliances, furnaces, heaters, and fireplaces ventilate to the outside", "Replace the furnace filter with a MERV 8 or better every three months", "If mold is visible in any room, refer to mold removal guidelines from the EPA, CDC, or HUD", "Install child‐proof locks on cabinets and child‐proof covers on electrical outlets", "Keep water temperature at less than 120 degrees", "Keep firearms in locked safes", "Use pest management recommendations or safer alternative products before applying pesticides", "Keep all cleaning products in original containers and do not mix two products together"])
     ]
     var selectedQuestion = Question(name: "Living, Dining, and Family Rooms", answers: ["If your home was built before 1978, check painted doors, windows, trim, and walls for lead", "Vacuum carpets regularly to reduce asthma triggers", "Move blind cords out of reach of children to prevent strangulation", "Check lighting and extension cords for fraying or bare wires", "Avoid having lighting and extension cords in floor pathways", "Purchase children’s toys that do not have small parts for choking and do not contain lead", "Secure heavy items (televisions, bookcases) to walls to prevent tip overs"])
     
@@ -42,8 +42,8 @@ class CheckItTwiceViewController: UIViewController {
     weak var delegate: MonsterSelectionDelegate?
 
     @IBAction func ChecklistButton(_ sender: UIButton) {
-        let title : String = sender.currentTitle!
-        if (title == "1. Family rooms"){
+        let title : String = (sender.currentTitle)!
+        if (title == "1. Family rooms") {
             self.selectedQuestion = questions[0]
             selectedIndex = 0
             self.performSegue(withIdentifier: "ChecklistSegue", sender: self)
@@ -116,22 +116,22 @@ class CheckItTwiceViewController: UIViewController {
             let notesKey = "notes|" + (ques.name)
             var existingNotesAnswer = UserDefaults.standard.object(forKey: notesKey) as? String
             if (existingNotesAnswer == nil) {
-                existingNotesAnswer = "User Notes: "
+                existingNotesAnswer = "My Notes: "
             }
             UserDefaults.standard.set(existingNotesAnswer!, forKey: notesKey)
             UserDefaults.standard.synchronize()
         }
         
+        let frame = UIScreen.main.bounds
         
-        for eachbutton in CheckButtons {
-            //          Padding:
-            eachbutton.titleEdgeInsets = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
-            //           Min font:
-            eachbutton.titleLabel?.adjustsFontSizeToFitWidth = true
-            //         Corner radius:
-            eachbutton.layer.cornerRadius = 5
-            //        Alignment:
-            eachbutton.titleLabel?.textAlignment = .center
+        for button in CheckButtons {
+            if frame.height > 850 && frame.width > 450  {
+                button.titleLabel?.font = UIFont(name: "Helvetica Neue", size: 27)
+            }
+            else
+            {
+                button.titleLabel?.font = UIFont(name: "Helvetica Neue", size: 15)
+            }
         }
     }
 
@@ -143,14 +143,4 @@ class CheckItTwiceViewController: UIViewController {
     @IBOutlet weak var backGroundView: UIView!
     
     @IBOutlet weak var header: UIImageView!
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

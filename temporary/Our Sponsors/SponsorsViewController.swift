@@ -26,42 +26,58 @@ class SponsorsViewController: UIViewController {
     
     @IBOutlet weak var sponsor6: UIButton!
     
+    @IBOutlet weak var MainMenu: UIButton!
+    
     @IBAction func ReturnSponsorsToMainMenu(_ sender: Any) {
         performSegue(withIdentifier: "UnwindSponsorsToMainMenu", sender: nil)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let frame = UIScreen.main.bounds
+        
+        if frame.height > 850 && frame.width > 450  {
+            MainMenu.titleLabel?.font = UIFont(name: "Helvetica Neue", size: 27)
+        }
+        else
+        {
+            MainMenu.titleLabel?.font = UIFont(name: "Helvetica Neue", size: 15)
+        }
+ 
+        for button in leftIconButtons {
+            if frame.height > 850 && frame.width > 450  {
+                button.titleLabel?.font = UIFont(name: "Helvetica Neue", size: 25)
+                button.contentHorizontalAlignment = .center
+            }
+            else
+            {
+                button.titleLabel?.font = UIFont(name: "Helvetica Neue", size: 12)
+            }
+        }
+        
+        for button in rightIconButtons {
+            if frame.height > 850 && frame.width > 450  {
+                button.titleLabel?.font = UIFont(name: "Helvetica Neue", size: 25)
+                button.contentHorizontalAlignment = .center
+            }
+            else
+            {
+                button.titleLabel?.font = UIFont(name: "Helvetica Neue", size: 12)
+            }
+        }
 
         sponsor1.setTitle("US DEPARTMENT OF HOUSING", for: UIControlState.normal)
-        sponsor1.titleEdgeInsets = UIEdgeInsets(top: 5, left: 100, bottom: 5, right: 25)
-        //           Min font:
-        sponsor1.titleLabel?.adjustsFontSizeToFitWidth = true
-        
+       
         sponsor2.setTitle("EQUAL HOUSING OPPORTUNITY", for: UIControlState.normal)
-        sponsor2.titleEdgeInsets = UIEdgeInsets(top: 5, left: 25, bottom: 5, right: 100)
-        //           Min font:
-        sponsor2.titleLabel?.adjustsFontSizeToFitWidth = true
         
         sponsor3.setTitle("HEALTHY HOMES PARTNERSHIP", for: UIControlState.normal)
-        sponsor3.titleEdgeInsets = UIEdgeInsets(top: 5, left: 100, bottom: 5, right: 25)
-        //           Min font:
-        sponsor3.titleLabel?.adjustsFontSizeToFitWidth = true
         
         sponsor4.setTitle("OFFICE OF LEAD HAZARD CONTROL", for: UIControlState.normal)
-        sponsor4.titleEdgeInsets = UIEdgeInsets(top: 5, left: 25, bottom: 5, right: 100)
-        //           Min font:
-        sponsor4.titleLabel?.adjustsFontSizeToFitWidth = true
         
         sponsor5.setTitle("US DEPARTMENT OF AGRICULTURE", for: UIControlState.normal)
-        sponsor5.titleEdgeInsets = UIEdgeInsets(top: 5, left: 100, bottom: 5, right: 25)
-        //           Min font:
-        sponsor5.titleLabel?.adjustsFontSizeToFitWidth = true
         
         sponsor6.setTitle("OKLAHOMA STATE APP CENTER", for: UIControlState.normal)
-        sponsor6.titleEdgeInsets = UIEdgeInsets(top: 5, left: 25, bottom: 5, right: 100)
-        //           Min font:
-        sponsor6.titleLabel?.adjustsFontSizeToFitWidth = true
     }
 
     override func didReceiveMemoryWarning() {

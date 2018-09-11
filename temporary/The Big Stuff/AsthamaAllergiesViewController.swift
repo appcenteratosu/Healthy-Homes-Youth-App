@@ -29,14 +29,27 @@ class AsthamaAllergiesViewController: UIViewController {
     
     @IBOutlet weak var bookmarkSelected6: UIButton!
    
+    @IBOutlet var BottomNavButtons: [UIButton]!
+    
     @IBAction func ReturnAsthamaToBigStuff(_ sender: Any) {
         performSegue(withIdentifier: "ReturnAsthamaToBigStuff", sender: nil)
 
     }
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let frame = UIScreen.main.bounds
+        
+        for button in BottomNavButtons {
+            if frame.height > 850 && frame.width > 450  {
+                button.titleLabel?.font = UIFont(name: "Helvetica Neue", size: 27)
+            }
+            else
+            {
+                button.titleLabel?.font = UIFont(name: "Helvetica Neue", size: 15)
+            }
+        }
         
         var value1 = false
         value1 = UserDefaults.standard.bool(forKey: key1)

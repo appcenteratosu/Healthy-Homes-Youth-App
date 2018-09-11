@@ -2,13 +2,15 @@
 //  LeadViewController.swift
 //  temporary
 //
-//  Created by apple on 17/08/18.
+//  Created by apple on 15/08/18.
 //  Copyright © 2018 Tejasree V App Developement. All rights reserved.
 //
 
 import UIKit
 
 class LeadViewController: UIViewController {
+    
+    @IBOutlet weak var LeadScrollView: UIScrollView!
     
     @IBAction func returnLeadtoBigStuff(_ sender: Any) {
         performSegue(withIdentifier: "returnLeadtoBigStuff", sender: nil)
@@ -20,10 +22,6 @@ class LeadViewController: UIViewController {
     let key4 = "bookmarks|" + "The Big Stuff|" + "Lead|" + "Run water for at least 30 seconds before drinking it..."
     let key5 = "bookmarks|" + "The Big Stuff|" + "Lead|" + "Wash your hands and face often..."
     let key6 = "bookmarks|" + "The Big Stuff|" + "Lead|" + "Stay away from areas where there..."
-    
- //   @IBOutlet weak var LeadImage1: UIImageView!
-    
- //   @IBOutlet var LeadTextViews: [UITextView]!
     
     @IBOutlet weak var bookmarkSelected1: UIButton!
     
@@ -37,8 +35,22 @@ class LeadViewController: UIViewController {
     
     @IBOutlet weak var bookmarkSelected6: UIButton!
     
+    @IBOutlet var BottomNavButtons: [UIButton]!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let frame = UIScreen.main.bounds
+        
+        for button in BottomNavButtons {
+            if frame.height > 850 && frame.width > 450  {
+                button.titleLabel?.font = UIFont(name: "Helvetica Neue", size: 27)
+            }
+            else
+            {
+                button.titleLabel?.font = UIFont(name: "Helvetica Neue", size: 15)
+            }
+        }
         
         var value1 = false
         value1 = UserDefaults.standard.bool(forKey: key1)

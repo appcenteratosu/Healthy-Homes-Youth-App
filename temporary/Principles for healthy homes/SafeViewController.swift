@@ -2,7 +2,7 @@
 //  SafeViewController.swift
 //  temporary
 //
-//  Created by apple on 17/08/18.
+//  Created by apple on 15/08/18.
 //  Copyright © 2018 Tejasree V App Developement. All rights reserved.
 //
 
@@ -32,8 +32,16 @@ class SafeViewController: UIViewController {
             bookmarkSelected.setBackgroundImage(UIImage(named: "fav heart "), for: UIControlState.normal)
         }
         
-        for eachBottomButton in bottomNavButtons {
-            
+        let frame = UIScreen.main.bounds
+        
+        for button in bottomNavButtons {
+            if frame.height > 850 && frame.width > 450  {
+                button.titleLabel?.font = UIFont(name: "Helvetica Neue", size: 27)
+            }
+            else
+            {
+                button.titleLabel?.font = UIFont(name: "Helvetica Neue", size: 15)
+            }
         }
 
     }

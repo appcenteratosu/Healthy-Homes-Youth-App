@@ -2,7 +2,7 @@
 //  MoldMoistureViewController.swift
 //  temporary
 //
-//  Created by apple on 17/08/18.
+//  Created by apple on 15/08/18.
 //  Copyright © 2018 Tejasree V App Developement. All rights reserved.
 //
 
@@ -34,9 +34,22 @@ class MoldMoistureViewController: UIViewController {
     let key5 = "bookmarks|" + "The Big Stuff|" + "Mold&Moisture|" + "Tell someone of you see water and puddles..."
     let key6 = "bookmarks|" + "The Big Stuff|" + "Mold&Moisture|" + "See if your dryer vents to the..."
 
-
+    @IBOutlet var BottomNavButtons: [UIButton]!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let frame = UIScreen.main.bounds
+        
+        for button in BottomNavButtons {
+            if frame.height > 850 && frame.width > 450  {
+                button.titleLabel?.font = UIFont(name: "Helvetica Neue", size: 27)
+            }
+            else
+            {
+                button.titleLabel?.font = UIFont(name: "Helvetica Neue", size: 15)
+            }
+        }
         
         var value1 = false
         value1 = UserDefaults.standard.bool(forKey: key1)

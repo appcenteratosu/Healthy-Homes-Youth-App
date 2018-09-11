@@ -10,11 +10,9 @@ import UIKit
 
 class PrinciplesofHealthyHomesViewController: UIViewController {
     
-    @IBOutlet weak var TitleTextView: UITextView!
-    
-    
     @IBOutlet var MainButtons: [UIButton]!
-   
+    
+    @IBOutlet weak var MainMenuButton: UIButton!
     
     @IBAction func unWindToManiMenu(_ sender: Any) {
         performSegue(withIdentifier: "UnwindToMainmenu", sender: nil)
@@ -26,25 +24,25 @@ class PrinciplesofHealthyHomesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        TitleTextView.contentInset = UIEdgeInsetsMake(5,5,5,5)
-        TitleTextView.adjustsFontForContentSizeCategory = true
-        TitleTextView.textAlignment = .center
-        TitleTextView.textContainer.maximumNumberOfLines = 3
-   //     TitleTextView.num
-      
-        for eachbutton in MainButtons {
-            eachbutton.titleEdgeInsets = UIEdgeInsets(top: 2, left: 2, bottom: 2, right: 2)
-            
-    //        Min font:
-            eachbutton.titleLabel?.adjustsFontSizeToFitWidth = true
-     //       Corner radius:
-            eachbutton.layer.cornerRadius = 5
-     //       Alignment:
-            eachbutton.titleLabel?.textAlignment = .center
-            
+        let frame = UIScreen.main.bounds
+        
+        for button in MainButtons {
+            if frame.height > 850 && frame.width > 450  {
+                button.titleLabel?.font = UIFont(name: "Helvetica Neue", size: 27)
+            }
+            else
+            {
+                button.titleLabel?.font = UIFont(name: "Helvetica Neue", size: 15)
+            }
         }
         
+        if frame.height > 850 && frame.width > 450  {
+            MainMenuButton.titleLabel?.font = UIFont(name: "Helvetica Neue", size: 27)
+        }
+        else
+        {
+            MainMenuButton.titleLabel?.font = UIFont(name: "Helvetica Neue", size: 15)
+        }        
     }
 
     override func didReceiveMemoryWarning() {

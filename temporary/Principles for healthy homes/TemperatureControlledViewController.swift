@@ -10,6 +10,7 @@ class TemperatureControlledViewController: UIViewController {
         performSegue(withIdentifier: "UnwindTempToPrinciple", sender: nil)
     }
     
+    @IBOutlet var BottomNavButtons: [UIButton]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +22,18 @@ class TemperatureControlledViewController: UIViewController {
             bookmarkButtonSelected.setBackgroundImage(UIImage(named: "liked heart icon"), for: UIControlState.normal)
         } else {
             bookmarkButtonSelected.setBackgroundImage(UIImage(named: "fav heart"), for: UIControlState.normal)
+        }
+        
+        let frame = UIScreen.main.bounds
+        
+        for button in BottomNavButtons {
+            if frame.height > 850 && frame.width > 450  {
+                button.titleLabel?.font = UIFont(name: "Helvetica Neue", size: 27)
+            }
+            else
+            {
+                button.titleLabel?.font = UIFont(name: "Helvetica Neue", size: 15)
+            }
         }
     }
 

@@ -10,10 +10,22 @@ import UIKit
 
 class ViewController: UIViewController {
     var window: UIWindow?
-
+    
+    @IBOutlet weak var WelcomeButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        let frame = UIScreen.main.bounds
+        if frame.height > 850 && frame.width > 450 {
+            WelcomeButton.titleLabel?.font = UIFont(name: "Helvetica Neue", size: 27)
+            WelcomeButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 27)
+        }
+        else
+        {
+            WelcomeButton.titleLabel?.font = UIFont(name: "Helvetica Neue", size: 15)
+            WelcomeButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 15)
+        }
     }
 
     override func didReceiveMemoryWarning() {
