@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scribble" translatesAutoresizingMaskIntoConstraints="NO" id="A8g-Ob-cJj">
-                                <rect key="frame" x="1" y="119" width="320" height="309"/>
+                                <rect key="frame" x="1" y="113" width="320" height="315"/>
                                 <color key="backgroundColor" red="0.60392156862745094" green="0.90980392156862744" blue="0.77254901960784317" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bottom nav bar-green" translatesAutoresizingMaskIntoConstraints="NO" id="SLW-OA-E9y">
@@ -89,7 +89,7 @@
                                 <rect key="frame" x="45" y="20" width="230" height="71"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0lV-VQ-mWF">
-                                <rect key="frame" x="126" y="357" width="94" height="45"/>
+                                <rect key="frame" x="132" y="357" width="88" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="fuc-KB-6QP"/>
                                 </constraints>
@@ -103,7 +103,7 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="top-right fluffy man" translatesAutoresizingMaskIntoConstraints="NO" id="pdY-xc-GhL">
-                                <rect key="frame" x="16" y="364" width="90" height="88"/>
+                                <rect key="frame" x="16" y="358" width="96" height="94"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Healthy Homes Partnership App" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="xs3-xy-ubb">
                                 <rect key="frame" x="65" y="25" width="190" height="61"/>
@@ -1848,7 +1848,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scribble" translatesAutoresizingMaskIntoConstraints="NO" id="8A6-b5-Yhg">
-                                <rect key="frame" x="16" y="100" width="288" height="309"/>
+                                <rect key="frame" x="16" y="100" width="288" height="315"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="top nav bar" translatesAutoresizingMaskIntoConstraints="NO" id="G5B-cA-bE0">
                                 <rect key="frame" x="16" y="20" width="288" height="59"/>
@@ -1919,19 +1919,19 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dry speech bubble" translatesAutoresizingMaskIntoConstraints="NO" id="Ww6-OB-2sV">
-                                <rect key="frame" x="10" y="252" width="300" height="130"/>
+                                <rect key="frame" x="10" y="257" width="300" height="130"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="130" id="PD7-xm-WdC"/>
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="top-left fluffy guy" translatesAutoresizingMaskIntoConstraints="NO" id="gj6-G9-BGr">
-                                <rect key="frame" x="250" y="342" width="70" height="115"/>
+                                <rect key="frame" x="250" y="347" width="70" height="110"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="rain cloud" translatesAutoresizingMaskIntoConstraints="NO" id="yoh-YY-2QB">
-                                <rect key="frame" x="43.5" y="134" width="233" height="108"/>
+                                <rect key="frame" x="43.5" y="134" width="233" height="113"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nEE-rF-W02">
-                                <rect key="frame" x="275" y="337" width="25" height="25"/>
+                                <rect key="frame" x="275" y="342" width="25" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="IFY-id-hc7"/>
                                     <constraint firstAttribute="width" constant="25" id="fQd-Be-oRG"/>
@@ -1942,7 +1942,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="H3K-Pu-ATn">
-                                <rect key="frame" x="35" y="267" width="260" height="80"/>
+                                <rect key="frame" x="35" y="272" width="260" height="80"/>
                                 <string key="text">Damp homes provide an environment for dust mites, roaches, rodents and molds. All of these can cause or worsen asthma. In addition, moisture can damage the building materials in your home.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <nil key="textColor"/>
@@ -2615,7 +2615,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scribble" translatesAutoresizingMaskIntoConstraints="NO" id="HCU-lq-XvU">
-                                <rect key="frame" x="16" y="81" width="288" height="309"/>
+                                <rect key="frame" x="16" y="75" width="288" height="315"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="top nav bar" translatesAutoresizingMaskIntoConstraints="NO" id="wzu-J5-Rln">
                                 <rect key="frame" x="16" y="20" width="288" height="59"/>
@@ -3220,7 +3220,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scribble" translatesAutoresizingMaskIntoConstraints="NO" id="hvw-99-S8c">
-                                <rect key="frame" x="16" y="81" width="288" height="309"/>
+                                <rect key="frame" x="16" y="75" width="288" height="315"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="top nav bar" translatesAutoresizingMaskIntoConstraints="NO" id="3KU-7y-RdQ">
                                 <rect key="frame" x="16" y="20" width="288" height="59"/>
@@ -3328,7 +3328,7 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="top-left fluffy guy" translatesAutoresizingMaskIntoConstraints="NO" id="jZd-QR-3Bp">
-                                <rect key="frame" x="250" y="332" width="70" height="115"/>
+                                <rect key="frame" x="250" y="337" width="70" height="110"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mga-b8-1F6">
                                 <rect key="frame" x="0.0" y="87" width="320" height="61"/>
@@ -3458,7 +3458,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scribble" translatesAutoresizingMaskIntoConstraints="NO" id="yNA-ZD-bvD">
-                                <rect key="frame" x="16" y="159" width="288" height="309"/>
+                                <rect key="frame" x="16" y="159" width="288" height="315"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="top nav bar" translatesAutoresizingMaskIntoConstraints="NO" id="cpb-OZ-hsT">
                                 <rect key="frame" x="16" y="20" width="288" height="59"/>
@@ -3523,7 +3523,7 @@
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cont free speech bubble" translatesAutoresizingMaskIntoConstraints="NO" id="8pq-ps-yQe">
-                                <rect key="frame" x="5" y="260" width="310" height="120"/>
+                                <rect key="frame" x="5" y="324" width="310" height="120"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="120" id="IUY-dn-Vxr"/>
                                 </constraints>
@@ -3535,10 +3535,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="up-left house man" translatesAutoresizingMaskIntoConstraints="NO" id="bkr-ej-qDX">
-                                <rect key="frame" x="110" y="134" width="100" height="136"/>
+                                <rect key="frame" x="110" y="134" width="100" height="200"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k4Q-Nu-4A1">
-                                <rect key="frame" x="280" y="345" width="25" height="25"/>
+                                <rect key="frame" x="280" y="409" width="25" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="C0j-4B-ZTb"/>
                                     <constraint firstAttribute="width" constant="25" id="eSG-OD-m3I"/>
@@ -3549,7 +3549,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="ptw-Z3-2LE">
-                                <rect key="frame" x="30" y="290" width="270" height="75"/>
+                                <rect key="frame" x="30" y="354" width="270" height="75"/>
                                 <string key="text">Levels of contaminants such as lead, radon, carbon monoxide, asbestos, secondhand smoke, and other chemicals are often much higher indoors.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <nil key="textColor"/>
@@ -3643,7 +3643,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scribble" translatesAutoresizingMaskIntoConstraints="NO" id="GaL-xr-Peq">
-                                <rect key="frame" x="16" y="159" width="288" height="309"/>
+                                <rect key="frame" x="16" y="159" width="288" height="315"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="top nav bar" translatesAutoresizingMaskIntoConstraints="NO" id="c1d-UK-96a">
                                 <rect key="frame" x="16" y="20" width="288" height="59"/>
@@ -3813,7 +3813,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scribble" translatesAutoresizingMaskIntoConstraints="NO" id="0eF-F2-Ihl">
-                                <rect key="frame" x="16" y="159" width="288" height="309"/>
+                                <rect key="frame" x="16" y="159" width="288" height="315"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="top nav bar" translatesAutoresizingMaskIntoConstraints="NO" id="C0j-uq-2hh">
                                 <rect key="frame" x="16" y="20" width="288" height="59"/>
@@ -4010,7 +4010,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scribble" translatesAutoresizingMaskIntoConstraints="NO" id="3RY-lA-5an">
-                                <rect key="frame" x="16" y="159" width="288" height="309"/>
+                                <rect key="frame" x="16" y="159" width="288" height="315"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="top nav bar" translatesAutoresizingMaskIntoConstraints="NO" id="Jq0-b4-cii">
                                 <rect key="frame" x="16" y="20" width="288" height="59"/>
@@ -4199,7 +4199,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scribble" translatesAutoresizingMaskIntoConstraints="NO" id="xpI-bi-gBn">
-                                <rect key="frame" x="16" y="159" width="288" height="309"/>
+                                <rect key="frame" x="16" y="159" width="288" height="315"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="top nav bar" translatesAutoresizingMaskIntoConstraints="NO" id="UbX-dt-1zh">
                                 <rect key="frame" x="16" y="20" width="288" height="59"/>
@@ -4387,7 +4387,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scribble" translatesAutoresizingMaskIntoConstraints="NO" id="Nk6-VG-s99">
-                                <rect key="frame" x="16" y="81" width="288" height="309"/>
+                                <rect key="frame" x="16" y="75" width="288" height="315"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="top nav bar" translatesAutoresizingMaskIntoConstraints="NO" id="03x-f1-clN">
                                 <rect key="frame" x="16" y="20" width="288" height="59"/>
@@ -6321,10 +6321,10 @@
                                                 </constraints>
                                             </imageView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="fVz-z7-bqA">
-                                                <rect key="frame" x="20" y="1206" width="280" height="54"/>
+                                                <rect key="frame" x="20" y="1201" width="280" height="59"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AGK-EO-TzQ">
-                                                        <rect key="frame" x="0.0" y="0.0" width="86.5" height="54"/>
+                                                        <rect key="frame" x="0.0" y="2.5" width="86.5" height="54"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                         <state key="normal" title="Back" backgroundImage="yellow option buttons"/>
                                                         <connections>
@@ -6332,7 +6332,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="gB7-LV-Ti0">
-                                                        <rect key="frame" x="96.5" y="0.0" width="87" height="54"/>
+                                                        <rect key="frame" x="96.5" y="2.5" width="87" height="54"/>
                                                         <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="20"/>
                                                         <state key="normal" title="Chapter Menu" backgroundImage="yellow option buttons"/>
                                                         <connections>
@@ -6341,7 +6341,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hrK-2A-FGA">
-                                                        <rect key="frame" x="193.5" y="0.0" width="86.5" height="54"/>
+                                                        <rect key="frame" x="193.5" y="2.5" width="86.5" height="54"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                         <state key="normal" title="Next" backgroundImage="yellow option buttons"/>
                                                         <connections>
@@ -6380,7 +6380,7 @@
                                                 </constraints>
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="top-left fluffy guy" translatesAutoresizingMaskIntoConstraints="NO" id="7Ea-Rb-6KO">
-                                                <rect key="frame" x="205" y="1065" width="115" height="115"/>
+                                                <rect key="frame" x="205" y="1065" width="115" height="110"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="115" id="waS-IJ-GvN"/>
                                                 </constraints>
@@ -7790,7 +7790,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scribble" translatesAutoresizingMaskIntoConstraints="NO" id="IQ8-sc-oRk">
-                                <rect key="frame" x="16" y="129.5" width="288" height="309"/>
+                                <rect key="frame" x="16" y="126.5" width="288" height="315"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="top nav bar" translatesAutoresizingMaskIntoConstraints="NO" id="KP9-Cz-trC">
                                 <rect key="frame" x="16" y="20" width="288" height="59"/>
@@ -7973,7 +7973,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scribble" translatesAutoresizingMaskIntoConstraints="NO" id="iLH-zt-wpH">
-                                <rect key="frame" x="16" y="159" width="288" height="309"/>
+                                <rect key="frame" x="16" y="159" width="288" height="315"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="top nav bar" translatesAutoresizingMaskIntoConstraints="NO" id="Ey0-ui-KaO">
                                 <rect key="frame" x="16" y="20" width="288" height="59"/>
@@ -10181,7 +10181,7 @@ AABUAAAAAAAAAAAAAAAAAAAT6w
         <image name="roaches" width="402" height="92"/>
         <image name="safe speech bubble" width="244" height="116"/>
         <image name="save for later icon" width="17" height="16"/>
-        <image name="scribble" width="311" height="309"/>
+        <image name="scribble" width="310" height="315"/>
         <image name="scribble " width="309" height="315"/>
         <image name="side fluffy guy" width="117" height="113"/>
         <image name="sky blue text box" width="187" height="54"/>
@@ -10198,13 +10198,13 @@ AABUAAAAAAAAAAAAAAAAAAAT6w
         <image name="the big stuff icon" width="18" height="20"/>
         <image name="top nav bar" width="343" height="48"/>
         <image name="top yellow button" width="270" height="57"/>
-        <image name="top-left fluffy guy" width="118" height="115"/>
+        <image name="top-left fluffy guy" width="113" height="110"/>
         <image name="top-right fluffy guy" width="96" height="94"/>
-        <image name="top-right fluffy man" width="90" height="88"/>
+        <image name="top-right fluffy man" width="96" height="94"/>
         <image name="train your brain icon" width="20" height="17"/>
         <image name="transparent rectangle" width="325" height="373"/>
         <image name="unselected button" width="327" height="26"/>
-        <image name="up-left house man" width="120" height="136"/>
+        <image name="up-left house man" width="176" height="200"/>
         <image name="upsidedown fluffy man" width="68" height="64"/>
         <image name="ventilated speech bubble" width="273" height="119"/>
         <image name="ventilated yellow button" width="203" height="61"/>
@@ -10232,11 +10232,11 @@ AABUAAAAAAAAAAAAAAAAAAAT6w
         <segue reference="Ppr-ii-dYo"/>
         <segue reference="xuZ-wE-J2r"/>
         <segue reference="6Rk-Lh-cT4"/>
-        <segue reference="9qT-Us-cJc"/>
+        <segue reference="dT6-so-CeH"/>
         <segue reference="nHr-eM-ANb"/>
         <segue reference="Jug-c3-1Jb"/>
         <segue reference="vgC-op-3oy"/>
-        <segue reference="ItL-vT-cKb"/>
+        <segue reference="0dd-Aw-UpE"/>
         <segue reference="OpX-As-s8m"/>
         <segue reference="fNP-ya-aCy"/>
         <segue reference="5Ea-un-8uM"/>
