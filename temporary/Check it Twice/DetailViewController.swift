@@ -62,10 +62,14 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
         for button in BottomNavButtons {
             if frame.height > 850 && frame.width > 450  {
                 button.titleLabel?.font = UIFont(name: "Helvetica Neue", size: 27)
+                button.titleLabel?.textAlignment = .center
+
             }
             else
             {
                 button.titleLabel?.font = UIFont(name: "Helvetica Neue", size: 15)
+                button.titleLabel?.textAlignment = .center
+
             }
         }
     }
@@ -77,7 +81,7 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
         self.answersTableView.reloadData()
 // snbada       self.ChecklistTextBox.reloadInputViews()
         // get user's old answer for this question, set the text view to that and reload it
-        let notesKey = "notes|" + (self.question?.name)!
+        let notesKey = "Mynotes|" + (self.question?.name)!
         ChecklistTextBox.text = UserDefaults.standard.object(forKey: notesKey) as! String
     }
     
@@ -198,7 +202,7 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     func textViewDidChange(_ ChecklistTextBox: UITextView) {
-        let notesKey = "notes|" + (self.question?.name)!
+        let notesKey = "Mynotes|" + (self.question?.name)!
         // get users answer
         // save that in nsuserdefaultss
         UserDefaults.standard.set(ChecklistTextBox.text, forKey: notesKey)
@@ -254,7 +258,7 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
                     }
                 }
                 // if key contains notes add to notes answers array add its html content
-                if key.contains("notes|") {
+                if key.contains("Mynotes|") {
                     //get the answer and put its html into array
                     var notes_content = UserDefaults.standard.value(forKey: key) as! String
                     var notesDataOptions = key.components(separatedBy: "|") as [String]

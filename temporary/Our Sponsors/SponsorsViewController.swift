@@ -52,7 +52,7 @@ class SponsorsViewController: UIViewController {
             }
             else
             {
-                button.titleLabel?.font = UIFont(name: "Helvetica Neue", size: 12)
+                button.titleLabel?.font = UIFont(name: "Helvetica Neue", size: 11)
             }
         }
         
@@ -63,7 +63,7 @@ class SponsorsViewController: UIViewController {
             }
             else
             {
-                button.titleLabel?.font = UIFont(name: "Helvetica Neue", size: 12)
+                button.titleLabel?.font = UIFont(name: "Helvetica Neue", size: 11)
             }
         }
 

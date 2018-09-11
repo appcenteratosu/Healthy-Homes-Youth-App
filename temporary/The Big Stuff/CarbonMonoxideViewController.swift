@@ -28,6 +28,9 @@ class CarbonMonoxideViewController: UIViewController {
     
     @IBOutlet weak var bookmarkSelected6: UIButton!
     
+    @IBOutlet var BottomNavButtons: [UIButton]!
+    
+    
     @IBAction func ReturnCOToBigStuff(_ sender: Any) {
         performSegue(withIdentifier: "UnwindCOToBigStuff", sender: nil)
     }
@@ -35,6 +38,22 @@ class CarbonMonoxideViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let frame = UIScreen.main.bounds
+        
+        for button in BottomNavButtons {
+            if frame.height > 850 && frame.width > 450  {
+                button.titleLabel?.font = UIFont(name: "Helvetica Neue", size: 27)
+                button.titleLabel?.textAlignment = .center
+                
+            }
+            else
+            {
+                button.titleLabel?.font = UIFont(name: "Helvetica Neue", size: 15)
+                button.titleLabel?.textAlignment = .center
+                
+            }
+        }
 
         var value1 = false
         value1 = UserDefaults.standard.bool(forKey: key1)

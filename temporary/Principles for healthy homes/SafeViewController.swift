@@ -37,10 +37,14 @@ class SafeViewController: UIViewController {
         for button in bottomNavButtons {
             if frame.height > 850 && frame.width > 450  {
                 button.titleLabel?.font = UIFont(name: "Helvetica Neue", size: 27)
+                button.titleLabel?.textAlignment = .center
+
             }
             else
             {
                 button.titleLabel?.font = UIFont(name: "Helvetica Neue", size: 15)
+                button.titleLabel?.textAlignment = .center
+
             }
         }
 

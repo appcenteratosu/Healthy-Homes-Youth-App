@@ -33,9 +33,6 @@ class quizScreenViewController: UIViewController {
     }
     
     @IBAction func backButton(_ sender: UIButton) {
-        if questionNumber == 0 {
-            backButtonSelected.isHidden = true
-        }
         if questionNumber > 0 {
             if sender.tag == 5 {
                 questionNumber -= 1
@@ -62,9 +59,6 @@ class quizScreenViewController: UIViewController {
             questionNumber += 1
             updateQuestion()
         }
-        
-        
-        
     }
     
     
@@ -79,10 +73,24 @@ class quizScreenViewController: UIViewController {
         
         if frame.height > 850 && frame.width > 450  {
             nextButtonSelected.titleLabel?.font = UIFont(name: "Helvetica Neue", size: 27)
+            chapterName.font = UIFont(name: "Helvetica Neue", size: 27)
+            chapterName.font = UIFont.boldSystemFont(ofSize: 27)
+            quesName.font = UIFont(name: "Helvetica Neue", size: 24)
+            optionA.titleLabel?.font = UIFont(name: "Helvetica Neue", size: 24)
+            optionB.titleLabel?.font = UIFont(name: "Helvetica Neue", size: 24)
+            optionC.titleLabel?.font = UIFont(name: "Helvetica Neue", size: 24)
+            optionD.titleLabel?.font = UIFont(name: "Helvetica Neue", size: 24)
         }
         else
         {
             nextButtonSelected.titleLabel?.font = UIFont(name: "Helvetica Neue", size: 15)
+            chapterName.font = UIFont(name: "Helvetica Neue", size: 14)
+            chapterName.font = UIFont.boldSystemFont(ofSize: 14)
+            quesName.font = UIFont(name: "Helvetica Neue", size: 14)
+            optionA.titleLabel?.font = UIFont(name: "Helvetica Neue", size: 15)
+            optionB.titleLabel?.font = UIFont(name: "Helvetica Neue", size: 15)
+            optionC.titleLabel?.font = UIFont(name: "Helvetica Neue", size: 15)
+            optionD.titleLabel?.font = UIFont(name: "Helvetica Neue", size: 15)
         }
         
         if frame.height > 850 && frame.width > 450  {

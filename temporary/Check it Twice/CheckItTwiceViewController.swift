@@ -113,7 +113,7 @@ class CheckItTwiceViewController: UIViewController {
                 UserDefaults.standard.set(!existingAnswer!, forKey: key)
                 UserDefaults.standard.synchronize()
             }
-            let notesKey = "notes|" + (ques.name)
+            let notesKey = "Mynotes|" + (ques.name)
             var existingNotesAnswer = UserDefaults.standard.object(forKey: notesKey) as? String
             if (existingNotesAnswer == nil) {
                 existingNotesAnswer = "My Notes: "
