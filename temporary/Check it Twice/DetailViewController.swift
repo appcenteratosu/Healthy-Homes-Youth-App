@@ -63,13 +63,13 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
             if frame.height > 850 && frame.width > 450  {
                 button.titleLabel?.font = UIFont(name: "Helvetica Neue", size: 27)
                 button.titleLabel?.textAlignment = .center
-
+                
             }
             else
             {
                 button.titleLabel?.font = UIFont(name: "Helvetica Neue", size: 15)
                 button.titleLabel?.textAlignment = .center
-
+                
             }
         }
     }
@@ -124,6 +124,18 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
         cell.answerLabel.layer.masksToBounds = true
         cell.answerLabel.layer.cornerRadius = 5
         configureCheckmark(for: cell, at: indexPath)
+        
+        let frame = UIScreen.main.bounds
+        
+            if frame.height > 850 && frame.width > 450  {
+                cell.answerLabel.font = UIFont(name: "Helvetica Neue", size: 25)
+                
+            }
+            else
+            {
+                cell.answerLabel.font = UIFont(name: "Helvetica Neue", size: 13)
+                
+            }
         
         let optionIndex = indexPath.row
         let key = "checklist|" + (self.question?.name)! + "|" + (self.question?.answers[optionIndex])! + "|" + String(optionIndex)

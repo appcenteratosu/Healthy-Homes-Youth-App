@@ -1830,13 +1830,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "temporary/Check it Twice/DetailViewController.swift"
-            timestampString = "558400873.6613311"
+            timestampString = "558403038.801633"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "138"
-            endingLineNumber = "138"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            startingLineNumber = "150"
+            endingLineNumber = "150"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1846,13 +1846,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "temporary/Check it Twice/DetailViewController.swift"
-            timestampString = "558400873.661464"
+            timestampString = "558403038.802456"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "122"
             endingLineNumber = "122"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1862,13 +1862,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "temporary/Check it Twice/DetailViewController.swift"
-            timestampString = "558400873.6615371"
+            timestampString = "558403038.803054"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "127"
-            endingLineNumber = "127"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            startingLineNumber = "140"
+            endingLineNumber = "140"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1878,13 +1878,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "temporary/Check it Twice/DetailViewController.swift"
-            timestampString = "558400873.661606"
+            timestampString = "558403038.80361"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "128"
-            endingLineNumber = "128"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            startingLineNumber = "143"
+            endingLineNumber = "143"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1894,13 +1894,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "temporary/Check it Twice/DetailViewController.swift"
-            timestampString = "558400873.661671"
+            timestampString = "558403038.804243"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "131"
-            endingLineNumber = "131"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            startingLineNumber = "145"
+            endingLineNumber = "145"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1910,13 +1910,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "temporary/Check it Twice/DetailViewController.swift"
-            timestampString = "558400873.661736"
+            timestampString = "558403038.804831"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "133"
-            endingLineNumber = "133"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            startingLineNumber = "147"
+            endingLineNumber = "147"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1926,13 +1926,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "temporary/Check it Twice/DetailViewController.swift"
-            timestampString = "558400873.6618"
+            timestampString = "558403038.805403"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "135"
-            endingLineNumber = "135"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            startingLineNumber = "149"
+            endingLineNumber = "149"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1942,29 +1942,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "temporary/Check it Twice/DetailViewController.swift"
-            timestampString = "558400873.661864"
+            timestampString = "558403038.806091"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "137"
-            endingLineNumber = "137"
-            landmarkName = "unknown"
-            landmarkType = "0">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "temporary/Check it Twice/DetailViewController.swift"
-            timestampString = "558400873.6619281"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "136"
-            endingLineNumber = "136"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            startingLineNumber = "148"
+            endingLineNumber = "148"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1974,13 +1958,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "temporary/Check it Twice/DetailViewController.swift"
-            timestampString = "558400873.661991"
+            timestampString = "558403038.806681"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "50"
             endingLineNumber = "50"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1990,13 +1974,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "temporary/Check it Twice/DetailViewController.swift"
-            timestampString = "558400873.662056"
+            timestampString = "558403038.807062"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "52"
             endingLineNumber = "52"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2006,13 +1990,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "temporary/Check it Twice/DetailViewController.swift"
-            timestampString = "558400873.662119"
+            timestampString = "558403038.807404"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "53"
             endingLineNumber = "53"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2022,13 +2006,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "temporary/Check it Twice/DetailViewController.swift"
-            timestampString = "558400873.662183"
+            timestampString = "558403038.807788"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "48"
             endingLineNumber = "48"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2038,13 +2022,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "temporary/Check it Twice/DetailViewController.swift"
-            timestampString = "558400873.662246"
+            timestampString = "558403038.808301"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "47"
             endingLineNumber = "47"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2054,13 +2038,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "temporary/Check it Twice/DetailViewController.swift"
-            timestampString = "558400873.66231"
+            timestampString = "558403038.8088731"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "211"
-            endingLineNumber = "211"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            startingLineNumber = "223"
+            endingLineNumber = "223"
+            landmarkName = "DetailViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2070,13 +2054,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "temporary/Check it Twice/DetailViewController.swift"
-            timestampString = "558400873.662374"
+            timestampString = "558403038.809448"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "215"
-            endingLineNumber = "215"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            startingLineNumber = "227"
+            endingLineNumber = "227"
+            landmarkName = "DetailViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2086,13 +2070,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "temporary/Check it Twice/DetailViewController.swift"
-            timestampString = "558400873.662437"
+            timestampString = "558403038.810102"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "51"
             endingLineNumber = "51"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2102,13 +2086,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "temporary/Check it Twice/DetailViewController.swift"
-            timestampString = "558400873.6625"
+            timestampString = "558403038.810499"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "49"
             endingLineNumber = "49"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
