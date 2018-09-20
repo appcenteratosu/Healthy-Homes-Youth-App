@@ -82,7 +82,7 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
 // snbada       self.ChecklistTextBox.reloadInputViews()
         // get user's old answer for this question, set the text view to that and reload it
         let notesKey = "Mynotes|" + (self.question?.name)!
-        ChecklistTextBox.text = UserDefaults.standard.object(forKey: notesKey) as! String
+        ChecklistTextBox.text = UserDefaults.standard.object(forKey: notesKey) as? String
     }
     
     var questionIndex = 0

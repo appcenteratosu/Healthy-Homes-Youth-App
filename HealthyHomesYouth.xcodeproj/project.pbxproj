@@ -82,7 +82,7 @@
 		18EBE94A211E217F0001A9C4 /* ViewAnswersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewAnswersTableViewCell.swift; sourceTree = "<group>"; };
 		18EBE94C211E219F0001A9C4 /* ViewAnswersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewAnswersViewController.swift; sourceTree = "<group>"; };
 		18F7CBE8212B0A5C00826194 /* BigStuffViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigStuffViewController.swift; sourceTree = "<group>"; };
-		A50E83B52117AC270026A0D6 /* temporary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = temporary.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A50E83B52117AC270026A0D6 /* HealthyHomesYouth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthyHomesYouth.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A50E83B82117AC270026A0D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A50E83BA2117AC270026A0D6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A50E83BD2117AC270026A0D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -210,7 +210,7 @@
 		A50E83B62117AC270026A0D6 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A50E83B52117AC270026A0D6 /* temporary.app */,
+				A50E83B52117AC270026A0D6 /* HealthyHomesYouth.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -249,9 +249,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A50E83B42117AC270026A0D6 /* temporary */ = {
+		A50E83B42117AC270026A0D6 /* HealthyHomesYouth */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A50E83C72117AC290026A0D6 /* Build configuration list for PBXNativeTarget "temporary" */;
+			buildConfigurationList = A50E83C72117AC290026A0D6 /* Build configuration list for PBXNativeTarget "HealthyHomesYouth" */;
 			buildPhases = (
 				A50E83B12117AC270026A0D6 /* Sources */,
 				A50E83B22117AC270026A0D6 /* Frameworks */,
@@ -261,9 +261,9 @@
 			);
 			dependencies = (
 			);
-			name = temporary;
+			name = HealthyHomesYouth;
 			productName = temporary;
-			productReference = A50E83B52117AC270026A0D6 /* temporary.app */;
+			productReference = A50E83B52117AC270026A0D6 /* HealthyHomesYouth.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -281,7 +281,7 @@
 					};
 				};
 			};
-			buildConfigurationList = A50E83B02117AC270026A0D6 /* Build configuration list for PBXProject "temporary" */;
+			buildConfigurationList = A50E83B02117AC270026A0D6 /* Build configuration list for PBXProject "HealthyHomesYouth" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -294,7 +294,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A50E83B42117AC270026A0D6 /* temporary */,
+				A50E83B42117AC270026A0D6 /* HealthyHomesYouth */,
 			);
 		};
 /* End PBXProject section */
@@ -536,7 +536,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A50E83B02117AC270026A0D6 /* Build configuration list for PBXProject "temporary" */ = {
+		A50E83B02117AC270026A0D6 /* Build configuration list for PBXProject "HealthyHomesYouth" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A50E83C52117AC290026A0D6 /* Debug */,
@@ -545,7 +545,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A50E83C72117AC290026A0D6 /* Build configuration list for PBXNativeTarget "temporary" */ = {
+		A50E83C72117AC290026A0D6 /* Build configuration list for PBXNativeTarget "HealthyHomesYouth" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A50E83C82117AC290026A0D6 /* Debug */,

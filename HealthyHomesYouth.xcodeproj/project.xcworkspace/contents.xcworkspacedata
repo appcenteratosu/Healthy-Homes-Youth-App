@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:temporary.xcodeproj">
+      location = "self:/Users/apple/Desktop/Healthy-Homes-Youth-App/HealthyHomesYouth.xcodeproj">
    </FileRef>
 </Workspace>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1000"
+   LastUpgradeVersion = "0940"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "A50E83B42117AC270026A0D6"
-               BuildableName = "temporary.app"
-               BlueprintName = "temporary"
-               ReferencedContainer = "container:temporary.xcodeproj">
+               BuildableName = "HealthyHomesYouth.app"
+               BlueprintName = "HealthyHomesYouth"
+               ReferencedContainer = "container:HealthyHomesYouth.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A50E83B42117AC270026A0D6"
-            BuildableName = "temporary.app"
-            BlueprintName = "temporary"
-            ReferencedContainer = "container:temporary.xcodeproj">
+            BuildableName = "HealthyHomesYouth.app"
+            BlueprintName = "HealthyHomesYouth"
+            ReferencedContainer = "container:HealthyHomesYouth.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -56,9 +56,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A50E83B42117AC270026A0D6"
-            BuildableName = "temporary.app"
-            BlueprintName = "temporary"
-            ReferencedContainer = "container:temporary.xcodeproj">
+            BuildableName = "HealthyHomesYouth.app"
+            BlueprintName = "HealthyHomesYouth"
+            ReferencedContainer = "container:HealthyHomesYouth.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -75,9 +75,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A50E83B42117AC270026A0D6"
-            BuildableName = "temporary.app"
-            BlueprintName = "temporary"
-            ReferencedContainer = "container:temporary.xcodeproj">
+            BuildableName = "HealthyHomesYouth.app"
+            BlueprintName = "HealthyHomesYouth"
+            ReferencedContainer = "container:HealthyHomesYouth.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
