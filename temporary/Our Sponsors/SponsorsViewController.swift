@@ -49,10 +49,12 @@ class SponsorsViewController: UIViewController {
             if frame.height > 850 && frame.width > 450  {
                 button.titleLabel?.font = UIFont(name: "Helvetica Neue", size: 25)
                 button.contentHorizontalAlignment = .center
+                button.contentEdgeInsets = UIEdgeInsetsMake(5,5,5,5)
             }
             else
             {
                 button.titleLabel?.font = UIFont(name: "Helvetica Neue", size: 11)
+                button.contentEdgeInsets = UIEdgeInsetsMake(5,5,5,5)
             }
         }
         
@@ -60,10 +62,12 @@ class SponsorsViewController: UIViewController {
             if frame.height > 850 && frame.width > 450  {
                 button.titleLabel?.font = UIFont(name: "Helvetica Neue", size: 25)
                 button.contentHorizontalAlignment = .center
+                button.contentEdgeInsets = UIEdgeInsetsMake(5,5,5,5)
             }
             else
             {
                 button.titleLabel?.font = UIFont(name: "Helvetica Neue", size: 11)
+                button.contentEdgeInsets = UIEdgeInsetsMake(5,5,5,5)
             }
         }
 
