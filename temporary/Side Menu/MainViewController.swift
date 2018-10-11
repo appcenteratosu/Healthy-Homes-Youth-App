@@ -37,8 +37,8 @@ class MainViewController: UIViewController {
                 }
                 else
                 {
-                    button.titleLabel?.font = UIFont(name: "Helvetica Neue", size: 15)
-                    button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 15)
+                    button.titleLabel?.font = UIFont(name: "Helvetica Neue", size: 12)
+                    button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 12)
                 }
             }
         
@@ -48,8 +48,8 @@ class MainViewController: UIViewController {
         }
         else
         {
-            MainButton1.titleLabel?.font = UIFont(name: "Helvetica Neue", size: 15)
-            MainButton1.titleLabel?.font = UIFont.boldSystemFont(ofSize: 15)
+            MainButton1.titleLabel?.font = UIFont(name: "Helvetica Neue", size: 12)
+            MainButton1.titleLabel?.font = UIFont.boldSystemFont(ofSize: 12)
         }
        
         TitleLabel.adjustsFontSizeToFitWidth = true;

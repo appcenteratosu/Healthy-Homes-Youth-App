@@ -72,14 +72,14 @@ class quizScreenViewController: UIViewController {
         let frame = UIScreen.main.bounds
         
         if frame.height > 850 && frame.width > 450  {
-            nextButtonSelected.titleLabel?.font = UIFont(name: "Helvetica Neue", size: 27)
-            chapterName.font = UIFont(name: "Helvetica Neue", size: 27)
-            chapterName.font = UIFont.boldSystemFont(ofSize: 27)
-            quesName.font = UIFont(name: "Helvetica Neue", size: 22)
-            optionA.titleLabel?.font = UIFont(name: "Helvetica Neue", size: 24)
-            optionB.titleLabel?.font = UIFont(name: "Helvetica Neue", size: 24)
-            optionC.titleLabel?.font = UIFont(name: "Helvetica Neue", size: 24)
-            optionD.titleLabel?.font = UIFont(name: "Helvetica Neue", size: 24)
+            nextButtonSelected.titleLabel?.font = UIFont(name: "Helvetica Neue", size: 30)
+            chapterName.font = UIFont(name: "Helvetica Neue", size: 30)
+            chapterName.font = UIFont.boldSystemFont(ofSize: 30)
+            quesName.font = UIFont(name: "Helvetica Neue", size: 25)
+            optionA.titleLabel?.font = UIFont(name: "Helvetica Neue", size: 25)
+            optionB.titleLabel?.font = UIFont(name: "Helvetica Neue", size: 25)
+            optionC.titleLabel?.font = UIFont(name: "Helvetica Neue", size: 25)
+            optionD.titleLabel?.font = UIFont(name: "Helvetica Neue", size: 25)
         }
         else
         {
