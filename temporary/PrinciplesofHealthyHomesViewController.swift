@@ -10,10 +10,11 @@ import UIKit
 
 class PrinciplesofHealthyHomesViewController: UIViewController {
     
+    // Declaration of UI Objects
     @IBOutlet var MainButtons: [UIButton]!
-    
     @IBOutlet weak var MainMenuButton: UIButton!
     
+    // unwind segue.
     @IBAction func unWindToManiMenu(_ sender: Any) {
         performSegue(withIdentifier: "UnwindToMainmenu", sender: nil)
     }
@@ -26,6 +27,7 @@ class PrinciplesofHealthyHomesViewController: UIViewController {
         super.viewDidLoad()
         let frame = UIScreen.main.bounds
         
+        // fixing title font for iPhone screens to 15 and iPad screens to 27
         for button in MainButtons {
             if frame.height > 850 && frame.width > 450  {
                 button.titleLabel?.font = UIFont(name: "Helvetica Neue", size: 27)
@@ -49,5 +51,4 @@ class PrinciplesofHealthyHomesViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-  
 }

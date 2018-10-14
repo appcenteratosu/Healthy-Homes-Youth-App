@@ -3,6 +3,8 @@ import MessageUI
 import Foundation
 
 class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, MFMailComposeViewControllerDelegate, UITextViewDelegate {
+    
+    // Declaration of UI objects.
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var answersTableView: UITableView!
     @IBOutlet weak var ChecklistTextBox : UITextView!
@@ -12,18 +14,16 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
     var extraNotes : String!
     
     @IBOutlet weak var nextButton: UIButton!
-    
     @IBOutlet weak var backButton: UIButton!
-    
     @IBOutlet weak var MainMenu: UIButton!
-    
     @IBOutlet weak var MailButton: UIButton!
     
+    // When ever the mail button is tapped the pdf generated is sent to email.
     @IBAction func MailButtonTapped(_ sender: UIButton) {
         convertToPDF()
-
     }
     
+    // refreshes UI when ever it loads.
     var question: Question? {
         didSet {
             refreshUI()
@@ -57,19 +57,18 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         NotificationCenter.default.addObserver(self, selector: #selector(DetailViewController.keyboardWillHide(notification:)), name: Notification.Name.UIKeyboardWillHide, object: nil)
         
+        // fixing title font for iPhone screens to 15 and iPad screens to 27
         let frame = UIScreen.main.bounds
         
         for button in BottomNavButtons {
             if frame.height > 850 && frame.width > 450  {
                 button.titleLabel?.font = UIFont(name: "Helvetica Neue", size: 27)
                 button.titleLabel?.textAlignment = .center
-                
             }
             else
             {
                 button.titleLabel?.font = UIFont(name: "Helvetica Neue", size: 15)
                 button.titleLabel?.textAlignment = .center
-                
             }
         }
     }
@@ -79,14 +78,13 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
         nameLabel.text = question?.name
         answers = (question?.answers)!
         self.answersTableView.reloadData()
-// snbada       self.ChecklistTextBox.reloadInputViews()
-        // get user's old answer for this question, set the text view to that and reload it
         let notesKey = "Mynotes|" + (self.question?.name)!
         ChecklistTextBox.text = UserDefaults.standard.object(forKey: notesKey) as? String
     }
     
     var questionIndex = 0
     
+    // When ever the next button is clicked, it decreases the question number and loads the screen with that checklist options.
     @IBAction func backChecklistButton(_ sender: UIButton) {
         self.currentIndex = (self.currentIndex!-1)
 
@@ -97,6 +95,7 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
         refreshUI()
     }
     
+    // When ever the next button is clicked, it increases the question number and loads the screen with that checklist options.
     @IBAction func nextChecklistButton(_ sender: UIButton) {
         self.currentIndex=self.currentIndex!+1
         if currentIndex! == (allQuestions?.count)! {
@@ -125,18 +124,21 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
         cell.answerLabel.layer.cornerRadius = 5
         configureCheckmark(for: cell, at: indexPath)
         
+        // fixing title font for iPhone screens to 13 and iPad screens to 27
         let frame = UIScreen.main.bounds
         
-            if frame.height > 850 && frame.width > 450  {
-                cell.answerLabel.font = UIFont(name: "Helvetica Neue", size: 25)
-            }
-            else
-            {
-                cell.answerLabel.font = UIFont(name: "Helvetica Neue", size: 13)
-            }
+        if frame.height > 850 && frame.width > 450  {
+            cell.answerLabel.font = UIFont(name: "Helvetica Neue", size: 25)
+        }
+        else
+        {
+            cell.answerLabel.font = UIFont(name: "Helvetica Neue", size: 13)
+        }
         
         let optionIndex = indexPath.row
         let key = "checklist|" + (self.question?.name)! + "|" + (self.question?.answers[optionIndex])! + "|" + String(optionIndex)
+        
+         // Stores the bookmark status in userdefaults.
         let existingAnswer = defaults.object(forKey:key) as? Bool
         if (existingAnswer == true) {
             cell.checkBox.image = UIImage(named: "checked box")
@@ -150,16 +152,12 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         return cell;
     }
-    func tableview(_ answersTableView: UITableView,cellforRowAtIndexPath: IndexPath) {
-    }
-
-    
+   
     func tableView(_ answersTableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         if let cell = answersTableView.cellForRow(at: indexPath) {
             
             let checkBox = cell.viewWithTag(3) as! UIImageView
-            
             var isChecked = false
             
             rowChecked = !rowChecked
@@ -171,6 +169,8 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
                 checkBox.image = UIImage(named: "check list box (unfilled)")
             }
         }
+        
+        // if the checklist option is clicked it alters the status of existing answer.
         let key = "checklist|" + (self.question?.name)! + "|" + (self.question?.answers[indexPath.row])! + "|" + String(indexPath.row)
         var existingAnswer = UserDefaults.standard.object(forKey:key) as? Bool
         if (existingAnswer == nil){
@@ -180,12 +180,10 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
         UserDefaults.standard.synchronize()
     }
     
+    // Based on the status of existing answer, the checklist option image updates.
     func configureCheckmark(for cell: UITableViewCell, at indexPath: IndexPath) {
-        
         let checkBox = cell.viewWithTag(3) as! UIImageView
-        
-        var isChecked = false
-        
+        var isChecked = false        
         isChecked = rowChecked
         
         if isChecked {
@@ -195,10 +193,12 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
         }
     }
     
+    // when ever the textfield appears, view goes up for 150 points.
     @objc func keyboardWillShow(notification: Notification) {
         self.view.frame.origin.y = -150
     }
     
+     // when ever the textfield disappears, view comes to normal position.
     @objc func keyboardWillHide(notification: Notification) {
         self.view.frame.origin.y = 0
     }
@@ -223,6 +223,7 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
         controller.dismiss(animated: true, completion: nil)
     }
     
+    // using the html script, the checklist pages are added into a pdf and will be mailed to email in the form of pdf.
     func convertToPDF() {
         if MFMailComposeViewController.canSendMail() {
             let mail = MFMailComposeViewController()
@@ -272,8 +273,7 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
                     //get the answer and put its html into array
                     var notes_content = UserDefaults.standard.value(forKey: key) as! String
                     var notesDataOptions = key.components(separatedBy: "|") as [String]
-                    
-                       notesAnswers.append(notes_content)
+                    notesAnswers.append(notes_content)
                 }
             }
             
@@ -288,7 +288,6 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
                 checklistData = checklistData + "<br><br>"
             }
             
-            //         let html = "<b>Hello <i>World!</i></b> <p>Generate PDF file from HTML in Swift</p>"
             let fmt = UIMarkupTextPrintFormatter(markupText: checklistData)
             
             // 2. Assign print formatter to UIPrintPageRenderer
@@ -309,7 +308,6 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
             let pdfData = NSMutableData()
             UIGraphicsBeginPDFContextToData(pdfData, CGRect.zero,nil)
             
-            
             for i in 1...render.numberOfPages {
                 
                 UIGraphicsBeginPDFPage();
@@ -323,12 +321,6 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
                     image?.draw(in: CGRect(x: 160, y: 21, width: 80,height: 80)) //190
                     image = UIImage(named: "healthy homes logo")
                     image?.draw(in: CGRect(x: 255, y: 21, width: 210,height: 90))
-                    //doc 1 : 180, 51.5 //390 = 210 y: 35
-                    //doc 2 : 175, 52 //385 = 212.5
-                    //doc 3 : 175, 50  //385 = 212.5
-                    //doc 4 : 170, 50  //380 = 215
-            //        image = UIImage(named: "logo_iphone")
-           //         image?.draw(in: CGRect(x: 410, y: 21, width: 80,height: 80)) //
                     image = UIImage(named: "Group 2700")
                     image?.draw(in: CGRect(x: 480, y: 21, width: 80,height: 80))
                 }
@@ -360,12 +352,11 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
             self.showSendMailErrorAlert()
         }
     }
+    
     func showSendMailErrorAlert() {
         let sendMailErrorAlert = UIAlertView(title: "Could Not Send Email", message: "Your device could not send e-mail.  Please check e-mail configuration and try again.", delegate: self, cancelButtonTitle: "OK")
         sendMailErrorAlert.show()
     }
-    
-    
 }
 
 extension DetailViewController: MonsterSelectionDelegate {

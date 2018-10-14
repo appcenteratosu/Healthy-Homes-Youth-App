@@ -10,8 +10,6 @@ import UIKit
 
 class LeadViewController: UIViewController {
     
-    @IBOutlet weak var LeadScrollView: UIScrollView!
-    
     @IBAction func returnLeadtoBigStuff(_ sender: Any) {
         performSegue(withIdentifier: "returnLeadtoBigStuff", sender: nil)
     }
@@ -23,39 +21,34 @@ class LeadViewController: UIViewController {
     let key5 = "bookmarks|" + "The Big Stuff|" + "Lead|" + "Wash your hands and face often..."
     let key6 = "bookmarks|" + "The Big Stuff|" + "Lead|" + "Stay away from areas where there..."
     
+    // Declaration of UI Objects
     @IBOutlet weak var bookmarkSelected1: UIButton!
-    
     @IBOutlet weak var bookmarkSelected2: UIButton!
-    
     @IBOutlet weak var bookmarkSelected3: UIButton!
-    
     @IBOutlet weak var bookmarkSelected4: UIButton!
-    
     @IBOutlet weak var bookmarkSelected5: UIButton!
-    
-    @IBOutlet weak var bookmarkSelected6: UIButton!
-    
+    @IBOutlet weak var bookmarkSelected6: UIButton!    
     @IBOutlet var BottomNavButtons: [UIButton]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // fixing title font for iPhone screens to 15 and iPad screens to 27
         let frame = UIScreen.main.bounds
         
         for button in BottomNavButtons {
             if frame.height > 850 && frame.width > 450  {
                 button.titleLabel?.font = UIFont(name: "Helvetica Neue", size: 27)
                 button.titleLabel?.textAlignment = .center
-
             }
             else
             {
                 button.titleLabel?.font = UIFont(name: "Helvetica Neue", size: 15)
                 button.titleLabel?.textAlignment = .center
-
             }
         }
         
+        // changes the status of button based on "value"
         var value1 = false
         value1 = UserDefaults.standard.bool(forKey: key1)
         
@@ -109,16 +102,14 @@ class LeadViewController: UIViewController {
         } else {
             bookmarkSelected6.setBackgroundImage(UIImage(named: "fav heart "), for: UIControlState.normal)
         }
-       
-        
-        }
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-    
+    // Bookmark button, when it is null, Status of bookmark changes to bookmark selected and vice-versa.
     @IBAction func bookmark1Tapped(_ sender: UIButton) {
         let defaults = UserDefaults.standard
         
@@ -127,6 +118,8 @@ class LeadViewController: UIViewController {
         if (existingAnswer == nil){
             existingAnswer = false
         }
+        
+        // Stores the bookmark status in userdefaults and uses to add the page into save for later.
         existingAnswer = !existingAnswer!
         
         if existingAnswer! {
@@ -136,11 +129,11 @@ class LeadViewController: UIViewController {
         } else {
             UserDefaults.standard.set(false, forKey: key1)
             UserDefaults.standard.synchronize()
-            
             bookmarkSelected1.setBackgroundImage(UIImage(named: "fav heart "), for: UIControlState.normal)
         }
     }
     
+    // Bookmark button, when it is null, Status of bookmark changes to bookmark selected and vice-versa.
     @IBAction func bookmark2Tapped(_ sender: UIButton) {
         let defaults = UserDefaults.standard
         
@@ -149,6 +142,8 @@ class LeadViewController: UIViewController {
         if (existingAnswer == nil){
             existingAnswer = false
         }
+        
+        // Stores the bookmark status in userdefaults and uses to add the page into save for later.
         existingAnswer = !existingAnswer!
         
         if existingAnswer! {
@@ -158,19 +153,20 @@ class LeadViewController: UIViewController {
         } else {
             UserDefaults.standard.set(false, forKey: key2)
             UserDefaults.standard.synchronize()
-            
             bookmarkSelected2.setBackgroundImage(UIImage(named: "fav heart "), for: UIControlState.normal)
         }
     }
     
+    // Bookmark button, when it is null, Status of bookmark changes to bookmark selected and vice-versa.
     @IBAction func bookmark3Tapped(_ sender: UIButton) {
         let defaults = UserDefaults.standard
-        
         let key3 = "bookmarks|" + "The Big Stuff|" + "Lead|" + "Before 1978, lead was used in paint, water pipes, gasoline..."
         var existingAnswer = defaults.object(forKey:key3) as? Bool
         if (existingAnswer == nil){
             existingAnswer = false
         }
+        
+        // Stores the bookmark status in userdefaults and uses to add the page into save for later.
         existingAnswer = !existingAnswer!
         
         if existingAnswer! {
@@ -180,11 +176,11 @@ class LeadViewController: UIViewController {
         } else {
             UserDefaults.standard.set(false, forKey: key3)
             UserDefaults.standard.synchronize()
-            
             bookmarkSelected3.setBackgroundImage(UIImage(named: "fav heart "), for: UIControlState.normal)
         }
     }
     
+    // Bookmark button, when it is null, Status of bookmark changes to bookmark selected and vice-versa.
     @IBAction func bookmark4Tapped(_ sender: UIButton) {
         let defaults = UserDefaults.standard
         
@@ -193,6 +189,8 @@ class LeadViewController: UIViewController {
         if (existingAnswer == nil){
             existingAnswer = false
         }
+        
+        // Stores the bookmark status in userdefaults and uses to add the page into save for later.
         existingAnswer = !existingAnswer!
         
         if existingAnswer! {
@@ -202,11 +200,11 @@ class LeadViewController: UIViewController {
         } else {
             UserDefaults.standard.set(false, forKey: key4)
             UserDefaults.standard.synchronize()
-            
             bookmarkSelected4.setBackgroundImage(UIImage(named: "fav heart "), for: UIControlState.normal)
         }
     }
     
+    // Bookmark button, when it is null, Status of bookmark changes to bookmark selected and vice-versa.
     @IBAction func bookmark5Selected(_ sender: UIButton) {
         let defaults = UserDefaults.standard
         
@@ -215,6 +213,8 @@ class LeadViewController: UIViewController {
         if (existingAnswer == nil){
             existingAnswer = false
         }
+        
+        // Stores the bookmark status in userdefaults and uses to add the page into save for later.
         existingAnswer = !existingAnswer!
         
         if existingAnswer! {
@@ -229,6 +229,7 @@ class LeadViewController: UIViewController {
         }
     }
     
+    // Bookmark button, when it is null, Status of bookmark changes to bookmark selected and vice-versa.
     @IBAction func bookmark6Selected(_ sender: UIButton) {
         let defaults = UserDefaults.standard
         
@@ -237,6 +238,8 @@ class LeadViewController: UIViewController {
         if (existingAnswer == nil){
             existingAnswer = false
         }
+        
+        // Stores the bookmark status in userdefaults and uses to add the page into save for later.
         existingAnswer = !existingAnswer!
         
         if existingAnswer! {
@@ -250,7 +253,4 @@ class LeadViewController: UIViewController {
             bookmarkSelected6.setBackgroundImage(UIImage(named: "fav heart "), for: UIControlState.normal)
         }
     }
-    
-    
-
 }

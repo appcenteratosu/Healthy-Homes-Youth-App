@@ -15,18 +15,15 @@ class RadonViewController: UIViewController {
     let key4 = "bookmarks|" + "The Big Stuff|" + "Radon|" + "Learn more about..."
     let key5 = "bookmarks|" + "The Big Stuff|" + "Radon|" + "Have your home tested..."
     
+    // Declaration of UI Objects
     @IBOutlet weak var bookmarkSelected1: UIButton!
-    
     @IBOutlet weak var bookmarkSelected2: UIButton!
-    
     @IBOutlet weak var bookmarkSelected3: UIButton!
-    
     @IBOutlet weak var bookmarkSelected4: UIButton!
-    
     @IBOutlet weak var bookmarkSelected5: UIButton!
-    
     @IBOutlet var BottomNavButtons: [UIButton]!
     
+    // Unwind Segues.
     @IBAction func ReturnRadonToBigStuff(_ sender: Any) {
         performSegue(withIdentifier: "ReturnRadonToBigStuff", sender: nil)
     }
@@ -34,22 +31,22 @@ class RadonViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // fixing title font for iPhone screens to 15 and iPad screens to 27
         let frame = UIScreen.main.bounds
         
         for button in BottomNavButtons {
             if frame.height > 850 && frame.width > 450  {
                 button.titleLabel?.font = UIFont(name: "Helvetica Neue", size: 27)
                 button.titleLabel?.textAlignment = .center
-
             }
             else
             {
                 button.titleLabel?.font = UIFont(name: "Helvetica Neue", size: 15)
                 button.titleLabel?.textAlignment = .center
-
             }
         }
         
+        // changes the status of button based on "value"
         var value1 = false
         value1 = UserDefaults.standard.bool(forKey: key1)
         
@@ -101,6 +98,7 @@ class RadonViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    // Bookmark button, when it is null, Status of bookmark changes to bookmark selected and vice-versa.
     @IBAction func bookmarkTapped1(_ sender: UIButton) {
         let defaults = UserDefaults.standard
         
@@ -109,6 +107,8 @@ class RadonViewController: UIViewController {
         if (existingAnswer == nil){
             existingAnswer = false
         }
+        
+        // Stores the bookmark status in userdefaults and uses to add the page into save for later.
         existingAnswer = !existingAnswer!
         
         if existingAnswer! {
@@ -118,11 +118,11 @@ class RadonViewController: UIViewController {
         } else {
             UserDefaults.standard.set(false, forKey: key1)
             UserDefaults.standard.synchronize()
-            
             bookmarkSelected1.setBackgroundImage(UIImage(named: "fav heart "), for: UIControlState.normal)
         }
     }
     
+    // Bookmark button, when it is null, Status of bookmark changes to bookmark selected and vice-versa.
     @IBAction func bookmarkTapped2(_ sender: UIButton) {
         let defaults = UserDefaults.standard
         
@@ -131,6 +131,8 @@ class RadonViewController: UIViewController {
         if (existingAnswer == nil){
             existingAnswer = false
         }
+        
+        // Stores the bookmark status in userdefaults and uses to add the page into save for later.
         existingAnswer = !existingAnswer!
         
         if existingAnswer! {
@@ -140,11 +142,11 @@ class RadonViewController: UIViewController {
         } else {
             UserDefaults.standard.set(false, forKey: key2)
             UserDefaults.standard.synchronize()
-            
             bookmarkSelected2.setBackgroundImage(UIImage(named: "fav heart "), for: UIControlState.normal)
         }
     }
     
+    // Bookmark button, when it is null, Status of bookmark changes to bookmark selected and vice-versa.
     @IBAction func bookmarkTapped3(_ sender: UIButton) {
         let defaults = UserDefaults.standard
         
@@ -153,6 +155,8 @@ class RadonViewController: UIViewController {
         if (existingAnswer == nil){
             existingAnswer = false
         }
+        
+        // Stores the bookmark status in userdefaults and uses to add the page into save for later.
         existingAnswer = !existingAnswer!
         
         if existingAnswer! {
@@ -162,11 +166,11 @@ class RadonViewController: UIViewController {
         } else {
             UserDefaults.standard.set(false, forKey: key3)
             UserDefaults.standard.synchronize()
-            
             bookmarkSelected3.setBackgroundImage(UIImage(named: "fav heart "), for: UIControlState.normal)
         }
     }
     
+    // Bookmark button, when it is null, Status of bookmark changes to bookmark selected and vice-versa.
     @IBAction func bookmarkTapped4(_ sender: UIButton) {
         let defaults = UserDefaults.standard
         
@@ -175,6 +179,8 @@ class RadonViewController: UIViewController {
         if (existingAnswer == nil){
             existingAnswer = false
         }
+        
+        // Stores the bookmark status in userdefaults and uses to add the page into save for later.
         existingAnswer = !existingAnswer!
         
         if existingAnswer! {
@@ -184,11 +190,11 @@ class RadonViewController: UIViewController {
         } else {
             UserDefaults.standard.set(false, forKey: key4)
             UserDefaults.standard.synchronize()
-            
             bookmarkSelected4.setBackgroundImage(UIImage(named: "fav heart "), for: UIControlState.normal)
         }
     }
     
+    // Bookmark button, when it is null, Status of bookmark changes to bookmark selected and vice-versa.
     @IBAction func bookmarkTapped5(_ sender: UIButton) {
         let defaults = UserDefaults.standard
         
@@ -197,6 +203,8 @@ class RadonViewController: UIViewController {
         if (existingAnswer == nil){
             existingAnswer = false
         }
+        
+        // Stores the bookmark status in userdefaults and uses to add the page into save for later.
         existingAnswer = !existingAnswer!
         
         if existingAnswer! {
@@ -206,10 +214,7 @@ class RadonViewController: UIViewController {
         } else {
             UserDefaults.standard.set(false, forKey: key5)
             UserDefaults.standard.synchronize()
-            
             bookmarkSelected5.setBackgroundImage(UIImage(named: "fav heart "), for: UIControlState.normal)
         }
     }
-    
-  
 }

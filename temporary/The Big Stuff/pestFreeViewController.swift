@@ -16,20 +16,16 @@ class pestFreeViewController: UIViewController {
     let key5 = "bookmarks|" + "The Big Stuff|" + "pestFree|" + "Help keep your house tidy: Do not let..."
     let key6 = "bookmarks|" + "The Big Stuff|" + "pestFree|" + "Help clean up your yard. Keep mulch, garden..."
     
+    // Declaration of UI Objects
     @IBOutlet weak var bookmarkSelected1: UIButton!
-    
     @IBOutlet weak var bookmarkSelected2: UIButton!
-    
     @IBOutlet weak var bookmarkSelected3: UIButton!
-    
     @IBOutlet weak var bookmarkSelected4: UIButton!
-    
     @IBOutlet weak var bookmarkSelected5: UIButton!
-    
     @IBOutlet weak var bookmarkSelected6: UIButton!
-    
     @IBOutlet var BottomNavButtons: [UIButton]!
     
+    // Unwind Segues.
     @IBAction func ReturnPestToBigStuff(_ sender: Any) {
         performSegue(withIdentifier: "UnwindPestToBigStuff", sender: nil)
     }
@@ -37,19 +33,18 @@ class pestFreeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        // fixing title font for iPhone screens to 15 and iPad screens to 27
         let frame = UIScreen.main.bounds
         
         for button in BottomNavButtons {
             if frame.height > 850 && frame.width > 450  {
                 button.titleLabel?.font = UIFont(name: "Helvetica Neue", size: 27)
                 button.titleLabel?.textAlignment = .center
-
             }
             else
             {
                 button.titleLabel?.font = UIFont(name: "Helvetica Neue", size: 15)
                 button.titleLabel?.textAlignment = .center
-
             }
         }
         
@@ -71,6 +66,7 @@ class pestFreeViewController: UIViewController {
         var value6 = false
         value6 = UserDefaults.standard.bool(forKey: key6)
         
+        // changes the status of button based on "value"
         if value1 == true {
             bookmarkSelected1.setBackgroundImage(UIImage(named: "liked heart icon"), for: UIControlState.normal)
         } else {
@@ -105,13 +101,15 @@ class pestFreeViewController: UIViewController {
             bookmarkSelected6.setBackgroundImage(UIImage(named: "liked heart icon"), for: UIControlState.normal)
         } else {
             bookmarkSelected6.setBackgroundImage(UIImage(named: "fav heart "), for: UIControlState.normal)
-        }    }
+        }
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
+    // Bookmark button, when it is null, Status of bookmark changes to bookmark selected and vice-versa.
     @IBAction func bookmarkButtonSelected1(_ sender: UIButton) {
         let defaults = UserDefaults.standard
         
@@ -120,6 +118,8 @@ class pestFreeViewController: UIViewController {
         if (existingAnswer == nil){
             existingAnswer = false
         }
+        
+        // Stores the bookmark status in userdefaults and uses to add the page into save for later.
         existingAnswer = !existingAnswer!
         
         if existingAnswer! {
@@ -134,6 +134,7 @@ class pestFreeViewController: UIViewController {
         }
     }
     
+    // Bookmark button, when it is null, Status of bookmark changes to bookmark selected and vice-versa.
     @IBAction func bookmarkButtonSelected2(_ sender: UIButton) {
         let defaults = UserDefaults.standard
         
@@ -142,6 +143,8 @@ class pestFreeViewController: UIViewController {
         if (existingAnswer == nil){
             existingAnswer = false
         }
+        
+        // Stores the bookmark status in userdefaults and uses to add the page into save for later.
         existingAnswer = !existingAnswer!
         
         if existingAnswer! {
@@ -151,11 +154,11 @@ class pestFreeViewController: UIViewController {
         } else {
             UserDefaults.standard.set(false, forKey: key2)
             UserDefaults.standard.synchronize()
-            
             bookmarkSelected2.setBackgroundImage(UIImage(named: "fav heart "), for: UIControlState.normal)
         }
     }
     
+    // Bookmark button, when it is null, Status of bookmark changes to bookmark selected and vice-versa.
     @IBAction func bookmarkButtonSelected3(_ sender: UIButton) {
         let defaults = UserDefaults.standard
         
@@ -164,6 +167,8 @@ class pestFreeViewController: UIViewController {
         if (existingAnswer == nil){
             existingAnswer = false
         }
+        
+        // Stores the bookmark status in userdefaults and uses to add the page into save for later.
         existingAnswer = !existingAnswer!
         
         if existingAnswer! {
@@ -173,11 +178,11 @@ class pestFreeViewController: UIViewController {
         } else {
             UserDefaults.standard.set(false, forKey: key3)
             UserDefaults.standard.synchronize()
-            
             bookmarkSelected3.setBackgroundImage(UIImage(named: "fav heart "), for: UIControlState.normal)
         }
     }
     
+    // Bookmark button, when it is null, Status of bookmark changes to bookmark selected and vice-versa.
     @IBAction func bookmarkButtonSelected4(_ sender: UIButton) {
         let defaults = UserDefaults.standard
         
@@ -186,6 +191,8 @@ class pestFreeViewController: UIViewController {
         if (existingAnswer == nil){
             existingAnswer = false
         }
+        
+        // Stores the bookmark status in userdefaults and uses to add the page into save for later.
         existingAnswer = !existingAnswer!
         
         if existingAnswer! {
@@ -195,11 +202,11 @@ class pestFreeViewController: UIViewController {
         } else {
             UserDefaults.standard.set(false, forKey: key4)
             UserDefaults.standard.synchronize()
-            
             bookmarkSelected4.setBackgroundImage(UIImage(named: "fav heart "), for: UIControlState.normal)
         }
     }
     
+    // Bookmark button, when it is null, Status of bookmark changes to bookmark selected and vice-versa.
     @IBAction func bookmarkButtonSelected5(_ sender: UIButton) {
         let defaults = UserDefaults.standard
         
@@ -208,6 +215,8 @@ class pestFreeViewController: UIViewController {
         if (existingAnswer == nil){
             existingAnswer = false
         }
+        
+        // Stores the bookmark status in userdefaults and uses to add the page into save for later.
         existingAnswer = !existingAnswer!
         
         if existingAnswer! {
@@ -217,11 +226,11 @@ class pestFreeViewController: UIViewController {
         } else {
             UserDefaults.standard.set(false, forKey: key5)
             UserDefaults.standard.synchronize()
-            
             bookmarkSelected5.setBackgroundImage(UIImage(named: "fav heart "), for: UIControlState.normal)
         }
     }
     
+    // Bookmark button, when it is null, Status of bookmark changes to bookmark selected and vice-versa.
     @IBAction func bookmarkButtonSelected6(_ sender: UIButton) {
         let defaults = UserDefaults.standard
         
@@ -230,6 +239,8 @@ class pestFreeViewController: UIViewController {
         if (existingAnswer == nil){
             existingAnswer = false
         }
+        
+        // Stores the bookmark status in userdefaults and uses to add the page into save for later.
         existingAnswer = !existingAnswer!
         
         if existingAnswer! {
@@ -239,10 +250,7 @@ class pestFreeViewController: UIViewController {
         } else {
             UserDefaults.standard.set(false, forKey: key6)
             UserDefaults.standard.synchronize()
-            
             bookmarkSelected6.setBackgroundImage(UIImage(named: "fav heart "), for: UIControlState.normal)
         }
     }
-    
-
 }

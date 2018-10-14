@@ -10,12 +10,10 @@ import UIKit
 
 class TrainyourBrainViewController: UIViewController {
     
-    @IBOutlet weak var brainBGView: UIView!
-    
-    @IBOutlet weak var QuizMainScreen: UITextView!
-    
+    // Declaration of UI objects.
     @IBOutlet weak var QuizSpeechBubble: UIImageView!
     
+    // Unwind Segues.
     @IBAction func ReturnQuizToMainMenu(_ sender: Any) {
         performSegue(withIdentifier: "UnwindQuizToMainMenu", sender: nil)
     }
@@ -24,13 +22,13 @@ class TrainyourBrainViewController: UIViewController {
         
     }
     
-    @IBOutlet weak var Enter: UIButton!
-    
+    @IBOutlet weak var Enter: UIButton!    
     @IBOutlet weak var MainMenu: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // fixing title font for iPhone screens to 15 and iPad screens to 27
         let frame = UIScreen.main.bounds
         
         if frame.height > 850 && frame.width > 450  {

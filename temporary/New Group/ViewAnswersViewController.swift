@@ -15,6 +15,7 @@ class ViewAnswersViewController: UIViewController, UITableViewDelegate, UITableV
     var answersImageArray = [UIImageView]()
     var Image = UIImageView()
     
+    // Declaration of UI objects.
     @IBOutlet weak var Back: UIButton!
 
     override func viewDidLoad() {
@@ -26,18 +27,16 @@ class ViewAnswersViewController: UIViewController, UITableViewDelegate, UITableV
         self.ViewAnswersTableView.backgroundColor = UIColor.clear
         self.ViewAnswersTableView.layer.borderColor = #colorLiteral(red: 0.1647058824, green: 0.5294115647, blue: 1, alpha: 1)
         
+        // fixing title font for iPhone screens to 15 and iPad screens to 27.
         let frame = UIScreen.main.bounds
         
         if frame.height > 850 && frame.width > 450  {
             Back.titleLabel?.font = UIFont(name: "Helvetica Neue", size: 27)
-            
         }
         else
         {
             Back.titleLabel?.font = UIFont(name: "Helvetica Neue", size: 15)
         }
-        
-        
     }
     
     override func didReceiveMemoryWarning() {
@@ -51,15 +50,13 @@ class ViewAnswersViewController: UIViewController, UITableViewDelegate, UITableV
         performSegue(withIdentifier: "UnwindQuizResultsToQuizMain", sender: nil)
     }
     
-    
+    // correct answers array.
     let CorrectAnswers : [String] = ["1. D: All of the above", "2. D: Keep it beautiful", "3. D: All of the above",
                                      "4. A: 1978", "5. B: False", "6. A: True", "7. D: Increase the amount of fiber that you eat",
                                      "8. A: True", "9. D: All of the above", "10. B: False", "11. B: Lung cancer", "12. A: True",
                                      "13. B: False", "14. D: All of the above", "15. A: True", "16. A: True", "15. B: False",
                                      "18. A: True", "19. A: True", "20. A: True", "21. A: True", "22. A: Comfortable",
                                      "23. A: True", "24. B: False", "25. C:Carbon monoxide"]
-    
-    
     
     func numberOfSections(in ViewAnswersTableView: UITableView) -> Int {
         return 1
@@ -86,6 +83,7 @@ class ViewAnswersViewController: UIViewController, UITableViewDelegate, UITableV
         cell.layer.borderWidth = 2
         cell.layer.borderColor = #colorLiteral(red: 0.1647058824, green: 0.5294115647, blue: 1, alpha: 1)
         
+        // updates the image of correct answers, upon seeind the status of the quiz questions.
         var isChecked = viewAnswersStatusArray[indexPath.row]
         
         if isChecked == "correct" {

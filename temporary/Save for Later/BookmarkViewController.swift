@@ -2,6 +2,8 @@ import UIKit
 
 class BookmarkViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    // Declaration of UI objects.
+    @IBOutlet weak var bookmarkTableView: UITableView!    
     let formattedString = NSMutableAttributedString()
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -18,16 +20,15 @@ class BookmarkViewController: UIViewController, UITableViewDelegate, UITableView
         cell.layer.masksToBounds = true
         
         var bookmarkCell = cell.viewWithTag(1) as! UILabel
-        
         var paragraphCell = cell.viewWithTag(5) as! UILabel
     
         bookmarkCell.text = chapteAndSubChapterNames[indexPath.row]
-        
         paragraphCell.text = paragraghs[indexPath.row]
         
         return cell;
     }
     
+    // unwind Segues.
     @IBAction func ReturnSavedForLaterToMainMenu(_ sender: Any) {
         performSegue(withIdentifier: "ReturnSavedForLaterToMainMenu", sender: nil)
     }
@@ -46,16 +47,16 @@ class BookmarkViewController: UIViewController, UITableViewDelegate, UITableView
     override func viewDidLoad() {
         super.viewDidLoad()
        
+        // fixing title font for iPhone screens to 15 and iPad screens to 27
         let frame = UIScreen.main.bounds
         
-       
-            if frame.height > 850 && frame.width > 450  {
-                MainManu.titleLabel?.font = UIFont(name: "Helvetica Neue", size: 27)
-            }
-            else
-            {
-                MainManu.titleLabel?.font = UIFont(name: "Helvetica Neue", size: 15)
-            }
+        if frame.height > 850 && frame.width > 450  {
+            MainManu.titleLabel?.font = UIFont(name: "Helvetica Neue", size: 27)
+        }
+        else
+        {
+            MainManu.titleLabel?.font = UIFont(name: "Helvetica Neue", size: 15)
+        }
         
         self.bookmarkTableView.delegate = self
         self.bookmarkTableView.dataSource = self
@@ -66,36 +67,30 @@ class BookmarkViewController: UIViewController, UITableViewDelegate, UITableView
         let all_keys = UserDefaults.standard.dictionaryRepresentation().keys
         for key in all_keys {
             if key.contains("bookmarks|"){
+                
                 var value = UserDefaults.standard.value(forKey: key) as! Bool
                 
                 if value == true {
-                var bookmarkDataOptions = key.components(separatedBy: "|") as [String]
-                
-                chapter_name =  bookmarkDataOptions[1]
-                sub_chapter = bookmarkDataOptions[2]
+                    var bookmarkDataOptions = key.components(separatedBy: "|") as [String]
+                    chapter_name =  bookmarkDataOptions[1]
+                    sub_chapter = bookmarkDataOptions[2]
                     paragraph = bookmarkDataOptions[3]
-                chapteAndSubChapterNames.append(chapter_name + " | " + sub_chapter)
-                    
+                    chapteAndSubChapterNames.append(chapter_name + " | " + sub_chapter)
                     paragraghs.append(paragraph)
-                    
-                    
                 }
-                
             }
         }
-//        self.bookmarkTableView.backgroundColor = #colorLiteral(red: 0.2745098039, green: 0.8156862745, blue: 0.9921568627, alpha: 1)
     }
     
     func tableView(_ bookmarkTableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let cell = bookmarkTableView.cellForRow(at: indexPath) {
             let bookmarkCell = cell.viewWithTag(1) as! UILabel
             var paragraphCell = cell.viewWithTag(5) as! UILabel
-
             cell.contentView.backgroundColor = UIColor.clear
             
+            // Selects on save for later cell and check for the text and takes to that page.
             if bookmarkCell.text! == "Eight Principles of Healthy Homes | " + "Keep it DRY" && paragraphCell.text == "Damp homes provide an environment for dust mites, roaches, rodents and molds..." {
                 let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-                
                 let nextViewController = storyBoard.instantiateViewController(withIdentifier: "keepItDryViewController") as! keepItDryViewController
                 self.present(nextViewController, animated:true, completion:nil)
             } else if bookmarkCell.text == "Eight Principles of Healthy Homes | " + "Keep it CONTAMINANT FREE" && paragraphCell.text == "Levels of contaminants such as lead, radon, carbon monoxide, asbestos,..." {
@@ -105,7 +100,7 @@ class BookmarkViewController: UIViewController, UITableViewDelegate, UITableView
                 self.present(nextViewController, animated:true, completion:nil)
             } else if bookmarkCell.text == "Eight Principles of Healthy Homes | " + "Keep it PEST FREE" && paragraphCell.text == "Exposure to pests such as roaches and rodents can trigger an asthma attack..." {
                 let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-                
+
                 let nextViewController = storyBoard.instantiateViewController(withIdentifier: "PestsViewController") as! PestsViewController
                 self.present(nextViewController, animated:true, completion:nil)
             } else if bookmarkCell.text == "Eight Principles of Healthy Homes | " + "Keep it SAFE" && paragraphCell.text == "Injuries such as falls, burns, and poisonings occur most often..." {
@@ -120,8 +115,6 @@ class BookmarkViewController: UIViewController, UITableViewDelegate, UITableView
                 let nextViewController = storyBoard.instantiateViewController(withIdentifier: "WellMaintainedViewController") as! WellMaintainedViewController
                 self.present(nextViewController, animated:true, completion:nil)
             }
-                
-                
             else if bookmarkCell.text == "Eight Principles of Healthy Homes | " + "Keep it WELL VENTILATED" && paragraphCell.text == "Having a good fresh air supply to your home is important..." {
                 let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
                 
@@ -146,7 +139,6 @@ class BookmarkViewController: UIViewController, UITableViewDelegate, UITableView
                 let nextViewController = storyBoard.instantiateViewController(withIdentifier: "LeadViewController") as! LeadViewController
                 self.present(nextViewController, animated:true, completion:nil)
             }
-            
             else if bookmarkCell.text == "The Big Stuff | " + "Lead" && paragraphCell.text == "Lead can permanently damage your nervous..." {
                 let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
                 
@@ -445,8 +437,5 @@ class BookmarkViewController: UIViewController, UITableViewDelegate, UITableView
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    @IBOutlet weak var bookmarkTableView: UITableView!
-    
 }
 

@@ -10,24 +10,18 @@ import UIKit
 
 class SponsorsViewController: UIViewController {
     
+    // Declaration of UI objects.
     @IBOutlet var rightIconButtons: [UIButton]!
-    
     @IBOutlet var leftIconButtons: [UIButton]!
-    
     @IBOutlet weak var sponsor1: UIButton!
-    
     @IBOutlet weak var sponsor2: UIButton!
-    
     @IBOutlet weak var sponsor3: UIButton!
-    
     @IBOutlet weak var sponsor4: UIButton!
-    
     @IBOutlet weak var sponsor5: UIButton!
-    
     @IBOutlet weak var sponsor6: UIButton!
-    
     @IBOutlet weak var MainMenu: UIButton!
     
+    // Unwind Segues.
     @IBAction func ReturnSponsorsToMainMenu(_ sender: Any) {
         performSegue(withIdentifier: "UnwindSponsorsToMainMenu", sender: nil)
     }
@@ -35,6 +29,7 @@ class SponsorsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // fixing title font for iPhone screens to 15 and iPad screens to 27
         let frame = UIScreen.main.bounds
         
         if frame.height > 850 && frame.width > 450  {
@@ -72,15 +67,10 @@ class SponsorsViewController: UIViewController {
         }
 
         sponsor1.setTitle("US DEPARTMENT OF HOUSING", for: UIControlState.normal)
-       
         sponsor2.setTitle("EQUAL HOUSING OPPORTUNITY", for: UIControlState.normal)
-        
         sponsor3.setTitle("HEALTHY HOMES PARTNERSHIP", for: UIControlState.normal)
-        
         sponsor4.setTitle("OFFICE OF LEAD HAZARD CONTROL", for: UIControlState.normal)
-        
         sponsor5.setTitle("US DEPARTMENT OF AGRICULTURE", for: UIControlState.normal)
-        
         sponsor6.setTitle("OKLAHOMA STATE APP CENTER", for: UIControlState.normal)
     }
 
@@ -89,8 +79,8 @@ class SponsorsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    //  urls which takes to that web page link.
     @IBAction func firstSponsorButtonTapped(_ sender: Any) {
-        
         UIApplication.shared.openURL(URL(string: "https://www.hud.gov/")!)
     }
     
@@ -112,6 +102,5 @@ class SponsorsViewController: UIViewController {
     
     @IBAction func sixthSponsorButtonTapped(_ sender: Any) {
         UIApplication.shared.openURL(URL(string: "https://appcenter.okstate.edu/")!)
-    }
-    
+    }    
 }

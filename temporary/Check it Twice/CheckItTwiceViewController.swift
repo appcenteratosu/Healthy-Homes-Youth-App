@@ -16,10 +16,12 @@ class CheckItTwiceViewController: UIViewController {
     
     @IBOutlet var CheckButtons: [UIButton]!
     
+    // Unwind Segues.
     @IBAction func ReturnCheckItTwiceToMainMenu(_ sender: Any) {
         performSegue(withIdentifier: "UnwindCheckItTwiceToBigStuff", sender: nil)
     }
     
+     // Check list Chapters with check list options.
     let questions = [
         Question(name: "Living, Dining, and Family Rooms", answers: ["If your home was built before 1978, check painted doors, windows, trim, and walls for lead", "Vacuum carpets regularly to reduce asthma triggers", "Move blind cords out of reach of children to prevent strangulation", "Check lighting and extension cords for fraying or bare wires", "Avoid having lighting and extension cords in floor pathways", "Purchase children’s toys that do not have small parts for choking and do not contain lead", "Secure heavy items (televisions, bookcases) to walls to prevent tip overs"]),
         Question(name: "Kitchen", answers: ["If your home was built before 1978, check painted doors, windows, trim, and walls for lead", "Use a range hood exhausted to the outside (or open window) to ventilate while cooking", "Clean up liquids and foods right after spills", "Keep matches, glassware, knives, and cleaning supplies out of reach of children", "Avoid leaving food and water out overnight", "Mop floors weekly", "Place Poison Control Hotline number (800) 222 – 1222 on the refrigerator and in every room", "Do not allow children to be in kitchen unsupervised when the range or oven is on"]),
@@ -41,6 +43,7 @@ class CheckItTwiceViewController: UIViewController {
     
     weak var delegate: MonsterSelectionDelegate?
 
+    // segues of check it twice sub chapters taking to their page.
     @IBAction func ChecklistButton(_ sender: UIButton) {
         let title : String = (sender.currentTitle)!
         if (title == "1. Family rooms") {
@@ -90,6 +93,7 @@ class CheckItTwiceViewController: UIViewController {
         }
     }
     
+    // Send the checklist options of the chapter to detail view controller.
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let yourVC = segue.destination as? DetailViewController {
             yourVC.question = self.selectedQuestion
@@ -101,7 +105,6 @@ class CheckItTwiceViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // for loop over questions
         for ques in questions {
             for answerIndex in 0...(ques.answers.count-1){
                 let key = "checklist|" + (ques.name) + "|" + (ques.answers[answerIndex]) + "|" + String(answerIndex)
@@ -113,6 +116,8 @@ class CheckItTwiceViewController: UIViewController {
                 UserDefaults.standard.set(!existingAnswer!, forKey: key)
                 UserDefaults.standard.synchronize()
             }
+            
+            // Stores the bookmark status in userdefaults.
             let notesKey = "Mynotes|" + (ques.name)
             var existingNotesAnswer = UserDefaults.standard.object(forKey: notesKey) as? String
             if (existingNotesAnswer == nil) {

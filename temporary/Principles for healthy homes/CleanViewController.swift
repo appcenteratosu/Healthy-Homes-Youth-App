@@ -11,32 +11,29 @@ import UIKit
 class CleanViewController: UIViewController {
     let key = "bookmarks|" + "Eight Principles of Healthy Homes|" + "Keep it CLEAN|" + "Clean homes reduce pest infestation and exposures to ..."
 
+    // Declaration of UI Objects
     @IBOutlet weak var bookmarkButtonSelected: UIButton!
-    
-    
     @IBOutlet var BottomNavButtons: [UIButton]!
     
-    @IBOutlet weak var CleanTableView: UIView!
-    
+    // Unwind Segue.
     @IBAction func UnwindCleanToPrinciple(_ sender: Any) {
-        
         performSegue(withIdentifier: "UnwindCleanToPrinciple", sender: nil)
     }
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         var value = false
         value = UserDefaults.standard.bool(forKey: key)
-        //        configureCheckmark()
-        // change the status of button based on "value"
+
+        // changes the status of button based on "value"
         if value == true {
             bookmarkButtonSelected.setBackgroundImage(UIImage(named: "liked heart icon"), for: UIControlState.normal)
         } else {
             bookmarkButtonSelected.setBackgroundImage(UIImage(named: "fav heart "), for: UIControlState.normal)
         }
         
+        // fixing title font for iPhone screens to 15 and iPad screens to 27
         let frame = UIScreen.main.bounds
         
         for button in BottomNavButtons {
@@ -59,6 +56,7 @@ class CleanViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    // Bookmark button, when it is null, Status of bookmark changes to bookmark selected and vice-versa.
     @IBAction func bookmarkButtonTapped(_ sender: UIButton) {
         let defaults = UserDefaults.standard
         
@@ -68,6 +66,7 @@ class CleanViewController: UIViewController {
             existingAnswer = false
         }
         
+        // Stores the bookmark status in userdefaults and add the page into save for later.
         existingAnswer = !existingAnswer!
         
         if existingAnswer! {

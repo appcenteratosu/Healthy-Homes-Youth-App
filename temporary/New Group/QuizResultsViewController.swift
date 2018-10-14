@@ -10,10 +10,9 @@ import UIKit
 
 class QuizResultsViewController: UIViewController {
     
+    // Declaration of UI objects.
     @IBOutlet weak var scoreLabel: UILabel!
-    
     @IBOutlet weak var percentageLabel: UILabel!
-    
     @IBOutlet var bottomNavButtons: [UIButton]!
     
     var scoreText = Int()
@@ -24,6 +23,8 @@ class QuizResultsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // gets score from the quiz screen view controller through segue.
         scoreLabel.text = "You got \(scoreText) out of \(25) right!"
         percentageLabel.text = "That means you achieved \(percentage)%"
         checkStatusArray = answerStatusArray
@@ -31,6 +32,7 @@ class QuizResultsViewController: UIViewController {
         backgroundView.layer.cornerRadius = 5;
         backgroundView.layer.masksToBounds = true
         
+        // fixing title font for iPhone screens to 17 and iPad screens to 27.
         let frame = UIScreen.main.bounds
         
         for button in bottomNavButtons {
@@ -41,18 +43,14 @@ class QuizResultsViewController: UIViewController {
             else
             {
                 button.titleLabel?.font = UIFont(name: "Helvetica Neue", size: 17)
-                
-            button.titleLabel?.textAlignment = .center
-                
+                button.titleLabel?.textAlignment = .center
             }
         }
     }
     
     @IBAction func returnToMainMenu(_ sender: Any) {
         performSegue(withIdentifier: "UnwindToMainMenu", sender: nil)
-
     }
-    
     
     @IBAction func ReturnQuizResultsToQuizScreen(_ sender: Any) {
         performSegue(withIdentifier: "UnwindQuizResultsToQuizScreen", sender: nil)
@@ -60,6 +58,7 @@ class QuizResultsViewController: UIViewController {
     
     @IBOutlet weak var backgroundView: UIView!
     
+    // Segue to send the status of quiz questions.
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ViewAnswersSegue" {
             if let vc = segue.destination as? ViewAnswersViewController {

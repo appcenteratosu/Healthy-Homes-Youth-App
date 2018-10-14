@@ -19,19 +19,17 @@ class quizScreenViewController: UIViewController {
     @IBOutlet weak var optionB: UIButton!
     @IBOutlet weak var optionC: UIButton!
     @IBOutlet weak var optionD: UIButton!
-    
     @IBOutlet weak var nextButtonSelected: UIButton!
-    
     @IBOutlet weak var backgroundView: UIView!
-    
-    @IBOutlet weak var backButtonSelected: UIButton!
-    
+    @IBOutlet weak var backButtonSelected: UIButton!    
     @IBOutlet weak var endQuiz: UIButton!
     
+    // Unwind Segues.
     @IBAction func returnToQuizScreen (segue: UIStoryboardSegue) {
         
     }
     
+    // When ever the next button is clicked, it decreases the question number and loads the screen with that checklist options.
     @IBAction func backButton(_ sender: UIButton) {
         if questionNumber > 0 {
             if sender.tag == 5 {
@@ -41,15 +39,13 @@ class quizScreenViewController: UIViewController {
         }
     }
     
+    // When ever the next button is clicked, it increases the question number and loads the screen with that checklist options.
     @IBAction func nextButton(_ sender: UIButton) {
-        
         if status == "correct" {
             score += 1
         }
         percent = Double(score*4)
-        print(status)
-         print(score)
-   //     StatusArray.append(status)
+
         if questionNumber == 24 {
             nextButtonSelected.isHidden = true
         }
@@ -61,7 +57,7 @@ class quizScreenViewController: UIViewController {
         }
     }
     
-    
+    // When the quiz ends it leads to quiz results page.
     @IBAction func EndQuiz(_ sender: Any) {
         self.performSegue(withIdentifier: "results", sender: self)
     }
@@ -69,6 +65,7 @@ class quizScreenViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // fixing title font for iPhone screens to 14 and iPad screens to 30.
         let frame = UIScreen.main.bounds
         
         if frame.height > 850 && frame.width > 450  {
@@ -93,6 +90,7 @@ class quizScreenViewController: UIViewController {
             optionD.titleLabel?.font = UIFont(name: "Helvetica Neue", size: 15)
         }
         
+        // fixing title font for iPhone screens to 15 and iPad screens to 27.
         if frame.height > 850 && frame.width > 450  {
             backButtonSelected.titleLabel?.font = UIFont(name: "Helvetica Neue", size: 27)
         }
@@ -117,7 +115,6 @@ class quizScreenViewController: UIViewController {
         "skipped","skipped","skipped","skipped","skipped","skipped","skipped","skipped"]
       
         updateQuestion()
-        updateUI()
         
         backgroundView.layer.cornerRadius = 5;
         backgroundView.layer.masksToBounds = true;
@@ -147,6 +144,7 @@ class quizScreenViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    // When ever option A is clicked, it changes the button image and updates status value upon checking with correct answer value.
     @IBAction func optionAPressed(_ sender: UIButton) {
         if(sender.backgroundImage(for: UIControlState.normal) == UIImage(named: "unselected button")  ) {
             sender.setBackgroundImage(UIImage(named: "selected answer button"), for: UIControlState.normal)
@@ -170,6 +168,7 @@ class quizScreenViewController: UIViewController {
          print(status)
     }
     
+     // When ever option B is clicked, it changes the button image and updates status value upon checking with correct answer value.
     @IBAction func optionBPressed(_ sender: UIButton) {
         if(sender.backgroundImage(for: UIControlState.normal) == UIImage(named: "unselected button")  ) {
             sender.setBackgroundImage(UIImage(named: "selected answer button"), for: UIControlState.normal)
@@ -193,6 +192,7 @@ class quizScreenViewController: UIViewController {
          print(status)
     }
     
+     // When ever option C is clicked, it changes the button image and updates status value upon checking with correct answer value.
     @IBAction func optionCPressed(_ sender: UIButton) {
         if(sender.backgroundImage(for: UIControlState.normal) == UIImage(named: "unselected button")  ) {
             sender.setBackgroundImage(UIImage(named: "selected answer button"), for: UIControlState.normal)
@@ -216,6 +216,7 @@ class quizScreenViewController: UIViewController {
          print(status)
     }
     
+     // When ever option D is clicked, it changes the button image and updates status value upon checking with correct answer value.
     @IBAction func optionDPressed(_ sender: UIButton) {
         if(sender.backgroundImage(for: UIControlState.normal) == UIImage(named: "unselected button")  ) {
             sender.setBackgroundImage(UIImage(named: "selected answer button"), for: UIControlState.normal)
@@ -241,6 +242,7 @@ class quizScreenViewController: UIViewController {
     
     var percentage = Int()
     
+    // send the status, and score of the quiz to quiz results screen.
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "results" {
             if let vc = segue.destination as? QuizResultsViewController {
@@ -249,9 +251,9 @@ class quizScreenViewController: UIViewController {
                 vc.answerStatusArray = self.StatusArray
             }
         }
-        
     }
     
+    // When ever the next question of prev question is called this updates the options, chapter title and question title corresponding to the value of question.
     func updateQuestion() {
         if questionNumber <= allQuestions.list.count {
             optionA.setBackgroundImage(UIImage(named: "unselected button"), for: UIControlState.normal)
@@ -261,16 +263,12 @@ class quizScreenViewController: UIViewController {
                 optionC.setBackgroundImage(UIImage(named: "unselected button"), for: UIControlState.normal)
             } else {
                 optionC.setBackgroundImage(nil, for: UIControlState.normal)
-                //            optionC.backgroundColor = UIColor.clear
-                //            optionC.isHidden = true
             }
             
             if optionD.title(for: UIControlState.normal) != "" {
                 optionD.setBackgroundImage(UIImage(named: "unselected button"), for: UIControlState.normal)
             } else {
                 optionD.setBackgroundImage(nil, for: UIControlState.normal)
-                //            optionC.backgroundColor = UIColor.clear
-                //         optionD.isHidden = true
             }
         }
         
@@ -296,11 +294,8 @@ class quizScreenViewController: UIViewController {
     }
     
     var Score : Int = 0
-    
-    func updateUI() {
-        
-    }
-    
+
+    // if try again option is clicked then the score and question number returns to 0.
     func restartQuiz() {
         score = 0
         questionNumber = 0

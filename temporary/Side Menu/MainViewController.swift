@@ -10,26 +10,23 @@ import UIKit
 
 class MainViewController: UIViewController {
     var delegate: CenterViewControllerDelegate?
+    
+    // Declaration of UI Objects
     @IBOutlet var MainButtons: [UIButton]!
-
-    @IBOutlet weak var MenuBarNavigationItem: UINavigationItem!
-    
     @IBOutlet weak var menuButtonSelected: UIButton!
-    
-    @IBOutlet weak var TitleTextView: UITextView!
-    
     @IBOutlet weak var MainButton1: UIButton!
+    @IBOutlet weak var TitleLabel: UILabel!
     
+    // unwind segue.
     @IBAction func returnMainMenu(segue: UIStoryboardSegue) {
         
     }
-    
-    @IBOutlet weak var TitleLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         let frame = UIScreen.main.bounds
         
+        // fixing title font for iPhone screens to 12 and iPad screens to 27
             for button in MainButtons {
                 if frame.height > 850 && frame.width > 450  {
                     button.titleLabel?.font = UIFont(name: "Helvetica Neue", size: 27)
@@ -42,6 +39,7 @@ class MainViewController: UIViewController {
                 }
             }
         
+         // fixing title font for iPhone screens to 12 and iPad screens to 27
         if frame.height > 850 && frame.width > 450  {
             MainButton1.titleLabel?.font = UIFont(name: "Helvetica Neue", size: 27)
             MainButton1.titleLabel?.font = UIFont.boldSystemFont(ofSize: 27)
@@ -55,14 +53,9 @@ class MainViewController: UIViewController {
         TitleLabel.adjustsFontSizeToFitWidth = true;
         TitleLabel.minimumScaleFactor = 0.5;
 
-        //      self.navigationItem.titleView = TitleLabel
-        
-    
         navigationController?.navigationBar.barTintColor = #colorLiteral(red: 0.2745098039, green: 0.8156862745, blue: 0.9921568627, alpha: 1)
     }
     
-    
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -71,7 +64,4 @@ class MainViewController: UIViewController {
     @IBAction func MenuButton(_ sender: UIButton) {
         delegate?.toggleRightPanel?()
     }
-    
-    
-
 }

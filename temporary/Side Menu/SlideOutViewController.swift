@@ -7,32 +7,20 @@ protocol ChecklistSelectionDelegate: class {
 class SlideOutViewController: UIViewController {
     
     var isChecked = Bool()
-    
     weak var delegate: ChecklistSelectionDelegate?
     
+    // Declaration of UI Objects
     @IBOutlet var HealthyHomesButton: [UIButton]!
-    
     @IBOutlet var BigStuffButton: [UIButton]!
-    
     @IBOutlet var CheckItTwiceButton: [UIButton]!
-    
     @IBOutlet var MainMenus: [UIButton]!
-    
     @IBOutlet var BigStuffImageView: [UIImageView]!
-    
     @IBOutlet var FamilyBorders: [UIImageView]!
-    
     @IBOutlet var BigStuffBorders: [UIImageView]!
-    
     @IBOutlet var FamilyImageView: [UIImageView]!
-    
     @IBOutlet var CheckItTwiceImageView: [UIImageView]!
-    
     @IBOutlet var familyStackViews: [UIStackView]!
-    
     @IBOutlet var BigStuffStackViews: [UIStackView]!
-    
-    
     @IBOutlet var CheckItTwiceBorders: [UIImageView]!
     
     var allQuestions : [Question]!
@@ -43,17 +31,18 @@ class SlideOutViewController: UIViewController {
         super.viewDidLoad()
         let frame = UIScreen.main.bounds
         
+        // fixing title font for iPhone screens to 15 and iPad screens to 27
         for button in HealthyHomesButton {
             if frame.height > 850 && frame.width > 450  {
                     button.titleLabel?.font = UIFont(name: "Helvetica Neue", size: 27)
-                }
+            }
             else
             {
                 button.titleLabel?.font = UIFont(name: "Helvetica Neue", size: 15)
             }
-            
         }
         
+        // fixing title font for iPhone screens to 15 and iPad screens to 27
         for button in BigStuffButton {
             if frame.height > 850 && frame.width > 450  {
                 button.titleLabel?.font = UIFont(name: "Helvetica Neue", size: 27)
@@ -64,6 +53,7 @@ class SlideOutViewController: UIViewController {
             }
         }
         
+        // fixing title font for iPhone screens to 15 and iPad screens to 27
         for button in CheckItTwiceButton {
             if frame.height > 850 && frame.width > 450  {
                 button.titleLabel?.font = UIFont(name: "Helvetica Neue", size: 27)
@@ -74,6 +64,7 @@ class SlideOutViewController: UIViewController {
             }
         }
         
+        // fixing title font for iPhone screens to 15 and iPad screens to 27
         for button in MainMenus {
             if frame.height > 850 && frame.width > 450  {
                 button.titleLabel?.font = UIFont(name: "Helvetica Neue", size: 27)
@@ -82,9 +73,9 @@ class SlideOutViewController: UIViewController {
             {
                 button.titleLabel?.font = UIFont(name: "Helvetica Neue", size: 15)
             }
-            
         }
         
+        // fixing title font for iPhone screens to 15 and iPad screens to 27
         if frame.height > 850 && frame.width > 450  {
             MainMenuSelected.titleLabel?.font = UIFont(name: "Helvetica Neue", size: 27)
         }
@@ -99,10 +90,9 @@ class SlideOutViewController: UIViewController {
     }
     
     @IBOutlet weak var MainMenuSelected: UIButton!
-
     @IBOutlet var CheckItTwiceStackView: [UIStackView]!
     
-    
+    // Check list Chapters with check list options.
     let questions = [
         Question(name: "Living, Dining, and Family Rooms", answers: ["If your home was built before 1978, check painted doors, windows, trim, and walls for lead", "Vacuum carpets regularly to reduce asthma triggers", "Move blind cords out of reach of children to prevent strangulation", "Check lighting and extension cords for fraying or bare wires", "Avoid having lighting and extension cords in floor pathways", "Purchase children’s toys that do not have small parts for choking and do not contain lead", "Secure heavy items (televisions, bookcases) to walls to prevent tip overs"]),
         Question(name: "Kitchen", answers: ["If your home was built before 1978, check painted doors, windows, trim, and walls for lead", "Use a range hood exhausted to the outside (or open window) to ventilate while cooking", "Clean up liquids and foods right after spills", "Keep matches, glassware, knives, and cleaning supplies out of reach of children", "Avoid leaving food and water out overnight", "Mop floors weekly", "Place Poison Control Hotline number (800) 222 – 1222 on the refrigerator and in every room", "Do not allow children to be in kitchen unsupervised when the range or oven is on"]),
@@ -123,6 +113,7 @@ class SlideOutViewController: UIViewController {
     
     var selectedIndex : Int = 0
     
+    // send chapter names, and checklist in the chapters to Check It Twice page.
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let yourVC = segue.destination as? DetailViewController {
             yourVC.question = self.selectedQuestion
@@ -131,6 +122,7 @@ class SlideOutViewController: UIViewController {
         }
     }
 
+    // hiding sub chapter buttons of how can my family have a healthy home under chapter buttons.
     @IBAction func familyHomesSelection(_ sender: Any) {
         HealthyHomesButton.forEach { (button) in
             button.isHidden = !button.isHidden
@@ -146,17 +138,17 @@ class SlideOutViewController: UIViewController {
         }
         
         familyStackViews.forEach { (stackView) in
-            
-                        stackView.isHidden = !stackView.isHidden
+            stackView.isHidden = !stackView.isHidden
         }
-        
     }
     
+    // hiding sub chapter buttons of The Big Stuff under chapter buttons.
     @IBAction func BigStuffSelection(_ sender: Any) {
         BigStuffButton.forEach { (button) in
             button.isHidden = !button.isHidden
             button.contentHorizontalAlignment = .left
         }
+        
         CheckItTwiceImageView.forEach { (imageView) in
             imageView.isHidden = !imageView.isHidden
         }
@@ -166,11 +158,11 @@ class SlideOutViewController: UIViewController {
         }
         
         BigStuffStackViews.forEach { (stackView) in
-            
             stackView.isHidden = !stackView.isHidden
         }
     }
-    
+
+    // hiding sub chapter buttons of Check It Twice under chapter buttons.
     @IBAction func CheckItTwiceSelection(_ sender: Any) {
         CheckItTwiceButton.forEach { (button) in
             button.isHidden = !button.isHidden
@@ -186,14 +178,11 @@ class SlideOutViewController: UIViewController {
         }
         
         CheckItTwiceStackView.forEach { (stackView) in
-            
             stackView.isHidden = !stackView.isHidden
         }
-
     }
     
-//    @IBOutlet var CheckItTwiceButtons: [UIButton]!
-    
+    // segues of check it twice sub chapters taking to their page.
     @IBAction func CheckItTwiceButtons(_ sender: UIButton) {
         let title : String = sender.currentTitle!
         if (title == "1. Family Rooms"){
